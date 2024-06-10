@@ -1,0 +1,442 @@
+/* 主页面样式 */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f7fa;
+    color: #2c3e50;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden; /* 防止出现滚动条 */
+}
+
+aside {
+    flex: 1; /* 占满剩余高度 */
+    width: 100%;
+    background-color: #ffffff;
+    overflow-y: auto;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    margin: 10px;
+    padding: 20px; /* 增加内边距 */
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box; /* 确保内边距不会导致溢出 */
+}
+
+nav {
+    flex: 1;
+    padding: 0;
+    margin: 0;
+    overflow-y: auto;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-item {
+    border-bottom: 1px solid #e0e0e0;
+    margin-bottom: 5px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.menu-item:hover {
+    transform: translateX(10px);
+}
+
+nav h2, nav h3, nav h4, nav h5, nav h6 {
+    margin: 0;
+    cursor: pointer;
+    transition: background-color 0.3s, padding-left 0.3s, color 0.3s;
+    box-sizing: border-box;
+    font-weight: 500;
+    color: #2c3e50;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    padding: 10px; /* 增加内边距以防止文本过于靠边 */
+}
+
+nav h2 {
+    padding: 15px 20px;
+    background-color: #ffffff;
+    font-size: 18px;
+    height: 50px;
+}
+
+nav h3, nav h4, nav h5, nav h6 {
+    padding: 12px 18px;
+    background-color: #f8f9fa;
+    font-size: 16px;
+    height: 45px;
+}
+
+nav h2:hover, nav h3:hover, nav h4:hover, nav h5:hover, nav h6:hover {
+    background-color: #e0e0e0;
+    padding-left: 30px;
+    color: #333;
+}
+
+/* 文件夹样式 */
+.folder {
+    font-weight: bold;
+    color: #2c3e50; /* 保持与文本一致 */
+}
+
+/* 文件样式 */
+.file {
+    font-style: italic;
+    color: #2c3e50; /* 使用一致的颜色 */
+}
+
+/* 调整文件图标的大小 */
+.file-icon {
+    font-size: 18px; /* 设置较小的图标大小 */
+    margin-right: 8px; /* 与文本保持适当间距 */
+}
+
+.submenu {
+    display: none; /* 初始隐藏子菜单 */
+    padding-left: 20px;
+    transition: max-height 0.3s ease-out, padding-left 0.3s;
+    max-height: 0;
+    overflow: hidden;
+}
+
+.submenu.active {
+    display: block;
+    max-height: 1000px;
+    padding-left: 20px;
+}
+
+nav a {
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #2c3e50;
+    border-bottom: 1px solid #e0e0e0;
+    font-size: 16px;
+    transition: background-color 0.3s, padding-left 0.3s;
+    border-radius: 8px;
+}
+
+nav a:hover, nav a.active {
+    background-color: #f8f9fa;
+    color: #2c3e50;
+    padding-left: 30px;
+}
+
+@media (max-width: 768px) {
+    aside {
+        margin: 5px;
+        padding: 10px; /* 减小内边距以适应小屏幕 */
+    }
+
+    nav h2 {
+        font-size: 16px;
+        padding: 10px 15px;
+    }
+
+    nav h3, nav h4, nav h5, nav h6 {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+
+    nav a {
+        font-size: 14px;
+        padding: 8px 15px;
+    }
+}
+
+/* 文件页面样式 */
+#content {
+    width: 100%;
+    max-width: calc(100% - 40px); /* 确保最大宽度不超出父容器并留出内边距 */
+    margin: 10px auto;
+    background-color: #ffffff;
+    padding: 20px; /* 增加内边距 */
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+    overflow-x: hidden; /* 防止水平滚动条 */
+    box-sizing: border-box; /* 确保padding不会导致溢出 */
+    height: calc(100vh - 40px); /* 减少高度以避免纵向滚动条 */
+    position: relative; /* 确保滑块在右上角定位 */
+}
+
+#page-title {
+    font-size: 24px;
+    text-align: center; /* 标题居中 */
+    margin-bottom: 10px;
+}
+
+#usage-description {
+    font-family: Lato;
+    font-size: 14px; /* 调整字体大小 */
+    font-style: italic; /* 改为常规字体 */
+    text-align: left; /* 描述文本左对齐 */
+    margin-bottom: 20px;
+    padding: 10px;
+    line-height: 1; /* 增加行高，提升可读性 */
+    background-color: #f8f9fa; /* 背景色 */
+    border-radius: 10px; /* 圆角 */
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1); /* 轻微阴影 */
+    max-width: calc(100% - 20px); /* 确保输入框宽度适应页面 */
+}
+
+#language-toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#language-label {
+    margin-left: 10px;
+    font-size: 12px; /* 调小字体大小 */
+    line-height: 20px; /* 保持与滑块同样高度 */
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 34px;
+    height: 20px;
+    margin-left: 10px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 12px;
+    width: 12px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #4caf50;
+}
+
+input:checked + .slider:before {
+    transform: translateX(14px);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%; /* 确保表单宽度适应页面 */
+    overflow: hidden; /* 防止表单内容超出容器 */
+    padding: 0 10px; /* 增加内边距，防止紧贴容器边缘 */
+    box-sizing: border-box; /* 确保内边距不会导致溢出 */
+}
+
+form .input-group {
+    display: flex;
+    flex-direction: column; /* 垂直排列 */
+    align-items: flex-start;
+    margin-bottom: 20px;
+    transition: transform 0.2s ease-in-out; /* 平移效果 */
+    width: 100%; /* 确保每个输入组适应页面宽度 */
+    box-sizing: border-box; /* 确保内边距不会导致超出 */
+}
+
+form .input-group:hover {
+    transform: translateX(5px); /* 鼠标滑动时轻微平移 */
+}
+
+form label {
+    font-size: 10px; /* 调小标签字体 */
+    margin-bottom: 5px;
+    padding: 5px 10px; /* 添加内部填充 */
+    background-color: #000; /* 黑色背景 */
+    color: #fff; /* 白色字体 */
+    border-radius: 10px; /* 圆角 */
+    width: 40px; /* 固定标签宽度 */
+    text-align: center;
+    flex-shrink: 0;
+    display: inline-block;
+}
+
+/* 统一的文本输入框样式 */
+.styled-textarea, form select {
+    padding: 10px 15px; /* 增加填充以提高舒适度 */
+    border: 1px solid #ddd; /* 边框颜色更柔和 */
+    border-radius: 10px; /* 圆角边框 */
+    font-size: 14px; /* 输入框和下拉菜单字体大小 */
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1); /* 添加轻微的阴影 */
+    transition: box-shadow 0.3s, transform 0.2s ease-in-out; /* 增加过渡效果和平移效果 */
+    outline: none; /* 移除默认的聚焦边框 */
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 12px;
+    margin-left: 20px; /* 固定左侧距离 */
+    width: calc(100% - 40px); /* 自动根据侧边栏宽度调整 */
+    box-sizing: border-box; /* 确保padding不会导致溢出 */
+    resize: vertical; /* 允许垂直调整大小 */
+    min-height: 40px; /* 设置最小高度，保证单行输入框的高度 */
+}
+
+.styled-textarea {
+    min-height: 80px; /* 设置textarea的最小高度，支持多行输入 */
+}
+
+.styled-textarea:focus, form select:focus {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* 聚焦时的阴影效果 */
+    transform: translateX(5px); /* 鼠标滑动时轻微平移 */
+}
+
+form select {
+    background-image: url('data:image/svg+xml;utf8,<svg fill="%23333" height="16" viewBox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>') !important; /* 自定义下拉箭头 */
+    background-color: white; /* 确保背景颜色为白色 */
+    padding-right: 25px; /* 确保背景箭头和文本不重叠 */
+    border-radius: 10px; /* 圆角边框 */
+    margin-top: 5px; /* 与标签保持适当距离 */
+}
+
+form select option {
+    padding: 10px;
+    background-color: #fff;
+    color: #2c3e50;
+    font-size: 14px;
+    border-radius: 10px; /* 圆角选项 */
+    overflow: hidden; /* 防止选项文字溢出 */
+}
+
+/* 优化下拉菜单样式 */
+form select:focus {
+    border-color: #4caf50; /* 聚焦时边框颜色 */
+    background-color: #f5f7fa; /* 聚焦时背景颜色 */
+}
+
+/* 隐藏滚动条 */
+form select::-ms-expand {
+    display: none;
+}
+
+#output-container {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    position: relative; /* 使复制按钮定位于输出框内部 */
+    max-width: 100%; /* 确保输出容器适应页面宽度 */
+    box-sizing: border-box; /* 确保padding不会导致溢出 */
+    padding: 0 10px; /* 增加内边距，防止紧贴容器边缘 */
+}
+
+#output {
+    flex-grow: 1;
+    padding: 12px 15px; /* 增加填充以提高舒适度 */
+    border: 1px solid #ddd; /* 边框颜色更柔和 */
+    border-radius: 10px; /* 圆角边框 */
+    resize: vertical; /* 允许垂直调整大小 */
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1); /* 添加轻微的阴影 */
+    font-size: 14px; /* 文本框字体大小 */
+    outline: none; /* 移除默认的聚焦边框 */
+    background-color: #f9f9f9; /* 输出框背景颜色 */
+    height: 300px; /* 增加输出框高度 */
+    max-width: 100%; /* 确保输出框宽度适应页面 */
+    box-sizing: border-box; /* 确保padding不会导致溢出 */
+    position: relative; /* 确保复制按钮在输出框内部定位 */
+}
+
+#copy-button {
+    position: absolute; /* 定位在输出框的右上角 */
+    right: 0px;
+    top: -10px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 6px; /* 调整按钮尺寸以适应输出框 */
+    border-radius: 50%; /* 圆形按钮 */
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2); /* 按钮阴影 */
+    transition: background-color 0.3s, box-shadow 0.3s, transform 0.2s ease-in-out; /* 增加过渡效果和平移效果 */
+    font-size: 14px; /* 减小图标尺寸 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#copy-button:hover {
+    background-color: #45a049; /* 鼠标悬停时的按钮颜色 */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* 鼠标悬停时的阴影效果 */
+}
+
+#back-button {
+    margin-bottom: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    color: #2c3e50;
+}
+
+/* 自定义模版页面的额外样式 */
+.styled-textarea,
+.styled-select {
+    padding: 10px 15px; /* 增加填充以提高舒适度 */
+    border: 1px solid #ddd; /* 边框颜色更柔和 */
+    border-radius: 10px; /* 圆角边框 */
+    font-size: 14px; /* 字体大小 */
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1); /* 添加轻微的阴影 */
+    outline: none; /* 移除默认的聚焦边框 */
+    appearance: none !important; /* 强制移除默认的下拉箭头（适用于 select） */
+    width: calc(100% - 0px); /* 确保输入框宽度适应页面 */
+    margin-left: 0px; /* 与标签保持适当距离 */
+    box-sizing: border-box; /* 确保 padding 不会导致溢出 */
+    transition: box-shadow 0.3s, transform 0.2s ease-in-out; /* 增加过渡效果和平移效果 */
+    resize: vertical; /* 允许垂直调整大小 */
+    min-height: 40px; /* 设置最小高度，保证单行输入框的高度 */
+}
+
+.styled-textarea {
+    min-height: 80px; /* 设置textarea的最小高度，支持多行输入 */
+}
+
+.styled-textarea:hover,
+.styled-select:hover,
+.styled-textarea:focus,
+.styled-select:focus {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* 聚焦时的阴影效果 */
+    border-color: #4caf50; /* 聚焦时的边框颜色 */
+    transform: translateX(5px); /* 鼠标滑动时轻微平移 */
+}
+
+/* 新增的输入框位于下拉菜单下一行 */
+.input-group-sub {
+    width: 100%;
+    margin-top: 5px; /* 与上方下拉菜单保持间距 */
+}
+
+/* 隐藏类的样式 */
+.hidden {
+    display: none;
+}

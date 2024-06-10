@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- 引入 Google Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+<body>
+    <div id="content">
+        <button id="back-button" class="material-icons">arrow_back</button>
+        <h1 id="page-title"></h1>
+        <p id="usage-description"></p>
+        <div id="language-toggle">
+            <label for="language-switch">Language: </label>
+            <input type="checkbox" id="language-switch" name="language-switch" />
+            <span id="language-label">English</span>
+        </div>
+        <form id="dynamic-form"></form>
+        <div id="output-container">
+            <textarea id="output" readonly></textarea>
+            <button id="copy-button" class="material-icons">content_copy</button>
+        </div>
+    </div>
+    <script src="template.js"></script>
+</body>
+</html>
