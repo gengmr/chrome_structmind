@@ -9,7 +9,7 @@
     "service_worker": "background.js"
   },
   "action": {
-    "default_title": "Click to open panel",
+    "default_title": "点击打开StructMind",
     "default_icon": {
       "16": "icons/icon.png",
       "48": "icons/icon.png",
