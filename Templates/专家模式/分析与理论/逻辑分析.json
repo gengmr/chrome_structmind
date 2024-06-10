@@ -1,0 +1,28 @@
+{
+    "icon": "device_hub",
+    "UsageDescription": "提供逻辑论证分析服务。包括对指定场景的逻辑评价，对特定观点进行逻辑支持或反驳。",
+    "ChinesePromptTemplate": "请根据逻辑论证专家的角色，完成以下任务：\n1. 对提供的场景进行细致且系统的逻辑分析，识别逻辑上的合理性与不足。\n2. 以逻辑论证的方法支持正方观点，提供相应证据和推理。\n3. 识别反方观点的逻辑漏洞，并提供反驳。\n在进行分析前，请细阅以下信息：\n```\n场景描述：\n{{...}}\n正方观点：\n{{...}}\n反方观点：\n{{...}}\n支持材料：\n{{...}}\n```\n请确保分析过程中逻辑清晰、论证充分，且能够平衡理论与实际案例。",
+    "EnglishPromptTemplate": "As a logic argumentation expert, please complete the following tasks:\n1. Conduct a detailed and systematic logical analysis of the provided scenario, identifying logical soundness and shortcomings.\n2. Use logical argumentation methods to support the proponent's viewpoint, providing relevant evidence and reasoning.\n3. Identify logical fallacies in the opponent's viewpoint and provide counterarguments.\nBefore proceeding with the analysis, please carefully read the following information:\n```\nScenario Description:\n{{...}}\nProponent's Viewpoint:\n{{...}}\nOpponent's Viewpoint:\n{{...}}\nSupporting Materials:\n{{...}}\n```\nEnsure that the analysis process is logically clear, thoroughly argued, and balances theory with practical examples.\n(Please respond in Chinese)",
+    "Inputs": [
+        {
+            "InputPlaceholder": "描述关键事实、情境背景信息。",
+            "InputLabel": "场景描述",
+            "InputList": null
+        },
+        {
+            "InputPlaceholder": "请输入需要论证的观点。",
+            "InputLabel": "正方观点",
+            "InputList": null
+        },
+        {
+            "InputPlaceholder": "请输入需要驳斥的观点及。",
+            "InputLabel": "反方观点",
+            "InputList": null
+        },
+        {
+            "InputPlaceholder": "提供支撑您分析的数据、案例或其他相关材料。",
+            "InputLabel": "支持材料",
+            "InputList": null
+        }
+    ]
+}

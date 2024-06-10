@@ -1,0 +1,23 @@
+{
+    "icon": "fitness_center",
+    "UsageDescription": "根据个人需求提供定制化的健身建议与计划。",
+    "ChinesePromptTemplate": "作为一名专业的健身教练和营养顾问，你的任务是根据客户提供的详细信息制定专业、实用、个性化的健身与营养计划。请根据以下步骤操作：\n请仔细审阅以下信息\n\n健身目标：\n{{...}}\n当前健康状况和健身水平：\n{{...}}\n具体需求和限制（如饮食偏好、可用设备、时间安排等）：\n{{...}}\n\n根据以上信息，制定你的健身与营养计划。请确保最终计划：\n- 明确针对健身目标，适应当前健康状况和健身水平\n- 充分考虑具体需求和限制\n- 完成计划后，请检查并确认以下内容是否满足要求：\n  - 计划是否全面、实用\n  - 是否易于客户理解和执行\n  - 是否符合健康与安全标准",
+    "EnglishPromptTemplate": "As a professional fitness coach and nutrition consultant, your task is to create a professional, practical, and personalized fitness and nutrition plan based on the detailed information provided by the client. Please follow these steps:\nCarefully review the following information\n\nFitness Goals:\n{{...}}\nCurrent Health Status and Fitness Level:\n{{...}}\nSpecific Needs and Limitations (such as dietary preferences, available equipment, time schedule, etc.):\n{{...}}\n\nBased on the above information, develop your fitness and nutrition plan. Ensure that the final plan:\n- Is clearly targeted towards the fitness goals, adapting to the current health status and fitness level\n- Fully considers specific needs and limitations\n- After completing the plan, check and confirm whether the following requirements are met:\n  - Whether the plan is comprehensive and practical\n  - Whether it is easy for the client to understand and implement\n  - Whether it conforms to health and safety standards\n(Please respond in Chinese)",
+    "Inputs": [
+        {
+            "InputPlaceholder": "描述您的健身目标（例如：减脂、增肌、提高耐力等）。",
+            "InputLabel": "健身目标",
+            "InputList": null
+        },
+        {
+            "InputPlaceholder": "提供您的当前健康状况和健身水平（例如：身体数据、以往经验等）。",
+            "InputLabel": "当前状况",
+            "InputList": null
+        },
+        {
+            "InputPlaceholder": "阐述具体需求和限制（例如：饮食偏好、可用设备、每周可训练时间等）。",
+            "InputLabel": "需求限制",
+            "InputList": null
+        }
+    ]
+}

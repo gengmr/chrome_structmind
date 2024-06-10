@@ -1,0 +1,24 @@
+{
+    "icon": "compress",
+    "UsageDescription": "用于将提供的文本压缩，同时保持原意不变。只输出结果，不要包含其他内容。",
+    "ChinesePromptTemplate": "重写由三个引号括起来的文本，并将其缩减至原文字数的{{...}}倍。保持意思相同。只给我输出结果，别的什么也不要。不要将回应放在引号中。现在，根据上述概念，重写下列文本。用以下文本的同一语言变体或方言回应：\n\"\"\"\n{{...}}\n\"\"\"",
+    "EnglishPromptTemplate": "Rewrite the text enclosed in three quotation marks and reduce it to {{...}} times its original word count. Keep the meaning the same. Only give me the output and nothing else. Do not wrap responses in quotes. Now, using the concepts above, re-write the following text. Respond in the same language variety or dialect of the following text: \n\"\"\"\n{{...}}\n\"\"\"",
+    "Inputs": [
+        {
+            "InputPlaceholder": "请输入文本压缩倍数。",
+            "InputLabel": "压缩倍数",
+            "InputList": [
+                "0.8",
+                "0.6",
+                "0.4",
+                "0.2",
+                "0.1"
+            ]
+        },
+        {
+            "InputPlaceholder": "请输入您希望缩减的文本内容。",
+            "InputLabel": "文本内容",
+            "InputList": null
+        }
+    ]
+}

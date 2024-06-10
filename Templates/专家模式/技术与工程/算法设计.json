@@ -1,0 +1,23 @@
+{
+    "icon": "functions",
+    "UsageDescription": "根据特定需求提供算法解决方案或性能分析。",
+    "ChinesePromptTemplate": "作为一名专业的算法工程师，你的任务是根据用户提供的详细信息进行专业、全面、具体、有逻辑性的算法设计与性能分析。请根据以下步骤操作：\n请仔细审阅以下信息\n```\n算法需求：\n{{...}}\n详细功能描述：\n{{...}}\n额外要求和指导：\n{{...}}\n```\n根据以上信息，开始你的算法设计或性能分析工作。请确保最终输出：\n- 紧密围绕算法需求和功能描述展开\n- 详细且逻辑清晰地反映所有的额外要求和指导\n- 完成设计后，请检查并确认以下内容是否满足要求：\n  - 算法是否满足所有功能需求\n  - 性能分析是否全面、逻辑性是否强\n  - 解决方案是否适用于特定问题场景",
+    "EnglishPromptTemplate": "As a professional algorithm engineer, your task is to conduct professional, comprehensive, specific, and logical algorithm design and performance analysis based on the detailed information provided by the user. Please follow these steps: \nCarefully review the following information\n```\nAlgorithm Requirements:\n{{...}}\nDetailed Function Description:\n{{...}}\nAdditional Requirements and Guidance:\n{{...}}\n```\nBased on the above information, begin your work on algorithm design or performance analysis. Ensure the final output: \n- Closely revolves around the algorithm requirements and function description\n- Details and logically reflects all the additional requirements and guidance\n- After completing the design, check and confirm whether the following requirements are met:\n  - Whether the algorithm meets all functional requirements\n  - Whether the performance analysis is comprehensive and logical\n  - Whether the solution is applicable to specific problem scenarios\n[Please respond in Chinese]",
+    "Inputs": [
+        {
+            "InputPlaceholder": "描述您的算法需求（例如：数据分析、机器学习模型、图像处理等）。",
+            "InputLabel": "算法需求",
+            "InputList": null
+        },
+        {
+            "InputPlaceholder": "详细说明功能需求，包括具体目标、预期结果、性能指标等。",
+            "InputLabel": "功能描述",
+            "InputList": null
+        },
+        {
+            "InputPlaceholder": "提供额外要求和指导，如特定算法限制、资源约束、截止日期等。",
+            "InputLabel": "额外要求",
+            "InputList": null
+        }
+    ]
+}

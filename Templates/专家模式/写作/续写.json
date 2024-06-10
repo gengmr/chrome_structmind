@@ -1,0 +1,13 @@
+{
+    "icon": "keyboard",
+    "UsageDescription": "继续以相同的语言、语调和风格写作，仅输出续写内容。",
+    "ChinesePromptTemplate": "\"\"\"\n{{...}}\n\"\"\" \n继续写作，保持文本的语言、语调和风格与开始部分三重引号内的文本一致。仅输出续写的部分，不包含其他内容。不要在回应中使用引号。",
+    "EnglishPromptTemplate": "\"\"\"\n{{...}}\n\"\"\" \nContinue writing that begins the text delimited by triple quotes with the same language, tone, and style. Only give me the output of the continuation and nothing else. Do not wrap responses in quotes.",
+    "Inputs": [
+        {
+            "InputPlaceholder": "请输入您要继续写作的文本起始部分（例如：在一个风和日丽的早晨，...）",
+            "InputLabel": "起始文本",
+            "InputList": null
+        }
+    ]
+}

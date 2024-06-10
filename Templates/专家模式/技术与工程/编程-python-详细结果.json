@@ -1,0 +1,22 @@
+{
+    "icon": "code",
+    "UsageDescription": "按照要求编写Python代码。",
+    "ChinesePromptTemplate": "作为Python编程专家，您的任务是根据编程需求完成编程任务。要求:\n```\n代码实现专业、规范、逻辑清晰\n遵循PEP8标准及Google Python编程风格指南\n类与类、类与函数、函数与函数之间，以及import语句与函数定义、函数定义与`if __name__ == '__main__':`语句之间应空两行。类中的方法定义或不同逻辑块之间应空一行。\n包含详尽中文注释，如果包含函数，请给出详细的函数注释并使用:param格式进行入参说明\n在最后通过if __name__ == '__main__': 方式给出示例调用代码\n具有良好的变量命名、易维护，遵守选用编程语言的最佳实践和规范。\n```\n\n编程需求：\n```\n{{...}}\n```\n\n其他要求：\n```\n{{...}}\n```\n请按以下步骤操作：\n步骤1: 阐述最佳代码实现思路及其他常见实现思路，对比最佳实现思路与其他常见思路的优劣\n步骤2: 按照最佳代码实现思路编写代码。\n步骤3: 完成后，评估以下要素以确保代码质量：\n  - 代码完整性和对需求的满足度\n  - 代码结构的清晰度和逻辑连贯性\n  - 遵守编程规范和风格指南",
+    "EnglishPromptTemplate": "As a Python programming expert, your task is to complete the programming task based on the programming requirements. Requirements:\n\nCode implementation should be professional, standardized, and logically clear\nFollow the PEP8 standard and the Google Python Style Guide\nThere should be two lines of space between classes, between classes and functions, between functions, and between import statements and function definitions, as well as between function definitions and the `if __name__ == '__main__':` statement. Within classes, there should be one line of space between method definitions or different logical blocks.\nInclude detailed Chinese comments. If functions are included, provide detailed function comments and use the :param format for explaining input parameters\nAt the end, provide example invocation code using the `if __name__ == '__main__':` method\nHave good variable naming, be easy to maintain, and adhere to the best practices and standards of the chosen programming language.\n\n\nProgramming requirements:\n\n{{...}}\n\n\nOther requirements:\n\n{{...}}\n\nPlease follow these steps:\nStep 1: Describe the best code implementation approach and other common approaches, comparing the advantages and disadvantages of the best approach against others\nStep 2: Write the code following the best code implementation approach.\nStep 3: Upon completion, assess the following elements to ensure code quality:\n - Completeness of the code and its fulfillment of the requirements\n - Clarity of the code structure and its logical coherence\n - Adherence to programming conventions and style guides",
+    "Inputs": [
+        {
+            "InputPlaceholder": "详细描述您的编程需求",
+            "InputLabel": "需求概述",
+            "InputList": null
+        },
+        {
+            "InputPlaceholder": "提供任何其他特定要求或指导，如性能参数、内存限制或特定库/框架的使用。",
+            "InputLabel": "其他要求",
+            "InputList": [
+                "运行速度优先",
+                "实现效果优先",
+                "代码可读性优先"
+            ]
+        }
+    ]
+}

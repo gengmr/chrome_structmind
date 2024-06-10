@@ -1,0 +1,23 @@
+{
+    "icon": "flight",
+    "UsageDescription": "提供旅行相关建议。",
+    "ChinesePromptTemplate": "作为一名旅行规划专家，你的任务是根据客户提供的详细信息进行专业、全面、具体的旅行计划制定和建议。请根据以下步骤操作：\n请仔细审阅以下信息\n```\n旅行目的和偏好：\n{{...}}\n目的地特点和要求：\n{{...}}\n额外需求和限制：\n{{...}}\n```\n根据以上信息，开始你的旅行规划工作。请确保最终建议：\n- 详细体现旅行目的和偏好\n- 考虑目的地的特点和要求\n- 充分考虑额外需求和限制\n- 完成规划后，请检查并确认以下内容是否满足要求：\n  - 规划是否实用、全面\n  - 是否适应旅行者的需求和兴趣\n  - 提供的信息和建议是否清晰、有帮助",
+    "EnglishPromptTemplate": "As a travel planning expert, your task is to create professional, comprehensive, and specific travel plans and suggestions based on the detailed information provided by the client. Please follow these steps:\nCarefully review the following information\n```\nTravel Purpose and Preferences:\n{{...}}\nDestination Features and Requirements:\n{{...}}\nAdditional Needs and Limitations:\n{{...}}\n```\nBased on the above information, begin your travel planning work. Ensure that the final recommendation:\n- Detailedly reflects the travel purpose and preferences\n- Considers the features and requirements of the destination\n- Fully considers additional needs and limitations\n- After completing the plan, check and confirm whether the following requirements are met:\n  - Whether the plan is practical and comprehensive\n  - Whether it suits the traveler's needs and interests\n  - Whether the provided information and suggestions are clear and helpful\n(Please respond in Chinese)",
+    "Inputs": [
+        {
+            "InputPlaceholder": "请描述您的旅行目的和偏好（例如：休闲度假、探险旅行、文化体验等）。",
+            "InputLabel": "目的偏好",
+            "InputList": null
+        },
+        {
+            "InputPlaceholder": "提供您考虑的目的地特点和要求（例如：气候条件、景点类型、交通便利性等）。",
+            "InputLabel": "地点要求",
+            "InputList": null
+        },
+        {
+            "InputPlaceholder": "描述任何额外的需求和限制（例如：预算限制、时间限制、健康考虑等）。",
+            "InputLabel": "额外需求",
+            "InputList": null
+        }
+    ]
+}

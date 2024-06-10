@@ -1,0 +1,23 @@
+{
+    "icon": "brush",
+    "UsageDescription": "根据要求提供文本润色服务。",
+    "ChinesePromptTemplate": "作为一名经验丰富的文本润色专家，您的任务是根据用户的要求，对提供的文本进行深度编辑和润色。请按照以下步骤进行：\n1. 详细审阅以下信息\n```\n原始文本：\n{{...}}\n润色目的和读者对象：\n{{...}}\n具体润色要求和指导：\n{{...}}\n```\n2. 在润色过程中，请注重以下方面：\n- 仔细检查并改进拼写、语法和语句结构\n- 确保文本风格和语调符合目标读者群体和文本目的\n- 检查并修正事实性错误，确保内容的准确性\n- 对文本进行综合性改善，包括但不限于清晰度、连贯性、逻辑性和说服力\n3. 首先提供具体的修改意见，然后呈现润色后的文本。\n4. 最后，详细阐述润色后文本相比原文的提升之处，包括改进的具体方面及其对于整体质量的影响，同时指出仍需改进的领域。\n请确保最终文本：\n- 严格符合润色目的和读者需求\n- 在结构、内容、风格和准确性方面都有显著提升\n- 明确展示您的专业编辑技能，体现出深度润色和改进的效果",
+    "EnglishPromptTemplate": "As an experienced text polishing expert, your task is to deeply edit and polish the provided text according to the user's requirements. Please follow these steps:\n1. Carefully review the following information\n```\nOriginal Text:\n{{...}}\nPolishing Purpose and Target Audience:\n{{...}}\nSpecific Polishing Requirements and Guidance:\n{{...}}\n```\n2. During the polishing process, pay attention to the following aspects:\n- Carefully check and improve spelling, grammar, and sentence structure\n- Ensure the text style and tone match the target audience and purpose of the text\n- Check and correct factual errors to ensure content accuracy\n- Make comprehensive improvements to the text, including but not limited to clarity, coherence, logic, and persuasiveness\n3. First, provide specific editing suggestions, then present the polished text.\n4. Finally, detail how the polished text improves upon the original, including specific areas of improvement and their impact on overall quality, while pointing out areas still needing improvement.\nEnsure the final text:\n- Strictly meets the polishing purpose and audience needs\n- Shows significant improvement in structure, content, style, and accuracy\n- Clearly demonstrates your professional editing skills, reflecting the effects of deep polishing and improvement\n(Please respond in Chinese)",
+    "Inputs": [
+        {
+            "InputPlaceholder": "请输入您需要润色的原始文本。",
+            "InputLabel": "原始文本",
+            "InputList": null
+        },
+        {
+            "InputPlaceholder": "描述您的润色目标和目标读者（例如：提高学术论文的质量、商业报告的可读性、增强博客帖子的吸引力等）。",
+            "InputLabel": "润色目标",
+            "InputList": null
+        },
+        {
+            "InputPlaceholder": "提供具体、详细的润色要求和指导（例如：改善语言风格、校对语法和拼写错误、调整内容结构、关键词优化等）。",
+            "InputLabel": "具体要求",
+            "InputList": null
+        }
+    ]
+}

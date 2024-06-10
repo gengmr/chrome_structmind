@@ -1,0 +1,31 @@
+{
+    "icon": "code",
+    "UsageDescription": "按照要求编写代码。",
+    "ChinesePromptTemplate": "作为编程专家，您的任务是按照用户指定的编程语言完成编程任务，以解决用户的编程需求。要求代码实现规范、简洁、明确、高效、逻辑清晰、包含详尽中文注释、具有良好的命名和组织、易维护，遵守选用编程语言的最佳实践和规范。\n\n用户编程需求和指定编程语言如下：\n指定编程语言：\n```\n{{...}}\n```\n\n编程需求：\n```\n{{...}}\n```\n\n其他要求：\n```\n{{...}}\n```\n请按以下步骤操作：\n步骤1: 阐述最佳代码实现思路及其他常见实现思路，对比最佳实现思路与其他常见思路的优劣\n步骤2: 按照最佳代码实现思路编写代码。\n步骤3: 完成后，评估以下要素以确保代码质量：\n  - 代码完整性和对需求的满足度\n  - 代码结构的清晰度和逻辑连贯性\n  - 遵守编程规范和风格指南",
+    "EnglishPromptTemplate": "As a programming expert, your task is to complete programming assignments using the programming language specified by the user, to meet their programming needs. The code should be standard, concise, clear, efficient, logically coherent, include comprehensive English comments, have good naming and organization, be easy to maintain, and adhere to the best practices and standards of the chosen programming language.\n\nUser's programming requirements and specified programming language are as follows:\nSpecified programming language:\n```\n{{...}}\n```\n\nProgramming requirement:\n```\n{{...}}\n```\n\nOther requirements:\n```\n{{...}}\n```\nPlease proceed with the following steps:\nStep 1: Elucidate the best code implementation approach and other common approaches, comparing the advantages and disadvantages of the best approach with others.\nStep 2: Write code according to the best code implementation approach.\nStep 3: Upon completion, assess the following aspects to ensure code quality:\n  - Completeness of the code and its adequacy in meeting the requirements\n  - Clarity of code structure and logical coherence\n  - Adherence to coding standards and style guides",
+    "Inputs": [
+        {
+            "InputPlaceholder": "指定您希望使用的编程语言（如 Python、JavaScript、C++等）。",
+            "InputLabel": "编程语言",
+            "InputList": [
+                "Python",
+                "JavaScript",
+                "C++"
+            ]
+        },
+        {
+            "InputPlaceholder": "详细描述您的编程需求",
+            "InputLabel": "需求概述",
+            "InputList": null
+        },
+        {
+            "InputPlaceholder": "提供任何其他特定要求或指导，如性能参数、内存限制或特定库/框架的使用。",
+            "InputLabel": "其他要求",
+            "InputList": [
+                "运行速度优先",
+                "实现效果优先",
+                "代码可读性优先"
+            ]
+        }
+    ]
+}

@@ -1,0 +1,23 @@
+{
+    "icon": "military_tech",
+    "UsageDescription": "提供军事相关分析。",
+    "ChinesePromptTemplate": "作为一名军事分析专家，你的任务是根据客户提供的详细信息进行专业、全面、具体的军事相关分析。请根据以下步骤操作：\n请仔细审阅以下信息\n```\n军事话题：\n{{...}}\n战略或技术细节：\n{{...}}\n历史背景或当前情况：\n{{...}}\n```\n根据以上信息，开始你的分析工作。请确保最终分析：\n- 紧密围绕军事话题展开\n- 详细且逻辑清晰地反映所有的战略或技术细节\n- 涵盖相关的历史背景或当前情况\n- 完成分析后，请检查并确认以下内容是否满足要求：\n  - 分析是否全面、深入\n  - 结构是否清晰，逻辑是否合理",
+    "EnglishPromptTemplate": "As a military analysis expert, your task is to provide professional, comprehensive, and specific military-related analysis based on detailed information provided by the client. Please follow these steps:\nCarefully review the following information\n```\nMilitary Topic:\n{{...}}\nStrategic or Technical Details:\n{{...}}\nHistorical Background or Current Situation:\n{{...}}\n```\nBased on the above information, begin your analysis. Ensure that the final analysis:\n- Closely revolves around the military topic\n- Detailed and logically clear in reflecting all strategic or technical details\n- Covers relevant historical background or current situation\n- After completing the analysis, check and confirm whether the following requirements are met:\n  - Whether the analysis is comprehensive and in-depth\n  - Whether the structure is clear and the logic is sound\n(Please respond in Chinese)",
+    "Inputs": [
+        {
+            "InputPlaceholder": "请输入您要分析的军事话题（例如：特定冲突、战略发展、武器系统等）。",
+            "InputLabel": "军事话题",
+            "InputList": null
+        },
+        {
+            "InputPlaceholder": "提供所需分析的具体战略或技术问题（例如：作战策略、武器功能、技术创新等）。",
+            "InputLabel": "具体问题",
+            "InputList": null
+        },
+        {
+            "InputPlaceholder": "描述与话题相关的历史背景或当前情况（例如：历史事件、地缘政治影响、军事对峙等）。",
+            "InputLabel": "背景现状",
+            "InputList": null
+        }
+    ]
+}

@@ -1,0 +1,23 @@
+{
+    "icon": "flag",
+    "UsageDescription": "提供目标设定、战略规划和行动指导。",
+    "ChinesePromptTemplate": "作为一名战略规划专家，您的任务是基于综合信息，为个人或组织设定目标、制定战略及规划行动。请详细评估以下信息：\n```\n现状描述：\n{{...}}\n目标设定：\n{{...}}\n资源和约束条件：\n{{...}}\n```\n随后，请执行以下步骤：\n1. 从现状分析出发，细化并明确目标。\n2. 基于这些目标，规划相应的战略和具体行动步骤。\n3. 制定详细的行动计划，包括关键阶段和预期成果。\n确保您的规划：\n- 紧密结合所提供信息，具有高度针对性\n- 创新与实用并重\n- 结构清晰，方便执行和跟踪\n- 充分考虑潜在挑战及应对策略",
+    "EnglishPromptTemplate": "As a strategic planning expert, your task is to set goals, develop strategies, and plan actions for individuals or organizations based on comprehensive information. Please assess the following information in detail:\n```\nCurrent Situation Description:\n{{...}}\nGoal Setting:\n{{...}}\nResources and Constraints:\n{{...}}\n```\nSubsequently, please follow these steps:\n1. Start with an analysis of the current situation to refine and clarify goals.\n2. Based on these goals, plan corresponding strategies and specific action steps.\n3. Develop a detailed action plan, including key stages and expected outcomes.\nEnsure that your planning:\n- Is closely linked to the provided information, with high specificity\n- Balances innovation with practicality\n- Has a clear structure, facilitating execution and tracking\n- Fully considers potential challenges and coping strategies\n(Please respond in Chinese)",
+    "Inputs": [
+        {
+            "InputPlaceholder": "详细描述当前的情况，包括现状、优势、挑战和改进点。",
+            "InputLabel": "现状描述",
+            "InputList": null
+        },
+        {
+            "InputPlaceholder": "明确阐述短期和长期目标。",
+            "InputLabel": "目标设定",
+            "InputList": null
+        },
+        {
+            "InputPlaceholder": "列出可利用的资源、存在的限制和潜在风险。",
+            "InputLabel": "资源限制",
+            "InputList": null
+        }
+    ]
+}

@@ -1,0 +1,13 @@
+{
+    "icon": "search",
+    "UsageDescription": "识别并分析潜在的问题和风险并提出预防或改进建议。适用于工程安全、软件测试、项目风险评估等多种场景。",
+    "ChinesePromptTemplate": "作为一名问题检测专家，您需要根据以下场景描述检测可能存在的问题或潜在风险。请细致地审查并回答下列问题：\n```\n场景描述：\n{{...}}\n```\n\n请您分析并回答：\n```\n1. 在所描述的场景中，您能够检测到任何明显或隐蔽的问题吗？\n2. 有哪些潜在的风险因素需要关注？\n3. 如果存在问题，建议采取哪些预防或改进措施？\n```",
+    "EnglishPromptTemplate": "As a problem detection expert, you are required to identify potential issues or risks based on the following scenario description. Please review in detail and answer the following questions (Please respond in Chinese):\n```\nScenario description:\n{{...}}\n```\n\nPlease analyze and answer:\n```\n1. Can you detect any obvious or hidden problems in the described scenario?\n2. What are the potential risk factors that need attention?\n3. If problems exist, what preventive or improvement measures would you suggest?\n```",
+    "Inputs": [
+        {
+            "InputPlaceholder": "详细描述您希望检查的场景，包括任何已知的细节和上下文信息",
+            "InputLabel": "详细场景",
+            "InputList": null
+        }
+    ]
+}

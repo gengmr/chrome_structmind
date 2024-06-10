@@ -1,0 +1,28 @@
+{
+    "icon": "text_snippet",
+    "UsageDescription": "基于需求文档、任务清单、子任务解决方案及概述撰写与子任务相关的文档。",
+    "ChinesePromptTemplate": "根据需求文档、任务清单以及子任务解决方案，撰写与指定子任务相关的文档。请确保文档：1. 重点描述子任务相关信息，适当参考需求文档和任务清单，避免与需求文档或任务清单出现明显冲突；2. 专业、明确、结构清晰、逻辑性强；3. 充分反映子任务的详细信息。提供信息如下：\n```\n需求文档:\n{{...}}\n任务清单:\n{{...}}\n子任务解决方案:\n{{...}}\n子任务解决方案概述:\n{{...}}\n```",
+    "EnglishPromptTemplate": "Based on the requirement document, task list, and subtask solution, write a document related to the specified subtask. Ensure that the document: 1. Emphasizes information related to the subtask, appropriately referencing the requirement document and task list, while avoiding obvious conflicts with them; 2. Is professional, clear, well-structured, and logical; 3. Fully reflects the detailed information of the subtask. Provide the following information:\n```\nRequirement Document:\n{{...}}\nTask List:\n{{...}}\nSubtask Solution:\n{{...}}\nSubtask Solution Overview:\n{{...}}\n```\n(Please respond in Chinese)",
+    "Inputs": [
+        {
+            "InputPlaceholder": "请输入需求文档。",
+            "InputLabel": "需求文档",
+            "InputList": null
+        },
+        {
+            "InputPlaceholder": "请输入任务清单。",
+            "InputLabel": "任务清单",
+            "InputList": null
+        },
+        {
+            "InputPlaceholder": "请输入子任务解决方案。",
+            "InputLabel": "解决方案",
+            "InputList": null
+        },
+        {
+            "InputPlaceholder": "请输入子任务解决方案概述。",
+            "InputLabel": "方案概述",
+            "InputList": null
+        }
+    ]
+}

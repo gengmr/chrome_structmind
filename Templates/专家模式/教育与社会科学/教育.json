@@ -1,0 +1,23 @@
+{
+    "icon": "school",
+    "UsageDescription": "针对教育方法、学习策略、教育资源提供专业建议。",
+    "ChinesePromptTemplate": "作为一名教育专家，你的任务是根据提供的详细信息提供专业、具体、实用的教育方法、学习策略和教育资源建议。请根据以下步骤操作：\n请仔细审阅以下信息\n```\n教育问题类型：\n{{...}}\n具体需求和期望：\n{{...}}\n相关背景信息：\n{{...}}\n```\n根据以上信息，开始你的建议工作。请确保最终建议：\n- 紧密围绕具体需求和期望展开\n- 结合相关背景信息，提供适宜的方法和策略\n- 完成建议后，请检查并确认以下内容是否满足要求：\n  - 建议是否切实可行、适用于特定情况\n  - 信息是否全面、逻辑性是否强\n  - 方法和策略是否创新且具有实践价值",
+    "EnglishPromptTemplate": "As an education expert, your task is to provide professional, specific, and practical advice on educational methods, learning strategies, and educational resources based on the detailed information provided. Please follow these steps:\nCarefully review the following information\n```\nType of Educational Issue:\n{{...}}\nSpecific Needs and Expectations:\n{{...}}\nRelated Background Information:\n{{...}}\n```\nBased on the above information, begin your advisory work. Ensure that the final recommendation:\n- Closely revolves around the specific needs and expectations\n- Incorporates related background information to provide suitable methods and strategies\n- After completing the recommendation, check and confirm whether the following requirements are met:\n  - Whether the recommendation is practical and applicable to specific situations\n  - Whether the information is comprehensive and logical\n  - Whether the methods and strategies are innovative and have practical value\n(Please respond in Chinese)",
+    "Inputs": [
+        {
+            "InputPlaceholder": "描述您面临的教育问题（例如：学习效率低、课堂管理困难、教材选择等）。",
+            "InputLabel": "问题类型",
+            "InputList": null
+        },
+        {
+            "InputPlaceholder": "说明您的具体需求和期望（例如：提高学习效率、改善课堂互动、挑选合适教材等）。",
+            "InputLabel": "具体需求",
+            "InputList": null
+        },
+        {
+            "InputPlaceholder": "提供与问题相关的背景信息（例如：学习环境、学生特点、已尝试的策略等）。",
+            "InputLabel": "相关背景",
+            "InputList": null
+        }
+    ]
+}

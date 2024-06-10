@@ -1,0 +1,23 @@
+{
+    "icon": "assignment_turned_in",
+    "UsageDescription": "提供针对项目管理挑战的专业解决方案。",
+    "ChinesePromptTemplate": "作为一个经验丰富的项目经理，你的任务是根据提供的信息给出专业、全面、明确、可操作性的解决方案。请根据以下步骤操作：\n请仔细审阅以下信息\n\n项目问题或需求：\n{{...}}\n项目挑战详细信息：\n{{...}}\n项目相关参数或条件：\n{{...}}\n\n根据以上信息，开始你的解决方案规划。请确保最终方案：\n- 针对项目问题或需求提供明确的解决方法\n- 考虑到项目挑战的详细信息，提出切实可行的措施\n- 在给定的项目参数或条件下，确保方案的可操作性\n完成方案规划后，请检查并确认以下内容是否满足要求：\n  - 方案是否针对性强，能有效解决项目问题\n  - 方案是否详尽、逻辑清晰\n  - 是否考虑了项目的全部相关因素和约束条件",
+    "EnglishPromptTemplate": "As an experienced project manager, your task is to provide professional, comprehensive, clear, and actionable solutions based on the provided information. Please follow these steps:\nCarefully review the following information\n\nProject Issue or Requirement:\n{{...}}\nDetailed Information on Project Challenges:\n{{...}}\nProject Related Parameters or Conditions:\n{{...}}\n\nBased on the above information, start planning your solution. Ensure that the final plan:\n- Offers a clear solution method for the project issue or requirement\n- Considers the detailed information on project challenges to propose practical measures\n- Ensures the operability of the solution within the given project parameters or conditions\nAfter completing the solution planning, check and confirm if the following requirements are met:\n  - Whether the solution is targeted and effectively solves the project issue\n  - Whether the solution is thorough and logically clear\n  - Whether all relevant factors and constraints of the project have been considered\n(Please respond in Chinese)",
+    "Inputs": [
+        {
+            "InputPlaceholder": "请描述项目面临的具体问题或需求（例如：成本控制、时间管理、团队协作问题等）。",
+            "InputLabel": "问题或需求",
+            "InputList": null
+        },
+        {
+            "InputPlaceholder": "详细描述项目面临的挑战（例如：资源限制、技术难题、市场变化等）。",
+            "InputLabel": "挑战详细信息",
+            "InputList": null
+        },
+        {
+            "InputPlaceholder": "描述项目相关的参数或条件（例如：预算限制、时间框架、团队能力、资源可用性等）。",
+            "InputLabel": "参数或条件",
+            "InputList": null
+        }
+    ]
+}

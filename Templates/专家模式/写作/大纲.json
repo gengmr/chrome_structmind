@@ -1,0 +1,13 @@
+{
+    "icon": "edit_note",
+    "UsageDescription": "根据提供的主题或关键字生成包含标题、章节和小节的大纲。输出为Markdown格式。仅提供输出内容。大纲应使用指定语言。",
+    "ChinesePromptTemplate": "请使用以下主题或关键词生成包括标题、章节和小节的大纲，并以Markdown格式输出。只给我输出内容，不要其他内容。主题或关键词：\n\"\"\"\n{{...}}\n\"\"\"",
+    "EnglishPromptTemplate": "Please use the following topics or keywords to generate an outline that includes titles, chapters, and subsections. Output it in Markdown format. Only give me the output and nothing else. Topics or keywords: \n\"\"\"\n{{...}}\n\"\"\"",
+    "Inputs": [
+        {
+            "InputPlaceholder": "请输入您的主题或关键词（例如：全球变暖、区块链技术、中美贸易）",
+            "InputLabel": "主题关键词",
+            "InputList": null
+        }
+    ]
+}

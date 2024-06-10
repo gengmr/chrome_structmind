@@ -1,0 +1,28 @@
+{
+    "icon": "question_mark",
+    "UsageDescription": "提供哲学层面的分析论证。包括：对特定场景的哲学解读，对正反双方观点的哲学支持与批判分析，并通过具体案例来增强理论的实际应用性和理解力。",
+    "ChinesePromptTemplate": "作为哲学领域的专家，请按以下步骤进行：\n1. 对所提供场景进行全面的哲学解析，考虑不同哲学流派和理论的适用性。\n2. 依据哲学理论，提出对正方观点的支持性分析，同时结合实际案例加强观点的现实关联性。\n3. 基于哲学理论，进行对反方观点的批判性分析，利用案例进一步论证其不合理之处。\n开始前，请仔细审视以下信息：\n```\n场景描述：\n{{...}}\n正方观点：\n{{...}}\n反方观点：\n{{...}}\n参考理论和案例：\n{{...}}\n```\n确保您的分析和论证过程符合哲学思维的严密性，逻辑连贯，同时在理论与实践之间架起桥梁。",
+    "EnglishPromptTemplate": "As an expert in the field of philosophy, please proceed with the following steps:\n1. Conduct a comprehensive philosophical analysis of the provided scenario, considering the applicability of different philosophical schools and theories.\n2. Based on philosophical theories, provide a supportive analysis of the proponent's viewpoint, while also using actual cases to strengthen the real-world relevance of the viewpoint.\n3. Perform a critical analysis of the opponent's viewpoint based on philosophical theories, using cases to further argue its irrational aspects.\nBefore beginning, please carefully review the following information:\n```\nScenario Description:\n{{...}}\nProponent's Viewpoint:\n{{...}}\nOpponent's Viewpoint:\n{{...}}\nReference Theories and Cases:\n{{...}}\n```\nEnsure that your analysis and argumentation process is rigorous in philosophical thinking, logically coherent, and bridges theory and practice.\n(Please respond in Chinese)",
+    "Inputs": [
+        {
+            "InputPlaceholder": "请详细描述待分析的场景，包括其背景和关键要素。",
+            "InputLabel": "场景描述",
+            "InputList": null
+        },
+        {
+            "InputPlaceholder": "请输入需要论证的观点。",
+            "InputLabel": "正方观点",
+            "InputList": null
+        },
+        {
+            "InputPlaceholder": "请输入需要驳斥的观点。",
+            "InputLabel": "反方观点",
+            "InputList": null
+        },
+        {
+            "InputPlaceholder": "提供与讨论相关的哲学理论、案例研究或其他辅助材料，以支撑您的分析。",
+            "InputLabel": "相关材料",
+            "InputList": null
+        }
+    ]
+}

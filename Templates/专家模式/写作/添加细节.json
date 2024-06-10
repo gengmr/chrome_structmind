@@ -1,0 +1,13 @@
+{
+    "icon": "text_increase",
+    "UsageDescription": "用于增强和改进文本的真实性和详细程度，同时保持原有的语言风格。",
+    "ChinesePromptTemplate": "向三引号内的文本添加一些细节，使其更加真实。确保输出与文本的语言种类或方言相同 - 换句话说，不要改变语言，并且只给我输出，不要别的。不要用引号包裹回应。\n    \"\"\"\n    {{...}}\n    \"\"\"",
+    "EnglishPromptTemplate": "Add some details to the text delimited by triple quotes to make it more believable. Ensure output in the same language variety or dialect of the text - in other words don't change the language ,and only give me the output and nothing else. Do not wrap responses in quotes.\n    \"\"\"\n    {{...}}\n    \"\"\"",
+    "Inputs": [
+        {
+            "InputPlaceholder": "请在此输入您希望增强的文本细节（例如：特定事件的背景信息、人物的详细描述、场景的丰富描绘）。",
+            "InputLabel": "文本细节",
+            "InputList": null
+        }
+    ]
+}

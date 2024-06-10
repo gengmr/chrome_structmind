@@ -1,0 +1,23 @@
+{
+    "icon": "science",
+    "UsageDescription": "提供专业建议，协助完成研究方法、文献查阅、实验设计等任务。",
+    "ChinesePromptTemplate": "作为一名专业的研究咨询专家，你的任务是根据用户提供的详细信息进行专业、全面、具体、有逻辑性的研究咨询服务。请根据以下步骤操作：\n请仔细审阅以下信息\n研究问题：\n{{...}}\n研究领域：\n{{...}}\n具体需求：\n{{...}}\n根据以上信息，开始你的咨询服务。请确保最终建议：\n- 紧密围绕咨询问题、领域和需求展开\n- 详细且逻辑清晰地提供专业建议\n- 完成咨询后，请检查并确认以下内容是否满足要求：\n  - 是否针对性强、有助于解决问题\n  - 建议是否清晰、逻辑性强\n  - 语言风格是否专业且适合客户需求",
+    "EnglishPromptTemplate": "As a professional research consultant, your task is to provide expert, comprehensive, specific, and logical research consulting services based on the detailed information provided by the user. Please follow these steps:\nCarefully review the following information\nResearch Question:\n{{...}}\nResearch Area:\n{{...}}\nSpecific Requirements:\n{{...}}\nBased on the above information, begin your consulting service. Ensure that the final advice:\n- Closely revolves around the consultation question, area, and requirements\n- Provides detailed and logically clear professional advice\n- After completing the consultation, check and confirm if the following requirements are met:\n  - Whether it is targeted and helpful in solving the problem\n  - Whether the advice is clear and logical\n  - Whether the language style is professional and suitable for customer needs\n(Please respond in Chinese)",
+    "Inputs": [
+        {
+            "InputPlaceholder": "请输入您的具体研究问题（例如：如何设计有效的实验来测试某种假设？）。",
+            "InputLabel": "研究问题",
+            "InputList": null
+        },
+        {
+            "InputPlaceholder": "描述您的研究领域或主题（例如：生物医学、环境科学、计算机科学等）。",
+            "InputLabel": "研究领域",
+            "InputList": null
+        },
+        {
+            "InputPlaceholder": "提供您需要的具体咨询类型（例如：实验设计、数据分析、文献综述、科研伦理等）。",
+            "InputLabel": "具体需求",
+            "InputList": null
+        }
+    ]
+}

@@ -1,0 +1,18 @@
+{
+    "icon": "view_list",
+    "UsageDescription": "提供针对复杂数据和信息的专业整理和分析。",
+    "ChinesePromptTemplate": "作为一名数据与信息管理专家，您的任务是对所提供的复杂数据和信息进行专业的分析、归纳和整理。请遵循以下步骤：\n1. 详细审阅提供的信息：\n   - 信息内容：\n     {{...}}\n   - 整理和分析要求：\n     {{...}}\n2. 基于所给信息执行整理和分析任务。确保结果：\n   - 精确展现所提供信息的要点\n   - 严格遵循整理和分析的指定要求\n   - 结构清晰、逻辑连贯\n在完成后，进行以下确认：\n   - 全面覆盖所提信息内容\n   - 结果格式和质量符合专业标准\n   - 适应预定的应用场景或目标受众",
+    "EnglishPromptTemplate": "As a data and information management expert, your task is to professionally analyze, summarize, and organize the complex data and information provided. Please follow these steps:\n1. Thoroughly review the provided information:\n   - Information Content:\n     {{...}}\n   - Organization and Analysis Requirements:\n     {{...}}\n2. Based on the given information, execute the organization and analysis tasks. Ensure the results:\n   - Accurately present the key points of the provided information\n   - Strictly adhere to the specified requirements for organization and analysis\n   - Are clear in structure and coherent in logic\nAfter completion, confirm the following:\n   - Comprehensive coverage of the provided information content\n   - The format and quality of results meet professional standards\n   - Suitable for the intended application scenario or target audience\n(Please respond in Chinese)",
+    "Inputs": [
+        {
+            "InputPlaceholder": "输入待整理和分析的信息内容（例如：市场数据、科研结果、业务报告等）。",
+            "InputLabel": "信息内容",
+            "InputList": null
+        },
+        {
+            "InputPlaceholder": "具体描述整理和分析的要求及目的（例如：决策支持、学术研究、业务优化等）。",
+            "InputLabel": "要求与目的",
+            "InputList": null
+        }
+    ]
+}

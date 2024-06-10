@@ -1,0 +1,13 @@
+{
+    "icon": "spellcheck",
+    "UsageDescription": "对文本中的拼写、语法或句法错误进行纠正。且不改变原文的意思或风格。",
+    "ChinesePromptTemplate": "纠正三引号（\"\"\"）中文本的拼写、句法或语法错误，不要改善或更改原文的意思或风格。换句话说，仅纠正拼写、句法或语法错误，不要进行改善。使用列表形式列出每个错误。并给出修改后的文本。\n\n如果原文没有错误，只需输出原文即可，无需添加其他内容。不要在响应中使用引号。\n\"\"\"\n{{...}}\n\"\"\"",
+    "EnglishPromptTemplate": "Correct any spelling, syntax, or grammar mistakes in the text delimited by triple quotes (\"\"\") without making any improvements or changes to the original meaning or style. In other words, only correct spelling, syntax, or grammar mistakes, do not make improvements.\nList each error using a list format. Provide the corrected text.\n\nIf the original text has no mistakes, just output the original text and nothing else. Do not wrap responses in quotes.\n\"\"\"\n{{...}}\n\"\"\"",
+    "Inputs": [
+        {
+            "InputPlaceholder": "请输入需要纠错的文本。",
+            "InputLabel": "纠错文本",
+            "InputList": null
+        }
+    ]
+}

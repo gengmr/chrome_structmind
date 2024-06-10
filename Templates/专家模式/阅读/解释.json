@@ -1,0 +1,13 @@
+{
+    "icon": "psychology_alt",
+    "UsageDescription": "根据给定的文本，提供清晰、简洁的解释，以便读者更好地理解。",
+    "ChinesePromptTemplate": "请提供三引号内文本的详细解释，用清晰简单的语言，以便读者能够更好地理解。\n\"\"\"\n{{...}}\n\"\"\"",
+    "EnglishPromptTemplate": "Please provide a detailed explanation in clear and simple language of the text within the triple quotes so that readers can have a better understanding.\n\"\"\"\n{{...}}\n\"\"\"",
+    "Inputs": [
+        {
+            "InputPlaceholder": "请输入您需要解释的文本（例如：专业术语、复杂句子、难以理解的段落）。",
+            "InputLabel": "文本内容",
+            "InputList": null
+        }
+    ]
+}

@@ -1,0 +1,18 @@
+{
+    "icon": "shuffle",
+    "UsageDescription": "用于生成具有创新性和多样性的随机任务。",
+    "ChinesePromptTemplate": "请生成一个随机任务。这个任务可以是任何类型，如写作、数学问题、设计挑战或者任何你能想到的任务。请先简要描述这个任务，然后给出具体的任务要求。例如，如果是写作任务，描述一下写作的主题和要求的字数；如果是数学问题，给出问题的背景和难度级别。提供信息如下：\n```\n任务类型：\n{{...}}\n任务难度：\n{{...}}\n```",
+    "EnglishPromptTemplate": "Please generate a random task. This task can be of any type, such as writing, math problems, design challenges, or any other task you can think of. First, briefly describe the task, then provide specific requirements. For example, if it's a writing task, describe the theme and required word count; if it's a math problem, provide the background and difficulty level. Provide the following information:\n```\nTask Type:\n{{...}}\nTask Difficulty:\n{{...}}\n```\n(Please respond in Chinese)",
+    "Inputs": [
+        {
+            "InputPlaceholder": "请输入您想要的任务类型（例如：写作、数学问题、设计挑战等）。",
+            "InputLabel": "任务类型",
+            "InputList": null
+        },
+        {
+            "InputPlaceholder": "描述您想要的任务难度和特定要求（例如：初级、中级、高级；特定主题或条件等）。",
+            "InputLabel": "任务难度",
+            "InputList": null
+        }
+    ]
+}

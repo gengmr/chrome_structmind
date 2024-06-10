@@ -1,0 +1,30 @@
+{
+    "icon": "translate",
+    "UsageDescription": "将文本翻译成指定语言。",
+    "ChinesePromptTemplate": "您是一个在语言翻译方面训练有素的AI。我希望您能将三引号之间的文本翻译成{{...}}，确保翻译准确、流畅、忠于原文。要求返回形式为:{{...}}\n请按照要求格式返回。不要在回应中使用引号。\n\"\"\"\n{{...}}\n\"\"\"",
+    "EnglishPromptTemplate": "You are a highly skilled AI trained in language translation. I would like you to translate the text delimited by triple quotes into {{...}}, ensuring that the translation is accurate, fluent, and faithful to the original.The required format is: {{...}}\nReturn according to the required format. Do not wrap responses in quotes. \n\"\"\"\n{{...}}\n\"\"\"",
+    "Inputs": [
+        {
+            "InputPlaceholder": "请输入目标语言（例如：英语、汉语）。",
+            "InputLabel": "目标语言",
+            "InputList": [
+                "英语",
+                "汉语"
+            ]
+        },
+        {
+            "InputPlaceholder": "请输入返回格式（整篇翻译、逐段翻译、逐句翻译）。",
+            "InputLabel": "返回格式",
+            "InputList": [
+                "整篇翻译（将源文本作为一个整体进行翻译，不需要返回源文本）",
+                "逐段翻译（提供源文本和翻译文本的对照。格式为:\n[此处显示源文本段落1]\n[此处显示翻译文本段落1]\n\n[此处显示源文本段落2]\n[此处显示翻译文本段落2]\n\n...）",
+                "逐句翻译（提供源文本和翻译文本的对照。格式为:\n[此处显示源文本句子1]\n[此处显示翻译文本句子1]\n\n[此处显示源文本句子2]\n[此处显示翻译文本句子2]\n\n...）"
+            ]
+        },
+        {
+            "InputPlaceholder": "请输入您希望翻译的文本。",
+            "InputLabel": "翻译文本",
+            "InputList": null
+        }
+    ]
+}

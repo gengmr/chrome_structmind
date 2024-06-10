@@ -1,0 +1,23 @@
+{
+    "icon": "edit_note",
+    "UsageDescription": "参照官方提示工程（Prompt Engineering）规范，优化适用于LLM（Large Language Model）的最佳提示词（Prompt）",
+    "ChinesePromptTemplate": "您的任务是根据提示词设计原则、修改要求，优化初始提示词使其能够对GPT-4提问以达到最好的效果。仅只给我修改后的提示词，不要其他内容。不要改变初始提示词的语言。提示词设计原则和初始提示词如下：\n\n提示词设计原则：\n    - 指定模型要扮演的专家角色以明确其任务，如'作为[此处填写要求GPT-4扮演的专家角色，与初始提示词中任务要求相符]，您的任务是[要求GPT-4完成的任务]'\n    - 提供尽可能清晰、具体、专业、准确的指示，以表达您希望模型执行的任务。不要将写清晰的提示词与写简短的提示词混淆。\n    - 如任务较复杂，需要多步完成。明确且详细地说明完成任务所需步骤。\n    - 如存在输入信息，使用分隔符清晰标识输入的各部分。\n    - 明确期望的输出格式、确保尽可能清晰、逻辑性强、便于理解。\n    - 如有必要，提供输出示例模版。\n\n初始提示词：\n```\n{{...}}\n```\n修改要求：\n```\n{{...}}\n```",
+    "EnglishPromptTemplate": "Your task is to improve the initial prompt according to the principles of prompt design and the modification requirements, so that it can be used to ask GPT-4 for best results. Provide only the modified prompt, nothing else. Do not change the language of the initial prompt. The principles of prompt design and the initial prompt are as follows:\n\nPrompt Design Principles:\n    - Specify the export role the model should play to clarify its task, such as 'As a [export role required for GPT-4 to play, consistent with the task requirements in the initial prompt], your task is to [task for GPT-4 to complete]'\n    - Provide as clear, specific, professional, and accurate instructions as possible to express the task you want the model to perform. Do not confuse writing clear prompts with writing brief prompts.\n    - If the task is complex and requires multiple steps, clearly and detailedly describe the steps needed to complete the task.\n    - If there is input information, use delimiters to clearly mark the different parts of the input.\n    - Clearly define the expected output format, ensuring it is as clear, logical, and easy to understand as possible.\n    - If necessary, provide an example template for the output.\n\nInitial Prompt:\n```\n{{...}}\n```\nModification Requirements:\n```\n{{...}}\n```",
+    "Inputs": [
+        {
+            "InputPlaceholder": "请输入初始提示词",
+            "InputLabel": "初始提示",
+            "InputList": null
+        },
+        {
+            "InputPlaceholder": "请输入修改要求",
+            "InputLabel": "修改要求",
+            "InputList": [
+                "使初始提示词中任务描述具体化",
+                "将初始提示词中任务拆解为多个步骤",
+                "改进初始提示词的逻辑和结构，使其更加清晰易懂。但不改变其含义",
+                "指定规范的输出格式"
+            ]
+        }
+    ]
+}

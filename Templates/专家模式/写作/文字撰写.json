@@ -1,0 +1,87 @@
+{
+    "icon": "edit",
+    "UsageDescription": "按照文本撰写要求生成文本。",
+    "ChinesePromptTemplate": "您的任务是根据提供的输入信息，进行文本创作。请按照以下步骤进行，并在每一步中标明当前步骤：\n- step1: 梳理文章主题，确保充分理解其核心思想和目标。\n- step2: 精准展开写作，保持内容的高度逻辑性和连贯性。\n\n1. 输入信息：\n    1. 文章类型：\n    {{...}}\n    2. 文章主题：\n    {{...}}\n    3. 文章格式：\n    {{...}}\n    4. 语言风格：\n    {{...}}\n    5. 段落数要求：\n    {{...}}\n    6. 字数要求：\n    {{...}}\n    7. 关键字：\n    {{...}}\n    8. 写作语言：\n    {{...}}\n\n2. 任务要求：\n    - 确保写作内容逻辑清晰，结构严谨。\n    - 完整且准确地满足输入信息的所有规定要求。\n    - 保持文章的整体一致性和专业性，确保主题明晰，用词精确。",
+    "EnglishPromptTemplate": "Your task is to create a text based on the provided input information. Follow these steps and mark each step in the process:\n- Step 1: Understand the main theme of the article, ensuring a full grasp of its core idea and objective.\n- Step 2: Develop the writing precisely, maintaining high logical coherence and continuity.\n\n1. Input Information:\n    1. Article Type:\n    {{...}}\n    2. Article Theme:\n    {{...}}\n    3. Article Format:\n    {{...}}\n    4. Language Style:\n    {{...}}\n    5. Paragraph Count Requirement:\n    {{...}}\n    6. Word Count Requirement:\n    {{...}}\n    7. Keywords:\n    {{...}}\n    8. Writing Language:\n    {{...}}\n\n2. Task Requirements:\n    - Ensure clear logical content and rigorous structure.\n    - Completely and accurately fulfill all the specified requirements of the input information.\n    - Maintain overall consistency and professionalism of the article, ensuring clarity of theme and precision in word choice.",
+    "Inputs": [
+        {
+            "InputPlaceholder": "请输入您的撰写文章类型（例如：科研文章、项目文档、小说、诗歌、杂文、散文）。",
+            "InputLabel": "文章类型",
+            "InputList": [
+                "科研文章",
+                "项目文档",
+                "小说",
+                "诗歌",
+                "杂文",
+                "散文"
+            ]
+        },
+        {
+            "InputPlaceholder": "请描述您的文章主题，以明确文章的核心内容（例如：环境保护、市场分析、个人旅行经历等）。",
+            "InputLabel": "文章主题",
+            "InputList": null
+        },
+        {
+            "InputPlaceholder": "请描述您的文章格式（例如：文章、大纲、邮件、想法、博文）。",
+            "InputLabel": "文章格式",
+            "InputList": [
+                "文章",
+                "大纲",
+                "邮件",
+                "想法",
+                "博文"
+            ]
+        },
+        {
+            "InputPlaceholder": "指定您的文章应采用的语言风格（例如：正式、非正式、学术性、幽默等）。",
+            "InputLabel": "语言风格",
+            "InputList": [
+                "正式",
+                "非正式",
+                "学术性",
+                "幽默"
+            ]
+        },
+        {
+            "InputPlaceholder": "指明文章的段落数，以规划文章结构（例如：5、10等）。",
+            "InputLabel": "段落数",
+            "InputList": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10
+            ]
+        },
+        {
+            "InputPlaceholder": "设定文章的字数，尽量控制在500字以下（例如：100,200,300等）。",
+            "InputLabel": "字数要求",
+            "InputList": [
+                50,
+                100,
+                200,
+                300,
+                400,
+                500
+            ]
+        },
+        {
+            "InputPlaceholder": "列出文章中需包含的关键字（例如：可持续发展、创新技术、社交媒体影响等）。",
+            "InputLabel": "关键字",
+            "InputList": null
+        },
+        {
+            "InputPlaceholder": "指定您希望用于文本创作的语言（例如：中文、英文等）。",
+            "InputLabel": "写作语言",
+            "InputList": [
+                "中文",
+                "英文"
+            ]
+        }
+    ]
+}

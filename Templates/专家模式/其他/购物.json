@@ -1,0 +1,28 @@
+{
+    "icon": "shopping_cart",
+    "UsageDescription": "提供个性化购物建议和产品比较。",
+    "ChinesePromptTemplate": "作为专业的购物顾问，你的任务是根据客户提供的详细信息，提供专业、全面、具体的购物建议和产品比较。请根据以下步骤操作：\n请仔细审阅以下信息\n```\n产品名称：\n{{...}}\n主要特点或功能：\n{{...}}\n预算范围：\n{{...}}\n品牌偏好：\n{{...}}\n```\n根据以上信息，开始你的建议工作。请确保最终建议：\n- 充分考虑产品特性、功能、预算和品牌偏好\n- 细致分析并比较不同产品的优劣\n- 完成建议后，请检查并确认以下内容是否满足要求：\n  - 建议是否适合客户需求和预算\n  - 信息是否全面\n  - 建议是否贴合客户品牌偏好和使用场景",
+    "EnglishPromptTemplate": "As a professional shopping consultant, your task is to provide professional, comprehensive, and specific shopping advice and product comparisons based on the detailed information provided by the client. Please follow these steps:\nCarefully review the following information\n```\nProduct Name:\n{{...}}\nMain Features or Functions:\n{{...}}\nBudget Range:\n{{...}}\nBrand Preference:\n{{...}}\n```\nBased on the above information, begin your advisory work. Ensure that the final recommendation:\n- Fully considers product characteristics, functions, budget, and brand preferences\n- Provides a detailed analysis and comparison of the advantages and disadvantages of different products\n- After completing the recommendation, check and confirm whether the following requirements are met:\n  - Whether the recommendation suits the client's needs and budget\n  - Whether the information is comprehensive\n  - Whether the recommendation aligns with the client's brand preferences and usage scenarios\n(Please respond in Chinese)",
+    "Inputs": [
+        {
+            "InputPlaceholder": "请输入您希望比较的产品名称（例如：智能手机、耳机、运动鞋等）。",
+            "InputLabel": "产品名称",
+            "InputList": null
+        },
+        {
+            "InputPlaceholder": "请描述您考虑购买的产品的主要特点或功能（例如：高性能处理器、降噪功能、运动防滑等）。",
+            "InputLabel": "特点功能",
+            "InputList": null
+        },
+        {
+            "InputPlaceholder": "如果有特定预算，请提供您的预算范围（例如：500-1000元、不超过200美元等）。",
+            "InputLabel": "预算范围",
+            "InputList": null
+        },
+        {
+            "InputPlaceholder": "如果有品牌偏好，请告诉我们您偏好的品牌（例如：苹果、索尼、耐克等）。",
+            "InputLabel": "品牌偏好",
+            "InputList": null
+        }
+    ]
+}

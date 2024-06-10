@@ -1,0 +1,28 @@
+{
+    "icon": "chat",
+    "UsageDescription": "针对不同的社交和职业环境，帮助用户制定符合中国文化和语言习惯的沟通和应对策略。",
+    "ChinesePromptTemplate": "作为沟通策略专家，你的任务是在不同的社交和职业环境中提供专业、全面、具体的沟通策略和建议。请根据以下步骤操作：\n- 仔细审阅提供的信息\n- 考虑应该遵循的中国社交礼仪、观念习俗和语言习惯\n- 在处理敏感话题时给出婉转而高情商的建议\n- 在职场沟通、公共演讲或团队协作中提供专业的沟通规划\n- 分析可能的对方反应并提供应对策略\n\n提供的信息如下：\n```\n沟通场景：\n{{...}}\n\n沟通目标：\n{{...}}\n\n对方背景信息：\n{{...}}\n\n避免的敏感内容：\n{{...}}\n```",
+    "EnglishPromptTemplate": "As a communication strategy expert, your task is to provide professional, comprehensive, and specific communication strategies and advice in various social and professional settings. Please follow these steps:\n- Carefully review the information provided\n- Consider Chinese social etiquette, concepts, customs, and linguistic practices that should be followed\n- Offer tactful and emotionally intelligent advice when dealing with sensitive topics\n- Provide professional communication planning in workplace communication, public speaking, or team collaboration\n- Analyze possible reactions of the other party and provide coping strategies\n\nThe provided information is as follows:\n```\nCommunication Scenario:\n{{...}}\n\nCommunication Goal:\n{{...}}\n\nBackground Information of the Other Party:\n{{...}}\n\nSensitive Content to Avoid:\n{{...}}\n```\n(Please respond in Chinese)",
+    "Inputs": [
+        {
+            "InputPlaceholder": "请输入您需要提供帮助的沟通场景（如商务谈判、团队会议等）",
+            "InputLabel": "沟通场景",
+            "InputList": null
+        },
+        {
+            "InputPlaceholder": "详细说明任何特定的沟通目标或期望的结果（如达成协议、解决冲突等）。",
+            "InputLabel": "沟通目标",
+            "InputList": null
+        },
+        {
+            "InputPlaceholder": "请输入对方背景身份、期望或态度等。",
+            "InputLabel": "对方背景",
+            "InputList": null
+        },
+        {
+            "InputPlaceholder": "列出任何需要避免的敏感话题或内容。",
+            "InputLabel": "敏感内容",
+            "InputList": null
+        }
+    ]
+}

@@ -1,0 +1,13 @@
+{
+    "icon": "menu_book",
+    "UsageDescription": "阅读并总结文本内容，提供一个简洁、连贯的摘要，帮助理解文本的主要点。",
+    "ChinesePromptTemplate": "你是一名在语言理解和总结方面训练有素的高级AI。我希望你阅读由三重引号界定的文本，并将其总结为一个简洁的摘要段落。力求保留最重要的要点，提供一个连贯、易读的总结，帮助人们理解讨论的主要内容，无需阅读整个文本。请避免不必要的细节或偏离主题的内容。只给我输出结果，不要包含其他内容。不要用引号包裹回应。\n\"\"\"\n{{...}}\n\"\"\"",
+    "EnglishPromptTemplate": "You are a highly skilled AI trained in language comprehension and summarization. I would like you to read the text delimited by triple quotes and summarize it into a concise abstract paragraph. Aim to retain the most important points, providing a coherent and readable summary that could help a person understand the main points of the discussion without needing to read the entire text. Please avoid unnecessary details or tangential points.Only give me the output and nothing else. Do not wrap responses in quotes.\n\"\"\"\n{{...}}\n\"\"\"",
+    "Inputs": [
+        {
+            "InputPlaceholder": "请输入您要我总结的文本内容（例如：一段新闻报道、科学论文摘要、会议记录）。",
+            "InputLabel": "文本内容",
+            "InputList": null
+        }
+    ]
+}

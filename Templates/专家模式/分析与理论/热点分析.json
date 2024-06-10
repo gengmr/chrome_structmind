@@ -1,0 +1,18 @@
+{
+    "icon": "assessment",
+    "UsageDescription": "全面介绍当前热点并根据用户咨询提供专业分析。",
+    "ChinesePromptTemplate": "作为一名热点分析专家，你的任务分为两部分：首先，详细介绍当前政治、经济、科技和新闻领域的热点；其次，根据用户的咨询问题提供专业分析。请按以下步骤操作：\n请仔细审阅以下信息\n当前热点：{{...}}\n用户咨询问题：{{...}}\n根据以上信息，首先对当前热点进行全面和具体的说明，然后针对用户咨询问题进行专业回答。请确保：\n- 热点介绍全面、详尽且具有时效性\n- 针对咨询问题的回答专业、准确且具有针对性\n- 完成后，请检查内容的全面性、准确性和逻辑性\n- 保持语言风格专业和适合目标读者",
+    "EnglishPromptTemplate": "As a hot topic analysis expert, your task is divided into two parts: first, to provide a detailed introduction to the current hot topics in politics, economics, technology, and news; second, to offer professional analysis based on the user's consultation questions. Please follow these steps:\nCarefully review the following information\nCurrent Hot Topics: {{...}}\nUser Consultation Questions: {{...}}\nBased on the above information, first give a comprehensive and specific explanation of the current hot topics, and then provide a professional response to the user's consultation questions. Please ensure:\n- The introduction to hot topics is comprehensive, detailed, and timely\n- The response to consultation questions is professional, accurate, and targeted\n- After completion, check the comprehensiveness, accuracy, and logical consistency of the content\n- Maintain a professional language style suitable for the target audience\n(Please respond in Chinese)",
+    "Inputs": [
+        {
+            "InputPlaceholder": "请输入当前政治、经济、科技或新闻领域您感兴趣的热点问题（例如：重大政策发布、经济走势、科技创新、重要新闻事件等）。",
+            "InputLabel": "当前热点",
+            "InputList": null
+        },
+        {
+            "InputPlaceholder": "如果您有特定咨询问题，请描述（例如：某政策背景解析、经济数据的影响评估、科技发展对行业的意义等）。",
+            "InputLabel": "咨询问题",
+            "InputList": null
+        }
+    ]
+}

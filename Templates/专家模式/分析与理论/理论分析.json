@@ -1,0 +1,28 @@
+{
+    "icon": "analytics",
+    "UsageDescription": "提供基于理论和实例的专业论证服务。包括：1. 对特定场景进行客观且中立的理论分析；2. 从理论和实例出发，论证正方观点或行为的合理性；3. 利用理论和实际例证，论证反方观点或行为的不合理性。",
+    "ChinesePromptTemplate": "作为一名理论专家，请依次进行如下任务：\n1. 对所提供的场景进行客观、中立且逻辑严密的理论分析。指出所有合理和不合理之处\n2. 结合理论依据和实例，尽力论证正方观点或行为的合理性。\n3. 使用理论分析和实例，尽力论证反方观点或行为的不合理性。\n在执行任务前，请细致审阅以下信息：\n```\n场景描述：\n{{...}}\n正方观点或行为：\n{{...}}\n反方观点或行为：\n{{...}}\n相关材料：\n{{...}}\n```\n在完成任务时，请确保您的论证：\n- 在理论层面上专业、科学且具有说服力\n- 实例清楚、普适且易于理解\n- 结构逻辑清晰，论证全面\n- 严格符合所提供信息的要求",
+    "EnglishPromptTemplate": "As a theory expert, please perform the following tasks in order:\n1. Conduct an objective, neutral, and logically rigorous theoretical analysis of the provided scenario. Point out all reasonable and unreasonable aspects.\n2. Combine theoretical basis and examples to vigorously argue for the reasonableness of the proponent's viewpoint or behavior.\n3. Use theoretical analysis and examples to vigorously argue against the reasonableness of the opponent's viewpoint or behavior.\nBefore executing the tasks, please thoroughly review the following information:\n```\nScenario Description:\n{{...}}\nProponent's Viewpoint or Behavior:\n{{...}}\nOpponent's Viewpoint or Behavior:\n{{...}}\nRelevant Materials:\n{{...}}\n```\nWhen completing the tasks, ensure that your argumentation:\n- Is professional, scientific, and persuasive at the theoretical level\n- Uses clear, universally applicable, and easy-to-understand examples\n- Is structurally logical and comprehensive in argumentation\n- Strictly conforms to the requirements of the provided information\n(Please respond in Chinese)",
+    "Inputs": [
+        {
+            "InputPlaceholder": "详细描述您所需分析论证的场景。",
+            "InputLabel": "场景描述",
+            "InputList": null
+        },
+        {
+            "InputPlaceholder": "阐述您将支持的正方观点或行为。",
+            "InputLabel": "正方观点",
+            "InputList": null
+        },
+        {
+            "InputPlaceholder": "说明您将驳斥的反方观点或行为。",
+            "InputLabel": "反方观点",
+            "InputList": null
+        },
+        {
+            "InputPlaceholder": "提供相关的数据、研究或其他辅助材料。",
+            "InputLabel": "相关材料",
+            "InputList": null
+        }
+    ]
+}

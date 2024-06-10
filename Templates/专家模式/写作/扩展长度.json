@@ -1,0 +1,24 @@
+{
+    "icon": "expand",
+    "UsageDescription": "根据给定的文本，以保持原有含义的前提下，重写并扩展文本，使其长度至少是原文本的两倍。",
+    "ChinesePromptTemplate": "重写并扩展以下用三个引号括起来的文本，使其长度为原本长度{{...}}倍。不改变原文语言风格。避免不必要的繁琐。只需给出输出内容，不需要其他任何内容。不要使用引号括起回应。现在，请根据以上概念重写以下文本。用以下文本的同种语言或方言回应：\n\"\"\"\n{{...}}\n\"\"\"",
+    "EnglishPromptTemplate": "Rewrite the text delimited by triple quotes, make it {{...}} times its original length. Maintain the original language style. Avoid unnecessary verbosity. Only give me the output and nothing else. Do not wrap responses in quotes. Now, using the concepts above, re-write the following text. Respond in the same language variety or dialect of the following text: \n\"\"\"\n{{...}}\n\"\"\"",
+    "Inputs": [
+        {
+            "InputPlaceholder": "请输入文本扩展倍数。",
+            "InputLabel": "扩展倍数",
+            "InputList": [
+                "2",
+                "3",
+                "4",
+                "5",
+                "10"
+            ]
+        },
+        {
+            "InputPlaceholder": "请输入您希望重写和扩展的文本。",
+            "InputLabel": "原始文本",
+            "InputList": null
+        }
+    ]
+}

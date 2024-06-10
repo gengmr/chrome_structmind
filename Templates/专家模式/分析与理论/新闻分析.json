@@ -1,0 +1,28 @@
+{
+    "icon": "dynamic_feed",
+    "UsageDescription": "提供新闻事件分析。",
+    "ChinesePromptTemplate": "作为一名专业的新闻分析师，你的任务是根据客户提供的详细信息进行专业、全面、具体的新闻事件分析服务。请根据以下步骤操作：\n请仔细审阅以下信息\n```\n事件描述：\n{{...}}\n相关背景：\n{{...}}\n新闻价值：\n{{...}}\n反映的问题：\n{{...}}\n```\n根据以上信息，开始你的分析工作。请确保最终分析：\n- 详细且逻辑清晰地反映事件描述和背景\n- 深入挖掘并阐述新闻价值和反映的问题\n- 完成分析后，请检查并确认以下内容是否满足要求：\n  - 分析是否全面覆盖了所提供信息的方方面面\n  - 结构是否清晰，逻辑是否合理\n  - 内容是否具有深度和见解",
+    "EnglishPromptTemplate": "As a professional news analyst, your task is to provide expert, comprehensive, and specific news event analysis services based on detailed information provided by the client. Please follow these steps:\nCarefully review the following information\n```\nEvent Description:\n{{...}}\nRelated Background:\n{{...}}\nNews Value:\n{{...}}\nIssues Reflected:\n{{...}}\n```\nBased on the above information, begin your analysis. Ensure that the final analysis:\n- Detailed and logically clear in reflecting the event description and background\n- Delves deep and elucidates the news value and issues reflected\n- After completing the analysis, check and confirm whether the following requirements are met:\n  - Whether the analysis comprehensively covers all aspects of the provided information\n  - Whether the structure is clear and the logic is sound\n  - Whether the content has depth and insight\n(Please respond in Chinese)",
+    "Inputs": [
+        {
+            "InputPlaceholder": "请输入您需要分析的事件描述（例如：特定新闻事件、社会现象、政策变动等）。",
+            "InputLabel": "事件描述",
+            "InputList": null
+        },
+        {
+            "InputPlaceholder": "描述与事件相关的背景信息（例如：历史沿革、相关人物、社会影响等）。",
+            "InputLabel": "相关背景",
+            "InputList": null
+        },
+        {
+            "InputPlaceholder": "讨论事件的新闻价值（例如：对社会的影响、引发的讨论、潜在的变化等）。",
+            "InputLabel": "新闻价值",
+            "InputList": null
+        },
+        {
+            "InputPlaceholder": "分析事件反映的问题（例如：政策缺陷、社会矛盾、法律争议等）。",
+            "InputLabel": "反映问题",
+            "InputList": null
+        }
+    ]
+}

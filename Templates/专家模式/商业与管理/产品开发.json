@@ -1,0 +1,23 @@
+{
+    "icon": "engineering",
+    "UsageDescription": "根据用户需求提供产品设计、市场定位、功能优化的策略性建议。",
+    "ChinesePromptTemplate": "作为一名专业的策略顾问，你的任务是根据用户提供的详细信息进行深入分析，提出专业、具体、切实可行的策略建议。请根据以下步骤操作：\n请仔细审阅以下信息\n问题或场景描述：\n{{...}}\n目标客户群体：\n{{...}}\n期望成果和关键指标：\n{{...}}\n根据以上信息，开始你的分析或建议工作。请确保最终策略建议：\n- 紧密围绕问题或场景进行深入分析\n- 针对目标客户群体制定策略\n- 明确期望成果和关键指标，确保建议具体可行\n- 完成分析后，请检查并确认以下内容是否满足要求：\n  - 是否针对性强，解决了提出的问题或需求\n  - 建议是否具有可操作性和实际应用价值\n  - 语言风格和内容是否适合目标读者",
+    "EnglishPromptTemplate": "As a professional strategy consultant, your task is to conduct in-depth analysis and provide professional, specific, and practical strategic advice based on the detailed information provided by the user. Please follow these steps:\nCarefully review the following information\nProblem or Scenario Description:\n{{...}}\nTarget Customer Group:\n{{...}}\nExpected Outcomes and Key Indicators:\n{{...}}\nBased on the above information, start your analysis or advisory work. Ensure that the final strategic recommendation:\n- Involves an in-depth analysis closely revolving around the problem or scenario\n- Develops strategies tailored for the target customer group\n- Clearly defines expected outcomes and key indicators, ensuring that the recommendations are practical and feasible\n- After completing the analysis, check and confirm if the following requirements are met:\n  - Whether it is targeted and resolves the presented problem or need\n  - Whether the advice is actionable and has practical application value\n  - Whether the language style and content are suitable for the target audience\n(Please respond in Chinese)",
+    "Inputs": [
+        {
+            "InputPlaceholder": "详细描述您需要分析或解决的问题、场景或具体需求（例如：产品功能优化、市场定位、用户体验提升等）。",
+            "InputLabel": "问题或场景描述",
+            "InputList": null
+        },
+        {
+            "InputPlaceholder": "描述目标客户群体的特征和需求（例如：年龄段、地域、购买力、喜好等）。",
+            "InputLabel": "目标客户群体",
+            "InputList": null
+        },
+        {
+            "InputPlaceholder": "阐述您期望的成果和关键绩效指标（例如：市场占有率提升、用户满意度增加、营收增长等）。",
+            "InputLabel": "期望成果和关键指标",
+            "InputList": null
+        }
+    ]
+}

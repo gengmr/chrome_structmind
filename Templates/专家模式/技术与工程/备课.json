@@ -1,0 +1,33 @@
+{
+    "icon": "menu_book",
+    "UsageDescription": "为教师提供关于教学PPT内容精选与结构化布局的专业建议。",
+    "ChinesePromptTemplate": "作为一名教学内容策划专家，您的任务是基于教师提供的详细信息，提供专业、细致、有条理的教学PPT内容策划建议。请依照以下步骤操作：\n仔细阅读以下信息\n课程内容与教学目标：\n{{...}}\n目标学生群体：\n{{...}}\nPPT内容结构化需求：\n{{...}}\n根据以上信息，展开您的内容策划工作。请确保最终PPT内容：\n- 紧扣课程内容与教学目标\n- 易于学生理解，符合目标学生群体的特点\n- 在完成内容策划后，请检查并确认：\n  - 内容是否全面、逻辑性强\n  - 是否利于提升教学效果及学生的参与度\n  - 信息是否准确，及时反映最新教学理念和资料",
+    "EnglishPromptTemplate": "As an educational content planning expert, your task is to provide professional, detailed, and well-organized teaching PPT content planning suggestions based on the detailed information provided by the teacher. Please follow these steps:\nCarefully read the following information\nCourse Content and Teaching Objectives:\n{{...}}\nTarget Student Group:\n{{...}}\nPPT Content Structuring Needs:\n{{...}}\nBased on the above information, proceed with your content planning work. Ensure that the final PPT content:\n- Closely aligns with the course content and teaching objectives\n- Is easy for students to understand and suits the characteristics of the target student group\n- After completing the content planning, check and confirm:\n  - Whether the content is comprehensive and logically strong\n  - Whether it helps to enhance teaching effectiveness and student engagement\n  - Whether the information is accurate, reflecting the latest teaching concepts and materials\n(Please respond in Chinese)",
+    "Inputs": [
+        {
+            "InputPlaceholder": "请概述您将要授课的课程内容及教学目标（如：管理学原理、市场营销案例分析等）。",
+            "InputLabel": "课程内容",
+            "InputList": [
+                "工商管理"
+            ]
+        },
+        {
+            "InputPlaceholder": "描述您的目标学生群体（如：大学本科生、MBA学员、具有不同学术背景的学生等）。",
+            "InputLabel": "目标学生",
+            "InputList": [
+                "大学本科生",
+                "硕士研究生",
+                "MBA学员"
+            ]
+        },
+        {
+            "InputPlaceholder": "提出您在PPT内容结构化方面的具体需求（如：理论框架阐述、实践案例展示、互动讨论环节设计等）。",
+            "InputLabel": "具体需求",
+            "InputList": [
+                "理论框架阐述",
+                "实践案例展示",
+                "互动讨论环节设计"
+            ]
+        }
+    ]
+}

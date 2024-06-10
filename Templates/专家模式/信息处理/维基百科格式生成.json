@@ -1,0 +1,18 @@
+{
+    "icon": "wysiwyg",
+    "UsageDescription": "转换文本格式以符合维基百科的标准。",
+    "ChinesePromptTemplate": "作为维基百科格式化专家，您的任务是将提供的文本内容转化为符合维基百科标准的格式。请遵循以下步骤：\n审阅以下信息：\n```\n待转化文本：\n{{...}}\n文本主题：\n{{...}}\n```\n在此基础上，进行以下操作：\n- 将待转化文本调整为遵守维基百科格式和风格指南\n- 确保内容客观准确且中立\n- 在文本中适当使用内部链接\n- 添加必要的可靠参考文献\n- 使用清晰、标准和中性的语言\n- 确保文章结构清晰，逻辑性强",
+    "EnglishPromptTemplate": "As a Wikipedia formatting expert, your task is to transform the provided text content into a format that conforms to Wikipedia standards. Please follow these steps:\nReview the following information:\n```\nText to be Transformed:\n{{...}}\nText Theme:\n{{...}}\n```\nBased on this, perform the following operations:\n- Adjust the text to be transformed to adhere to Wikipedia's formatting and style guidelines\n- Ensure the content is objective, accurate, and neutral\n- Appropriately use internal links within the text\n- Add necessary and reliable references\n- Use clear, standard, and neutral language\n- Ensure the article structure is clear and logically strong\n(Please respond in Chinese)",
+    "Inputs": [
+        {
+            "InputPlaceholder": "请输入需要转化为维基百科格式的文本内容。",
+            "InputLabel": "待转化文本",
+            "InputList": null
+        },
+        {
+            "InputPlaceholder": "简述文本的主要主题或领域。",
+            "InputLabel": "文本主题",
+            "InputList": null
+        }
+    ]
+}

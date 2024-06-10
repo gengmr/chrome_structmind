@@ -53,9 +53,17 @@ StructMind 是一个 Chrome 浏览器扩展，专为管理和生成 ChatGPT 提�
 
 自定义模版的前端逻辑脚本，负责处理模版编辑器中的用户输入和占位符替换逻辑。它支持用户动态编辑和实时预览模版生成的提示词。
 
-## menu.json 格式说明
+## menu.json
 
 `menu.json` 文件用于定义 StructMind 插件中侧边栏的菜单结构和内容。该文件支持多层嵌套的菜单项，每个菜单项可以包含子菜单或文件。菜单结构可以具有任意的层级深度，以便灵活地组织内容。
+
+### create_json.py
+
+`create_json.py` 脚本用于从现有的目录结构生成menu.json文件。
+
+### create_folder.py
+
+`create_folder.py` 脚本用于从menu.json生成对应目录结构。
 
 ### 结构说明
 
@@ -63,8 +71,7 @@ StructMind 是一个 Chrome 浏览器扩展，专为管理和生成 ChatGPT 提�
 
   - **子目录 (object)**: 子目录下的键代表子菜单项的名称，值可以是更深层次的子目录或文件的定义。
   - **文件 (object)**: 文件具有以下属性，用于定义其行为和内容：
-    - **IsVisible** (boolean): 指定该项是否在菜单中可见。
-    - **icon** (string, optional): 文件的图标路径或图标名称。
+    - **icon** (string, optional): 文件的图标路径或图标名称，仅支持google icons。
     - **UsageDescription** (string): 文件的使用描述。
     - **ChinesePromptTemplate** (string): 文件的中文提示词模版，使用 `{{...}}` 表示占位符。
     - **EnglishPromptTemplate** (string): 文件的英文提示词模版，使用 `{{...}}` 表示占位符。
@@ -83,7 +90,6 @@ StructMind 是一个 Chrome 浏览器扩展，专为管理和生成 ChatGPT 提�
     "预定义模版": {
       "常用问候语": {
         "早安问候": {
-          "IsVisible": true,
           "icon": "icon-morning",
           "UsageDescription": "用于早上的问候模版",
           "ChinesePromptTemplate": "早上好，{{...}}！",
@@ -97,7 +103,6 @@ StructMind 是一个 Chrome 浏览器扩展，专为管理和生成 ChatGPT 提�
           ]
         },
         "晚安问候": {
-          "IsVisible": true,
           "icon": "icon-night",
           "UsageDescription": "用于晚上的问候模版",
           "ChinesePromptTemplate": "晚安，{{...}}！",
@@ -112,7 +117,6 @@ StructMind 是一个 Chrome 浏览器扩展，专为管理和生成 ChatGPT 提�
         }
       },
       "感谢词": {
-        "IsVisible": true,
         "icon": "icon-thanks",
         "UsageDescription": "表达感谢的模版",
         "ChinesePromptTemplate": "谢谢你，{{...}}！",

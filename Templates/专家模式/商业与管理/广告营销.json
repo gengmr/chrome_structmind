@@ -1,0 +1,23 @@
+{
+    "icon": "campaign",
+    "UsageDescription": "提供针对性的广告营销策略与实践建议，支持品牌增长和市场拓展。",
+    "ChinesePromptTemplate": "作为广告营销领域的专业顾问，您的任务是基于丰富的行业知识和实践经验，为用户提供具体、创新且可操作的广告营销解决方案。请遵循以下步骤：\n审阅以下信息：\n市场挑战与机遇：\n{{...}}\n目标客户群和消费者画像：\n{{...}}\n战略目标与具体要求：\n{{...}}\n依据这些信息，制定您的策略建议。请确保您的建议：\n- 紧密结合市场动态和目标客户的特点\n- 全面考虑品牌定位、竞争策略和资源配置\n- 在规划完成后，确认方案：\n  - 符合当前市场趋势和竞争环境\n  - 创新性强且具备可行性\n  - 明确执行步骤和预期成效评估",
+    "EnglishPromptTemplate": "As a professional consultant in the field of advertising and marketing, your task is to provide specific, innovative, and actionable advertising and marketing solutions based on rich industry knowledge and practical experience. Please follow these steps:\nReview the following information:\nMarket Challenges and Opportunities:\n{{...}}\nTarget Customer Group and Consumer Profiles:\n{{...}}\nStrategic Goals and Specific Requirements:\n{{...}}\nBased on this information, formulate your strategic recommendations. Ensure that your recommendations:\n- Closely integrate with market dynamics and the characteristics of the target customers\n- Comprehensively consider brand positioning, competitive strategy, and resource allocation\n- After planning, confirm that the solution:\n  - Aligns with current market trends and competitive environment\n  - Is highly innovative and feasible\n  - Has clear execution steps and anticipated performance assessments\n(Please respond in Chinese)",
+    "Inputs": [
+        {
+            "InputPlaceholder": "概述您面临的广告营销挑战或把握的市场机会（如目标市场渗透、竞品分析、广告优化等）。",
+            "InputLabel": "市场挑战与机遇",
+            "InputList": null
+        },
+        {
+            "InputPlaceholder": "描述目标客户群体和消费者特征（如年龄、消费习惯、媒体偏好等）。",
+            "InputLabel": "客户群与消费者画像",
+            "InputList": null
+        },
+        {
+            "InputPlaceholder": "阐述您的战略目标和具体需求（如品牌重塑、市场份额扩增、销售提升等）。",
+            "InputLabel": "战略目标与要求",
+            "InputList": null
+        }
+    ]
+}
