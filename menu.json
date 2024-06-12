@@ -1299,7 +1299,7 @@
         }
     },
     "3. 自定义模式": {
-        "01-自定义模版": {
+        "自定义模版": {
             "UsageDescription": "xxx",
             "ChinesePromptTemplate": "xxx",
             "EnglishPromptTemplate": "xxx",
