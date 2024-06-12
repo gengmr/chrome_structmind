@@ -1,98 +1,7 @@
 {
     "1. 专家模式": {
         "01-写作": {
-            "压缩长度": {
-                "icon": "compress",
-                "UsageDescription": "用于将提供的文本压缩，同时保持原意不变。只输出结果，不要包含其他内容。",
-                "ChinesePromptTemplate": "重写由三个引号括起来的文本，并将其缩减至原文字数的{{...}}倍。保持意思相同。只给我输出结果，别的什么也不要。不要将回应放在引号中。现在，根据上述概念，重写下列文本。用以下文本的同一语言变体或方言回应：\n\"\"\"\n{{...}}\n\"\"\"",
-                "EnglishPromptTemplate": "Rewrite the text enclosed in three quotation marks and reduce it to {{...}} times its original word count. Keep the meaning the same. Only give me the output and nothing else. Do not wrap responses in quotes. Now, using the concepts above, re-write the following text. Respond in the same language variety or dialect of the following text: \n\"\"\"\n{{...}}\n\"\"\"",
-                "Inputs": [
-                    {
-                        "InputPlaceholder": "请输入文本压缩倍数。",
-                        "InputLabel": "压缩倍数",
-                        "InputList": [
-                            "0.8",
-                            "0.6",
-                            "0.4",
-                            "0.2",
-                            "0.1"
-                        ]
-                    },
-                    {
-                        "InputPlaceholder": "请输入您希望缩减的文本内容。",
-                        "InputLabel": "文本内容",
-                        "InputList": null
-                    }
-                ]
-            },
-            "大纲": {
-                "icon": "edit_note",
-                "UsageDescription": "根据提供的主题或关键字生成包含标题、章节和小节的大纲。输出为Markdown格式。仅提供输出内容。大纲应使用指定语言。",
-                "ChinesePromptTemplate": "请使用以下主题或关键词生成包括标题、章节和小节的大纲，并以Markdown格式输出。只给我输出内容，不要其他内容。主题或关键词：\n\"\"\"\n{{...}}\n\"\"\"",
-                "EnglishPromptTemplate": "Please use the following topics or keywords to generate an outline that includes titles, chapters, and subsections. Output it in Markdown format. Only give me the output and nothing else. Topics or keywords: \n\"\"\"\n{{...}}\n\"\"\"",
-                "Inputs": [
-                    {
-                        "InputPlaceholder": "请输入您的主题或关键词（例如：全球变暖、区块链技术、中美贸易）",
-                        "InputLabel": "主题关键词",
-                        "InputList": null
-                    }
-                ]
-            },
-            "学术论文翻译": {
-                "icon": "translate",
-                "UsageDescription": "将文本翻译成指定语言。",
-                "ChinesePromptTemplate": "您是一个在语言翻译方面训练有素的AI。我希望您能将三引号之间的文本翻译成{{...}}，确保翻译精准、流畅、专业、忠于原文，符合高水平学术论文的风格和标准。要求返回形式为:{{...}}\n请按照要求格式返回。不要在回应中使用引号。\n\"\"\"\n{{...}}\n\"\"\"",
-                "EnglishPromptTemplate": "You are an AI highly trained in language translation. I would like you to translate the text delimited by triple quotes into {{...}}, ensuring the translation is precise, fluent, professional, faithful to the original, and conforms to the style and standards of high-level academic papers. The required format is: {{...}}\nReturn according to the required format. Do not wrap responses in quotes. \n\"\"\"\n{{...}}\n\"\"\"",
-                "Inputs": [
-                    {
-                        "InputPlaceholder": "请输入目标语言（例如：英语、汉语）。",
-                        "InputLabel": "目标语言",
-                        "InputList": [
-                            "英语",
-                            "汉语"
-                        ]
-                    },
-                    {
-                        "InputPlaceholder": "请输入返回格式（整篇翻译、逐段翻译、逐句翻译）。",
-                        "InputLabel": "返回格式",
-                        "InputList": [
-                            "整篇翻译（将源文本作为一个整体进行翻译，不需要返回源文本）",
-                            "逐段翻译（提供源文本和翻译文本的对照。格式为:\n[此处显示源文本段落1]\n[此处显示翻译文本段落1]\n\n[此处显示源文本段落2]\n[此处显示翻译文本段落2]\n\n...）",
-                            "逐句翻译（提供源文本和翻译文本的对照。格式为:\n[此处显示源文本句子1]\n[此处显示翻译文本句子1]\n\n[此处显示源文本句子2]\n[此处显示翻译文本句子2]\n\n...）"
-                        ]
-                    },
-                    {
-                        "InputPlaceholder": "请输入您希望翻译的文本。",
-                        "InputLabel": "翻译文本",
-                        "InputList": null
-                    }
-                ]
-            },
-            "扩展长度": {
-                "icon": "expand",
-                "UsageDescription": "根据给定的文本，以保持原有含义的前提下，重写并扩展文本，使其长度至少是原文本的两倍。",
-                "ChinesePromptTemplate": "重写并扩展以下用三个引号括起来的文本，使其长度为原本长度{{...}}倍。不改变原文语言风格。避免不必要的繁琐。只需给出输出内容，不需要其他任何内容。不要使用引号括起回应。现在，请根据以上概念重写以下文本。用以下文本的同种语言或方言回应：\n\"\"\"\n{{...}}\n\"\"\"",
-                "EnglishPromptTemplate": "Rewrite the text delimited by triple quotes, make it {{...}} times its original length. Maintain the original language style. Avoid unnecessary verbosity. Only give me the output and nothing else. Do not wrap responses in quotes. Now, using the concepts above, re-write the following text. Respond in the same language variety or dialect of the following text: \n\"\"\"\n{{...}}\n\"\"\"",
-                "Inputs": [
-                    {
-                        "InputPlaceholder": "请输入文本扩展倍数。",
-                        "InputLabel": "扩展倍数",
-                        "InputList": [
-                            "2",
-                            "3",
-                            "4",
-                            "5",
-                            "10"
-                        ]
-                    },
-                    {
-                        "InputPlaceholder": "请输入您希望重写和扩展的文本。",
-                        "InputLabel": "原始文本",
-                        "InputList": null
-                    }
-                ]
-            },
-            "文字撰写": {
+            "01-文字撰写": {
                 "icon": "edit",
                 "UsageDescription": "按照文本撰写要求生成文本。",
                 "ChinesePromptTemplate": "您的任务是根据提供的输入信息，进行文本创作。请按照以下步骤进行，并在每一步中标明当前步骤：\n- step1: 梳理文章主题，确保充分理解其核心思想和目标。\n- step2: 精准展开写作，保持内容的高度逻辑性和连贯性。\n\n1. 输入信息：\n    1. 文章类型：\n    {{...}}\n    2. 文章主题：\n    {{...}}\n    3. 文章格式：\n    {{...}}\n    4. 语言风格：\n    {{...}}\n    5. 段落数要求：\n    {{...}}\n    6. 字数要求：\n    {{...}}\n    7. 关键字：\n    {{...}}\n    8. 写作语言：\n    {{...}}\n\n2. 任务要求：\n    - 确保写作内容逻辑清晰，结构严谨。\n    - 完整且准确地满足输入信息的所有规定要求。\n    - 保持文章的整体一致性和专业性，确保主题明晰，用词精确。",
@@ -179,7 +88,68 @@
                     }
                 ]
             },
-            "文字润色": {
+            "02-大纲": {
+                "icon": "edit_note",
+                "UsageDescription": "根据提供的主题或关键字生成包含标题、章节和小节的大纲。输出为Markdown格式。仅提供输出内容。大纲应使用指定语言。",
+                "ChinesePromptTemplate": "请使用以下主题或关键词生成包括标题、章节和小节的大纲，并以Markdown格式输出。只给我输出内容，不要其他内容。主题或关键词：\n\"\"\"\n{{...}}\n\"\"\"",
+                "EnglishPromptTemplate": "Please use the following topics or keywords to generate an outline that includes titles, chapters, and subsections. Output it in Markdown format. Only give me the output and nothing else. Topics or keywords: \n\"\"\"\n{{...}}\n\"\"\"",
+                "Inputs": [
+                    {
+                        "InputPlaceholder": "请输入您的主题或关键词（例如：全球变暖、区块链技术、中美贸易）",
+                        "InputLabel": "主题关键词",
+                        "InputList": null
+                    }
+                ]
+            },
+            "03-扩展长度": {
+                "icon": "expand",
+                "UsageDescription": "根据给定的文本，以保持原有含义的前提下，重写并扩展文本，使其长度至少是原文本的两倍。",
+                "ChinesePromptTemplate": "重写并扩展以下用三个引号括起来的文本，使其长度为原本长度{{...}}倍。不改变原文语言风格。避免不必要的繁琐。只需给出输出内容，不需要其他任何内容。不要使用引号括起回应。现在，请根据以上概念重写以下文本。用以下文本的同种语言或方言回应：\n\"\"\"\n{{...}}\n\"\"\"",
+                "EnglishPromptTemplate": "Rewrite the text delimited by triple quotes, make it {{...}} times its original length. Maintain the original language style. Avoid unnecessary verbosity. Only give me the output and nothing else. Do not wrap responses in quotes. Now, using the concepts above, re-write the following text. Respond in the same language variety or dialect of the following text: \n\"\"\"\n{{...}}\n\"\"\"",
+                "Inputs": [
+                    {
+                        "InputPlaceholder": "请输入文本扩展倍数。",
+                        "InputLabel": "扩展倍数",
+                        "InputList": [
+                            "2",
+                            "3",
+                            "4",
+                            "5",
+                            "10"
+                        ]
+                    },
+                    {
+                        "InputPlaceholder": "请输入您希望重写和扩展的文本。",
+                        "InputLabel": "原始文本",
+                        "InputList": null
+                    }
+                ]
+            },
+            "04-压缩长度": {
+                "icon": "compress",
+                "UsageDescription": "用于将提供的文本压缩，同时保持原意不变。只输出结果，不要包含其他内容。",
+                "ChinesePromptTemplate": "重写由三个引号括起来的文本，并将其缩减至原文字数的{{...}}倍。保持意思相同。只给我输出结果，别的什么也不要。不要将回应放在引号中。现在，根据上述概念，重写下列文本。用以下文本的同一语言变体或方言回应：\n\"\"\"\n{{...}}\n\"\"\"",
+                "EnglishPromptTemplate": "Rewrite the text enclosed in three quotation marks and reduce it to {{...}} times its original word count. Keep the meaning the same. Only give me the output and nothing else. Do not wrap responses in quotes. Now, using the concepts above, re-write the following text. Respond in the same language variety or dialect of the following text: \n\"\"\"\n{{...}}\n\"\"\"",
+                "Inputs": [
+                    {
+                        "InputPlaceholder": "请输入文本压缩倍数。",
+                        "InputLabel": "压缩倍数",
+                        "InputList": [
+                            "0.8",
+                            "0.6",
+                            "0.4",
+                            "0.2",
+                            "0.1"
+                        ]
+                    },
+                    {
+                        "InputPlaceholder": "请输入您希望缩减的文本内容。",
+                        "InputLabel": "文本内容",
+                        "InputList": null
+                    }
+                ]
+            },
+            "05-文字润色": {
                 "icon": "brush",
                 "UsageDescription": "根据要求提供文本润色服务。",
                 "ChinesePromptTemplate": "作为一名经验丰富的文本润色专家，您的任务是根据用户的要求，对提供的文本进行深度编辑和润色。请按照以下步骤进行：\n1. 详细审阅以下信息\n```\n原始文本：\n{{...}}\n润色目的和读者对象：\n{{...}}\n具体润色要求和指导：\n{{...}}\n```\n2. 在润色过程中，请注重以下方面：\n- 仔细检查并改进拼写、语法和语句结构\n- 确保文本风格和语调符合目标读者群体和文本目的\n- 检查并修正事实性错误，确保内容的准确性\n- 对文本进行综合性改善，包括但不限于清晰度、连贯性、逻辑性和说服力\n3. 首先提供具体的修改意见，然后呈现润色后的文本。\n4. 最后，详细阐述润色后文本相比原文的提升之处，包括改进的具体方面及其对于整体质量的影响，同时指出仍需改进的领域。\n请确保最终文本：\n- 严格符合润色目的和读者需求\n- 在结构、内容、风格和准确性方面都有显著提升\n- 明确展示您的专业编辑技能，体现出深度润色和改进的效果",
@@ -202,33 +172,7 @@
                     }
                 ]
             },
-            "添加细节": {
-                "icon": "text_increase",
-                "UsageDescription": "用于增强和改进文本的真实性和详细程度，同时保持原有的语言风格。",
-                "ChinesePromptTemplate": "向三引号内的文本添加一些细节，使其更加真实。确保输出与文本的语言种类或方言相同 - 换句话说，不要改变语言，并且只给我输出，不要别的。不要用引号包裹回应。\n    \"\"\"\n    {{...}}\n    \"\"\"",
-                "EnglishPromptTemplate": "Add some details to the text delimited by triple quotes to make it more believable. Ensure output in the same language variety or dialect of the text - in other words don't change the language ,and only give me the output and nothing else. Do not wrap responses in quotes.\n    \"\"\"\n    {{...}}\n    \"\"\"",
-                "Inputs": [
-                    {
-                        "InputPlaceholder": "请在此输入您希望增强的文本细节（例如：特定事件的背景信息、人物的详细描述、场景的丰富描绘）。",
-                        "InputLabel": "文本细节",
-                        "InputList": null
-                    }
-                ]
-            },
-            "纠正错误": {
-                "icon": "spellcheck",
-                "UsageDescription": "对文本中的拼写、语法或句法错误进行纠正。且不改变原文的意思或风格。",
-                "ChinesePromptTemplate": "纠正三引号（\"\"\"）中文本的拼写、句法或语法错误，不要改善或更改原文的意思或风格。换句话说，仅纠正拼写、句法或语法错误，不要进行改善。使用列表形式列出每个错误。并给出修改后的文本。\n\n如果原文没有错误，只需输出原文即可，无需添加其他内容。不要在响应中使用引号。\n\"\"\"\n{{...}}\n\"\"\"",
-                "EnglishPromptTemplate": "Correct any spelling, syntax, or grammar mistakes in the text delimited by triple quotes (\"\"\") without making any improvements or changes to the original meaning or style. In other words, only correct spelling, syntax, or grammar mistakes, do not make improvements.\nList each error using a list format. Provide the corrected text.\n\nIf the original text has no mistakes, just output the original text and nothing else. Do not wrap responses in quotes.\n\"\"\"\n{{...}}\n\"\"\"",
-                "Inputs": [
-                    {
-                        "InputPlaceholder": "请输入需要纠错的文本。",
-                        "InputLabel": "纠错文本",
-                        "InputList": null
-                    }
-                ]
-            },
-            "续写": {
+            "06-续写": {
                 "icon": "keyboard",
                 "UsageDescription": "继续以相同的语言、语调和风格写作，仅输出续写内容。",
                 "ChinesePromptTemplate": "\"\"\"\n{{...}}\n\"\"\" \n继续写作，保持文本的语言、语调和风格与开始部分三重引号内的文本一致。仅输出续写的部分，不包含其他内容。不要在回应中使用引号。",
@@ -241,7 +185,20 @@
                     }
                 ]
             },
-            "翻译": {
+            "07-纠正错误": {
+                "icon": "spellcheck",
+                "UsageDescription": "对文本中的拼写、语法或句法错误进行纠正。且不改变原文的意思或风格。",
+                "ChinesePromptTemplate": "纠正三引号（\"\"\"）中文本的拼写、句法或语法错误，不要改善或更改原文的意思或风格。换句话说，仅纠正拼写、句法或语法错误，不要进行改善。使用列表形式列出每个错误。并给出修改后的文本。\n\n如果原文没有错误，只需输出原文即可，无需添加其他内容。不要在响应中使用引号。\n\"\"\"\n{{...}}\n\"\"\"",
+                "EnglishPromptTemplate": "Correct any spelling, syntax, or grammar mistakes in the text delimited by triple quotes (\"\"\") without making any improvements or changes to the original meaning or style. In other words, only correct spelling, syntax, or grammar mistakes, do not make improvements.\nList each error using a list format. Provide the corrected text.\n\nIf the original text has no mistakes, just output the original text and nothing else. Do not wrap responses in quotes.\n\"\"\"\n{{...}}\n\"\"\"",
+                "Inputs": [
+                    {
+                        "InputPlaceholder": "请输入需要纠错的文本。",
+                        "InputLabel": "纠错文本",
+                        "InputList": null
+                    }
+                ]
+            },
+            "08-翻译": {
                 "icon": "translate",
                 "UsageDescription": "将文本翻译成指定语言。",
                 "ChinesePromptTemplate": "您是一个在语言翻译方面训练有素的AI。我希望您能将三引号之间的文本翻译成{{...}}，确保翻译准确、流畅、忠于原文。要求返回形式为:{{...}}\n请按照要求格式返回。不要在回应中使用引号。\n\"\"\"\n{{...}}\n\"\"\"",
@@ -271,7 +228,50 @@
                     }
                 ]
             },
-            "风格转换": {
+            "09-学术论文翻译": {
+                "icon": "translate",
+                "UsageDescription": "将文本翻译成指定语言。",
+                "ChinesePromptTemplate": "您是一个在语言翻译方面训练有素的AI。我希望您能将三引号之间的文本翻译成{{...}}，确保翻译精准、流畅、专业、忠于原文，符合高水平学术论文的风格和标准。要求返回形式为:{{...}}\n请按照要求格式返回。不要在回应中使用引号。\n\"\"\"\n{{...}}\n\"\"\"",
+                "EnglishPromptTemplate": "You are an AI highly trained in language translation. I would like you to translate the text delimited by triple quotes into {{...}}, ensuring the translation is precise, fluent, professional, faithful to the original, and conforms to the style and standards of high-level academic papers. The required format is: {{...}}\nReturn according to the required format. Do not wrap responses in quotes. \n\"\"\"\n{{...}}\n\"\"\"",
+                "Inputs": [
+                    {
+                        "InputPlaceholder": "请输入目标语言（例如：英语、汉语）。",
+                        "InputLabel": "目标语言",
+                        "InputList": [
+                            "英语",
+                            "汉语"
+                        ]
+                    },
+                    {
+                        "InputPlaceholder": "请输入返回格式（整篇翻译、逐段翻译、逐句翻译）。",
+                        "InputLabel": "返回格式",
+                        "InputList": [
+                            "整篇翻译（将源文本作为一个整体进行翻译，不需要返回源文本）",
+                            "逐段翻译（提供源文本和翻译文本的对照。格式为:\n[此处显示源文本段落1]\n[此处显示翻译文本段落1]\n\n[此处显示源文本段落2]\n[此处显示翻译文本段落2]\n\n...）",
+                            "逐句翻译（提供源文本和翻译文本的对照。格式为:\n[此处显示源文本句子1]\n[此处显示翻译文本句子1]\n\n[此处显示源文本句子2]\n[此处显示翻译文本句子2]\n\n...）"
+                        ]
+                    },
+                    {
+                        "InputPlaceholder": "请输入您希望翻译的文本。",
+                        "InputLabel": "翻译文本",
+                        "InputList": null
+                    }
+                ]
+            },
+            "10-添加细节": {
+                "icon": "text_increase",
+                "UsageDescription": "用于增强和改进文本的真实性和详细程度，同时保持原有的语言风格。",
+                "ChinesePromptTemplate": "向三引号内的文本添加一些细节，使其更加真实。确保输出与文本的语言种类或方言相同 - 换句话说，不要改变语言，并且只给我输出，不要别的。不要用引号包裹回应。\n    \"\"\"\n    {{...}}\n    \"\"\"",
+                "EnglishPromptTemplate": "Add some details to the text delimited by triple quotes to make it more believable. Ensure output in the same language variety or dialect of the text - in other words don't change the language ,and only give me the output and nothing else. Do not wrap responses in quotes.\n    \"\"\"\n    {{...}}\n    \"\"\"",
+                "Inputs": [
+                    {
+                        "InputPlaceholder": "请在此输入您希望增强的文本细节（例如：特定事件的背景信息、人物的详细描述、场景的丰富描绘）。",
+                        "InputLabel": "文本细节",
+                        "InputList": null
+                    }
+                ]
+            },
+            "11-风格转换": {
                 "icon": "draw",
                 "UsageDescription": "根据用户指定的风格调整给定文本的表述。保持原文的语言和方言不变。",
                 "ChinesePromptTemplate": "在不改变语言的情况下，您的任务是根据指定风格重写三引号间的文本。所需风格为：{{...}}。确保输出与文本的语言种类或方言相同，换句话说，不要改变语言，并且只给我输出，不要包括其他内容。不要用引号包裹回应。\n    \"\"\"\n    {{...}}\n    \"\"\"",
@@ -304,7 +304,20 @@
             }
         },
         "02-常用功能": {
-            "优化提示词": {
+            "01-设计提示词": {
+                "icon": "edit_note",
+                "UsageDescription": "参照官方提示工程（Prompt Engineering）规范，设计适用于LLM（Large Language Model）的最佳提示词（Prompt）",
+                "ChinesePromptTemplate": "您的任务是根据提示词设计原则、任务要求，设计提示词使其能够对GPT-4提问以达到最好的效果。仅只给我提示词，不要其他内容。提示词的语言应与任务要求保持一致。提示词设计原则和任务要求如下：\n\n提示词设计原则：\n    - 指定模型要扮演的专家角色以明确其任务，如'作为[此处填写要求GPT-4扮演的专家角色，与初始提示词中任务要求相符]，您的任务是[要求GPT-4完成的任务]'\n    - 提供尽可能清晰、具体、专业、准确的指示，以表达您希望模型执行的任务。不要将写清晰的提示词与写简短的提示词混淆。\n    - 如任务较复杂，需要多步完成。明确且详细地说明完成任务所需步骤。\n    - 如存在输入信息，使用分隔符清晰标识输入的各部分。\n    - 明确期望的输出格式、确保尽可能清晰、逻辑性强、便于理解。\n    - 如有必要，提供输出示例模版。\n任务要求：\n```\n{{...}}\n```",
+                "EnglishPromptTemplate": "Your task is to design a prompt according to the principles of Prompt Engineering and the task requirements, ensuring the prompt enables the best possible questioning of GPT-4. Provide only the prompt, nothing else. The language of the prompt should be consistent with the language used in the Task Requirement. The principles of prompt design and the task requirement are as follows:\n\nPrompt Design Principles:\n    - Specify the expert role the model should play to clarify its task, such as 'As [fill in the export role you require GPT-4 to play, consistent with the task requirements in the initial prompt], your task is [the task you require GPT-4 to complete]'\n    - Provide as clear, specific, professional, and accurate instructions as possible to convey the task you want the model to perform. Do not confuse writing clear prompts with writing brief prompts.\n    - If the task is complex and requires multiple steps, clearly and detailedly state the steps needed to complete the task.\n    - If there is input information, use separators to clearly mark the different parts of the input.\n    - Clearly define the expected output format to ensure clarity, strong logic, and ease of understanding.\n    - If necessary, provide an output example template.\nTask Requirement:\n```\n{{...}}\n```",
+                "Inputs": [
+                    {
+                        "InputPlaceholder": "请输入任务要求",
+                        "InputLabel": "任务要求",
+                        "InputList": null
+                    }
+                ]
+            },
+            "02-优化提示词": {
                 "icon": "edit_note",
                 "UsageDescription": "参照官方提示工程（Prompt Engineering）规范，优化适用于LLM（Large Language Model）的最佳提示词（Prompt）",
                 "ChinesePromptTemplate": "您的任务是根据提示词设计原则、修改要求，优化初始提示词使其能够对GPT-4提问以达到最好的效果。仅只给我修改后的提示词，不要其他内容。不要改变初始提示词的语言。提示词设计原则和初始提示词如下：\n\n提示词设计原则：\n    - 指定模型要扮演的专家角色以明确其任务，如'作为[此处填写要求GPT-4扮演的专家角色，与初始提示词中任务要求相符]，您的任务是[要求GPT-4完成的任务]'\n    - 提供尽可能清晰、具体、专业、准确的指示，以表达您希望模型执行的任务。不要将写清晰的提示词与写简短的提示词混淆。\n    - 如任务较复杂，需要多步完成。明确且详细地说明完成任务所需步骤。\n    - 如存在输入信息，使用分隔符清晰标识输入的各部分。\n    - 明确期望的输出格式、确保尽可能清晰、逻辑性强、便于理解。\n    - 如有必要，提供输出示例模版。\n\n初始提示词：\n```\n{{...}}\n```\n修改要求：\n```\n{{...}}\n```",
@@ -327,63 +340,7 @@
                     }
                 ]
             },
-            "沟通策略": {
-                "icon": "chat",
-                "UsageDescription": "针对不同的社交和职业环境，帮助用户制定符合中国文化和语言习惯的沟通和应对策略。",
-                "ChinesePromptTemplate": "作为沟通策略专家，你的任务是在不同的社交和职业环境中提供专业、全面、具体的沟通策略和建议。请根据以下步骤操作：\n- 仔细审阅提供的信息\n- 考虑应该遵循的中国社交礼仪、观念习俗和语言习惯\n- 在处理敏感话题时给出婉转而高情商的建议\n- 在职场沟通、公共演讲或团队协作中提供专业的沟通规划\n- 分析可能的对方反应并提供应对策略\n\n提供的信息如下：\n```\n沟通场景：\n{{...}}\n\n沟通目标：\n{{...}}\n\n对方背景信息：\n{{...}}\n\n避免的敏感内容：\n{{...}}\n```",
-                "EnglishPromptTemplate": "As a communication strategy expert, your task is to provide professional, comprehensive, and specific communication strategies and advice in various social and professional settings. Please follow these steps:\n- Carefully review the information provided\n- Consider Chinese social etiquette, concepts, customs, and linguistic practices that should be followed\n- Offer tactful and emotionally intelligent advice when dealing with sensitive topics\n- Provide professional communication planning in workplace communication, public speaking, or team collaboration\n- Analyze possible reactions of the other party and provide coping strategies\n\nThe provided information is as follows:\n```\nCommunication Scenario:\n{{...}}\n\nCommunication Goal:\n{{...}}\n\nBackground Information of the Other Party:\n{{...}}\n\nSensitive Content to Avoid:\n{{...}}\n```\n(Please respond in Chinese)",
-                "Inputs": [
-                    {
-                        "InputPlaceholder": "请输入您需要提供帮助的沟通场景（如商务谈判、团队会议等）",
-                        "InputLabel": "沟通场景",
-                        "InputList": null
-                    },
-                    {
-                        "InputPlaceholder": "详细说明任何特定的沟通目标或期望的结果（如达成协议、解决冲突等）。",
-                        "InputLabel": "沟通目标",
-                        "InputList": null
-                    },
-                    {
-                        "InputPlaceholder": "请输入对方背景身份、期望或态度等。",
-                        "InputLabel": "对方背景",
-                        "InputList": null
-                    },
-                    {
-                        "InputPlaceholder": "列出任何需要避免的敏感话题或内容。",
-                        "InputLabel": "敏感内容",
-                        "InputList": null
-                    }
-                ]
-            },
-            "法律咨询": {
-                "icon": "gavel",
-                "UsageDescription": "提供适用于中国的法律咨询服务",
-                "ChinesePromptTemplate": "作为法律顾问，您的任务是请根据提供信息，通过多轮对话深入了解案情，运用法律专业知识分析问题，并提供专业、准确、全面的法律意见。请以逻辑严谨的方式回答，并确保您的建议遵循中国法律法规。当您获得足够的信息或完成5轮询问后，请根据所获得的信息给出法律分析、可能适用的法律条文、不同解决方案的可行性与后果，并制定解决问题的方案和后续行动计划。如果现有信息不足以形成一个全面的法律建议，请继续提出询问，直至获得所有必要信息。提供信息如下：\n```\n问题类型（如合同纠纷、房产问题、劳动争议等）：\n{{...}}\n事件详情：\n{{...}}\n相关证据：\n{{...}}\n期望结果：\n{{...}}\n```\n\n\n注意:\n```\n请务必保证依据中国法律法规\n```",
-                "EnglishPromptTemplate": "As a legal advisor, your task is to understand the case details through multiple rounds of dialogue based on the provided information, apply your legal expertise to analyze the issues, and provide professional, accurate, and comprehensive legal opinions. Respond in a logically rigorous manner, ensuring that your advice complies with Chinese laws and regulations. Once you have sufficient information or complete 5 rounds of inquiry, provide a legal analysis based on the information obtained, applicable legal provisions, the feasibility and consequences of different solutions, and develop a plan to solve the problem along with subsequent action steps. If the existing information is insufficient to form a comprehensive legal opinion, continue to make inquiries until all necessary information is obtained. The provided information is as follows:\n```\nType of issue (e.g., contract dispute, property issue, labor dispute, etc.):\n{{...}}\nDetails of the incident:\n{{...}}\nRelevant evidence:\n{{...}}\nDesired outcome:\n{{...}}\n```\n\n\nNote:\n```\nPlease ensure to comply with Chinese laws and regulations.\nRespond in Chinese, please.\n```",
-                "Inputs": [
-                    {
-                        "InputPlaceholder": "请详细描述您遇到的法律问题，包括问题的类型（如合同纠纷、房产问题、劳动争议等）。",
-                        "InputLabel": "问题类型",
-                        "InputList": null
-                    },
-                    {
-                        "InputPlaceholder": "提供具体相关事实，如事件发生的时间、地点、涉及的当事人以及已采取的行动或措施。",
-                        "InputLabel": "事件详情",
-                        "InputList": null
-                    },
-                    {
-                        "InputPlaceholder": "附上您手头的相关证据或文件，例如合同副本、交易记录、证人证言等（如果适用）。",
-                        "InputLabel": "相关证据",
-                        "InputList": null
-                    },
-                    {
-                        "InputPlaceholder": "明确您希望得到的法律帮助，如寻求赔偿、协商解决或法律意见等。",
-                        "InputLabel": "帮助目标",
-                        "InputList": null
-                    }
-                ]
-            },
-            "疾病诊断": {
+            "03-疾病诊断": {
                 "icon": "medical_services",
                 "UsageDescription": "辅助用户进行初步的疾病诊断，但不能替代专业的治疗意见。",
                 "ChinesePromptTemplate": "作为主任医师，您的任务是根据提供的患者信息，通过多轮询问，根据患者的回答做出专业、准确、全面的诊断。当您获得足够的信息或完成5轮询问后，请说明目前所知信息已充足并给出诊断结果、诊断依据、不同病症患病概率以及治疗建议。请尽量避免漏诊和误诊情况以免延误患者治疗。当已知信息不足以给出专业、准确、全面的诊断时，请继续提问以获得有效信息。患者信息如下：\n```\n主要症状：\n{{...}}\n症状时间：\n{{...}}\n当前药物：\n{{...}}\n病史过敏：\n{{...}}\n```\n",
@@ -411,20 +368,76 @@
                     }
                 ]
             },
-            "设计提示词": {
-                "icon": "edit_note",
-                "UsageDescription": "参照官方提示工程（Prompt Engineering）规范，设计适用于LLM（Large Language Model）的最佳提示词（Prompt）",
-                "ChinesePromptTemplate": "您的任务是根据提示词设计原则、任务要求，设计提示词使其能够对GPT-4提问以达到最好的效果。仅只给我提示词，不要其他内容。提示词的语言应与任务要求保持一致。提示词设计原则和任务要求如下：\n\n提示词设计原则：\n    - 指定模型要扮演的专家角色以明确其任务，如'作为[此处填写要求GPT-4扮演的专家角色，与初始提示词中任务要求相符]，您的任务是[要求GPT-4完成的任务]'\n    - 提供尽可能清晰、具体、专业、准确的指示，以表达您希望模型执行的任务。不要将写清晰的提示词与写简短的提示词混淆。\n    - 如任务较复杂，需要多步完成。明确且详细地说明完成任务所需步骤。\n    - 如存在输入信息，使用分隔符清晰标识输入的各部分。\n    - 明确期望的输出格式、确保尽可能清晰、逻辑性强、便于理解。\n    - 如有必要，提供输出示例模版。\n任务要求：\n```\n{{...}}\n```",
-                "EnglishPromptTemplate": "Your task is to design a prompt according to the principles of Prompt Engineering and the task requirements, ensuring the prompt enables the best possible questioning of GPT-4. Provide only the prompt, nothing else. The language of the prompt should be consistent with the language used in the Task Requirement. The principles of prompt design and the task requirement are as follows:\n\nPrompt Design Principles:\n    - Specify the expert role the model should play to clarify its task, such as 'As [fill in the export role you require GPT-4 to play, consistent with the task requirements in the initial prompt], your task is [the task you require GPT-4 to complete]'\n    - Provide as clear, specific, professional, and accurate instructions as possible to convey the task you want the model to perform. Do not confuse writing clear prompts with writing brief prompts.\n    - If the task is complex and requires multiple steps, clearly and detailedly state the steps needed to complete the task.\n    - If there is input information, use separators to clearly mark the different parts of the input.\n    - Clearly define the expected output format to ensure clarity, strong logic, and ease of understanding.\n    - If necessary, provide an output example template.\nTask Requirement:\n```\n{{...}}\n```",
+            "04-法律咨询": {
+                "icon": "gavel",
+                "UsageDescription": "提供适用于中国的法律咨询服务",
+                "ChinesePromptTemplate": "作为法律顾问，您的任务是请根据提供信息，通过多轮对话深入了解案情，运用法律专业知识分析问题，并提供专业、准确、全面的法律意见。请以逻辑严谨的方式回答，并确保您的建议遵循中国法律法规。当您获得足够的信息或完成5轮询问后，请根据所获得的信息给出法律分析、可能适用的法律条文、不同解决方案的可行性与后果，并制定解决问题的方案和后续行动计划。如果现有信息不足以形成一个全面的法律建议，请继续提出询问，直至获得所有必要信息。提供信息如下：\n```\n问题类型（如合同纠纷、房产问题、劳动争议等）：\n{{...}}\n事件详情：\n{{...}}\n相关证据：\n{{...}}\n期望结果：\n{{...}}\n```\n\n\n注意:\n```\n请务必保证依据中国法律法规\n```",
+                "EnglishPromptTemplate": "As a legal advisor, your task is to understand the case details through multiple rounds of dialogue based on the provided information, apply your legal expertise to analyze the issues, and provide professional, accurate, and comprehensive legal opinions. Respond in a logically rigorous manner, ensuring that your advice complies with Chinese laws and regulations. Once you have sufficient information or complete 5 rounds of inquiry, provide a legal analysis based on the information obtained, applicable legal provisions, the feasibility and consequences of different solutions, and develop a plan to solve the problem along with subsequent action steps. If the existing information is insufficient to form a comprehensive legal opinion, continue to make inquiries until all necessary information is obtained. The provided information is as follows:\n```\nType of issue (e.g., contract dispute, property issue, labor dispute, etc.):\n{{...}}\nDetails of the incident:\n{{...}}\nRelevant evidence:\n{{...}}\nDesired outcome:\n{{...}}\n```\n\n\nNote:\n```\nPlease ensure to comply with Chinese laws and regulations.\nRespond in Chinese, please.\n```",
                 "Inputs": [
                     {
-                        "InputPlaceholder": "请输入任务要求",
-                        "InputLabel": "任务要求",
+                        "InputPlaceholder": "请详细描述您遇到的法律问题，包括问题的类型（如合同纠纷、房产问题、劳动争议等）。",
+                        "InputLabel": "问题类型",
+                        "InputList": null
+                    },
+                    {
+                        "InputPlaceholder": "提供具体相关事实，如事件发生的时间、地点、涉及的当事人以及已采取的行动或措施。",
+                        "InputLabel": "事件详情",
+                        "InputList": null
+                    },
+                    {
+                        "InputPlaceholder": "附上您手头的相关证据或文件，例如合同副本、交易记录、证人证言等（如果适用）。",
+                        "InputLabel": "相关证据",
+                        "InputList": null
+                    },
+                    {
+                        "InputPlaceholder": "明确您希望得到的法律帮助，如寻求赔偿、协商解决或法律意见等。",
+                        "InputLabel": "帮助目标",
                         "InputList": null
                     }
                 ]
             },
-            "金融投资": {
+            "05-问题检查": {
+                "icon": "search",
+                "UsageDescription": "识别并分析潜在的问题和风险并提出预防或改进建议。适用于工程安全、软件测试、项目风险评估等多种场景。",
+                "ChinesePromptTemplate": "作为一名问题检测专家，您需要根据以下场景描述检测可能存在的问题或潜在风险。请细致地审查并回答下列问题：\n```\n场景描述：\n{{...}}\n```\n\n请您分析并回答：\n```\n1. 在所描述的场景中，您能够检测到任何明显或隐蔽的问题吗？\n2. 有哪些潜在的风险因素需要关注？\n3. 如果存在问题，建议采取哪些预防或改进措施？\n```",
+                "EnglishPromptTemplate": "As a problem detection expert, you are required to identify potential issues or risks based on the following scenario description. Please review in detail and answer the following questions (Please respond in Chinese):\n```\nScenario description:\n{{...}}\n```\n\nPlease analyze and answer:\n```\n1. Can you detect any obvious or hidden problems in the described scenario?\n2. What are the potential risk factors that need attention?\n3. If problems exist, what preventive or improvement measures would you suggest?\n```",
+                "Inputs": [
+                    {
+                        "InputPlaceholder": "详细描述您希望检查的场景，包括任何已知的细节和上下文信息",
+                        "InputLabel": "详细场景",
+                        "InputList": null
+                    }
+                ]
+            },
+            "06-沟通策略": {
+                "icon": "chat",
+                "UsageDescription": "针对不同的社交和职业环境，帮助用户制定符合中国文化和语言习惯的沟通和应对策略。",
+                "ChinesePromptTemplate": "作为沟通策略专家，你的任务是在不同的社交和职业环境中提供专业、全面、具体的沟通策略和建议。请根据以下步骤操作：\n- 仔细审阅提供的信息\n- 考虑应该遵循的中国社交礼仪、观念习俗和语言习惯\n- 在处理敏感话题时给出婉转而高情商的建议\n- 在职场沟通、公共演讲或团队协作中提供专业的沟通规划\n- 分析可能的对方反应并提供应对策略\n\n提供的信息如下：\n```\n沟通场景：\n{{...}}\n\n沟通目标：\n{{...}}\n\n对方背景信息：\n{{...}}\n\n避免的敏感内容：\n{{...}}\n```",
+                "EnglishPromptTemplate": "As a communication strategy expert, your task is to provide professional, comprehensive, and specific communication strategies and advice in various social and professional settings. Please follow these steps:\n- Carefully review the information provided\n- Consider Chinese social etiquette, concepts, customs, and linguistic practices that should be followed\n- Offer tactful and emotionally intelligent advice when dealing with sensitive topics\n- Provide professional communication planning in workplace communication, public speaking, or team collaboration\n- Analyze possible reactions of the other party and provide coping strategies\n\nThe provided information is as follows:\n```\nCommunication Scenario:\n{{...}}\n\nCommunication Goal:\n{{...}}\n\nBackground Information of the Other Party:\n{{...}}\n\nSensitive Content to Avoid:\n{{...}}\n```\n(Please respond in Chinese)",
+                "Inputs": [
+                    {
+                        "InputPlaceholder": "请输入您需要提供帮助的沟通场景（如商务谈判、团队会议等）",
+                        "InputLabel": "沟通场景",
+                        "InputList": null
+                    },
+                    {
+                        "InputPlaceholder": "详细说明任何特定的沟通目标或期望的结果（如达成协议、解决冲突等）。",
+                        "InputLabel": "沟通目标",
+                        "InputList": null
+                    },
+                    {
+                        "InputPlaceholder": "请输入对方背景身份、期望或态度等。",
+                        "InputLabel": "对方背景",
+                        "InputList": null
+                    },
+                    {
+                        "InputPlaceholder": "列出任何需要避免的敏感话题或内容。",
+                        "InputLabel": "敏感内容",
+                        "InputList": null
+                    }
+                ]
+            },
+            "07-金融投资": {
                 "icon": "account_balance",
                 "UsageDescription": "提供金融投资咨询服务",
                 "ChinesePromptTemplate": "作为金融顾问，您的任务是根据您的专业知识并结合用户提供的信息，通过多轮询问，为用户提出的金融领域相关问题提出专业、准确、全面的金融分析和建议。当您获得足够的信息或完成5轮询问后，请说明目前所知信息已充足并给出您的分析结果和分析依据。请根据中国金融市场环境进行回答。当已知信息不足以给出专业、准确、全面的建议时，请继续提问以获得有效信息。客户提供信息如下：\n```\n投资产品/项目名称：\n{{...}}\n咨询投资问题：\n{{...}}\n预期投资时间范围：\n{{...}}\n当前的财务情况和资产配置情况：\n{{...}}\n风险偏好（保守、中等、积极）：\n{{...}}\n```",
@@ -456,36 +469,10 @@
                         "InputList": null
                     }
                 ]
-            },
-            "问题检查": {
-                "icon": "search",
-                "UsageDescription": "识别并分析潜在的问题和风险并提出预防或改进建议。适用于工程安全、软件测试、项目风险评估等多种场景。",
-                "ChinesePromptTemplate": "作为一名问题检测专家，您需要根据以下场景描述检测可能存在的问题或潜在风险。请细致地审查并回答下列问题：\n```\n场景描述：\n{{...}}\n```\n\n请您分析并回答：\n```\n1. 在所描述的场景中，您能够检测到任何明显或隐蔽的问题吗？\n2. 有哪些潜在的风险因素需要关注？\n3. 如果存在问题，建议采取哪些预防或改进措施？\n```",
-                "EnglishPromptTemplate": "As a problem detection expert, you are required to identify potential issues or risks based on the following scenario description. Please review in detail and answer the following questions (Please respond in Chinese):\n```\nScenario description:\n{{...}}\n```\n\nPlease analyze and answer:\n```\n1. Can you detect any obvious or hidden problems in the described scenario?\n2. What are the potential risk factors that need attention?\n3. If problems exist, what preventive or improvement measures would you suggest?\n```",
-                "Inputs": [
-                    {
-                        "InputPlaceholder": "详细描述您希望检查的场景，包括任何已知的细节和上下文信息",
-                        "InputLabel": "详细场景",
-                        "InputList": null
-                    }
-                ]
             }
         },
         "03-阅读": {
-            "总结": {
-                "icon": "menu_book",
-                "UsageDescription": "阅读并总结文本内容，提供一个简洁、连贯的摘要，帮助理解文本的主要点。",
-                "ChinesePromptTemplate": "你是一名在语言理解和总结方面训练有素的高级AI。我希望你阅读由三重引号界定的文本，并将其总结为一个简洁的摘要段落。力求保留最重要的要点，提供一个连贯、易读的总结，帮助人们理解讨论的主要内容，无需阅读整个文本。请避免不必要的细节或偏离主题的内容。只给我输出结果，不要包含其他内容。不要用引号包裹回应。\n\"\"\"\n{{...}}\n\"\"\"",
-                "EnglishPromptTemplate": "You are a highly skilled AI trained in language comprehension and summarization. I would like you to read the text delimited by triple quotes and summarize it into a concise abstract paragraph. Aim to retain the most important points, providing a coherent and readable summary that could help a person understand the main points of the discussion without needing to read the entire text. Please avoid unnecessary details or tangential points.Only give me the output and nothing else. Do not wrap responses in quotes.\n\"\"\"\n{{...}}\n\"\"\"",
-                "Inputs": [
-                    {
-                        "InputPlaceholder": "请输入您要我总结的文本内容（例如：一段新闻报道、科学论文摘要、会议记录）。",
-                        "InputLabel": "文本内容",
-                        "InputList": null
-                    }
-                ]
-            },
-            "解释": {
+            "01-解释": {
                 "icon": "psychology_alt",
                 "UsageDescription": "根据给定的文本，提供清晰、简洁的解释，以便读者更好地理解。",
                 "ChinesePromptTemplate": "请提供三引号内文本的详细解释，用清晰简单的语言，以便读者能够更好地理解。\n\"\"\"\n{{...}}\n\"\"\"",
@@ -497,10 +484,167 @@
                         "InputList": null
                     }
                 ]
+            },
+            "02-总结": {
+                "icon": "menu_book",
+                "UsageDescription": "阅读并总结文本内容，提供一个简洁、连贯的摘要，帮助理解文本的主要点。",
+                "ChinesePromptTemplate": "你是一名在语言理解和总结方面训练有素的高级AI。我希望你阅读由三重引号界定的文本，并将其总结为一个简洁的摘要段落。力求保留最重要的要点，提供一个连贯、易读的总结，帮助人们理解讨论的主要内容，无需阅读整个文本。请避免不必要的细节或偏离主题的内容。只给我输出结果，不要包含其他内容。不要用引号包裹回应。\n\"\"\"\n{{...}}\n\"\"\"",
+                "EnglishPromptTemplate": "You are a highly skilled AI trained in language comprehension and summarization. I would like you to read the text delimited by triple quotes and summarize it into a concise abstract paragraph. Aim to retain the most important points, providing a coherent and readable summary that could help a person understand the main points of the discussion without needing to read the entire text. Please avoid unnecessary details or tangential points.Only give me the output and nothing else. Do not wrap responses in quotes.\n\"\"\"\n{{...}}\n\"\"\"",
+                "Inputs": [
+                    {
+                        "InputPlaceholder": "请输入您要我总结的文本内容（例如：一段新闻报道、科学论文摘要、会议记录）。",
+                        "InputLabel": "文本内容",
+                        "InputList": null
+                    }
+                ]
             }
         },
         "04-技术与工程": {
-            "备课": {
+            "01-编程-python-简易结果": {
+                "icon": "code",
+                "UsageDescription": "按照要求编写Python代码。",
+                "ChinesePromptTemplate": "作为Python编程专家，您的任务是根据编程需求完成编程任务。要求:\n```\n代码实现专业、规范、逻辑清晰\n遵循PEP8标准及Google Python编程风格指南\n类与类、类与函数、函数与函数之间，以及import语句与函数定义、函数定义与`if __name__ == '__main__':`语句之间应空两行。类中的方法定义或不同逻辑块之间应空一行。\n包含详尽中文注释，如果包含函数，请给出详细的函数注释并使用:param格式进行入参说明\n在最后通过if __name__ == '__main__': 方式给出示例调用代码\n具有良好的变量命名、易维护，遵守选用编程语言的最佳实践和规范。\n```\n\n编程需求：\n```\n{{...}}\n```\n\n其他要求：\n```\n{{...}}\n```",
+                "EnglishPromptTemplate": "As a Python programming expert, your task is to complete the programming tasks based on the programming requirements. Requirements:\n\nCode implementation should be professional, standardized, and logically clear\nFollow the PEP8 standard and the Google Python Style Guide\nThere should be two lines of space between classes, between classes and functions, between functions, and between import statements and function definitions, as well as between function definitions and the `if __name__ == '__main__':` statement. Within classes, there should be one line of space between method definitions or different logical blocks.\nInclude detailed Chinese comments. If functions are included, provide detailed function comments and use the :param format for input parameter explanation\nAt the end, provide example invocation code using the `if __name__ == '__main__':` method\nHave good variable naming, be easy to maintain, and adhere to the best practices and standards of the chosen programming language.\n\n\nProgramming requirements:\n\n{{...}}\n\n\nOther requirements:\n\n{{...}}\n",
+                "Inputs": [
+                    {
+                        "InputPlaceholder": "详细描述您的编程需求",
+                        "InputLabel": "需求概述",
+                        "InputList": null
+                    },
+                    {
+                        "InputPlaceholder": "提供任何其他特定要求或指导，如性能参数、内存限制或特定库/框架的使用。",
+                        "InputLabel": "其他要求",
+                        "InputList": [
+                            "运行速度优先",
+                            "实现效果优先",
+                            "代码可读性优先"
+                        ]
+                    }
+                ]
+            },
+            "02-编程-python-详细结果": {
+                "icon": "code",
+                "UsageDescription": "按照要求编写Python代码。",
+                "ChinesePromptTemplate": "作为Python编程专家，您的任务是根据编程需求完成编程任务。要求:\n```\n代码实现专业、规范、逻辑清晰\n遵循PEP8标准及Google Python编程风格指南\n类与类、类与函数、函数与函数之间，以及import语句与函数定义、函数定义与`if __name__ == '__main__':`语句之间应空两行。类中的方法定义或不同逻辑块之间应空一行。\n包含详尽中文注释，如果包含函数，请给出详细的函数注释并使用:param格式进行入参说明\n在最后通过if __name__ == '__main__': 方式给出示例调用代码\n具有良好的变量命名、易维护，遵守选用编程语言的最佳实践和规范。\n```\n\n编程需求：\n```\n{{...}}\n```\n\n其他要求：\n```\n{{...}}\n```\n请按以下步骤操作：\n步骤1: 阐述最佳代码实现思路及其他常见实现思路，对比最佳实现思路与其他常见思路的优劣\n步骤2: 按照最佳代码实现思路编写代码。\n步骤3: 完成后，评估以下要素以确保代码质量：\n  - 代码完整性和对需求的满足度\n  - 代码结构的清晰度和逻辑连贯性\n  - 遵守编程规范和风格指南",
+                "EnglishPromptTemplate": "As a Python programming expert, your task is to complete the programming task based on the programming requirements. Requirements:\n\nCode implementation should be professional, standardized, and logically clear\nFollow the PEP8 standard and the Google Python Style Guide\nThere should be two lines of space between classes, between classes and functions, between functions, and between import statements and function definitions, as well as between function definitions and the `if __name__ == '__main__':` statement. Within classes, there should be one line of space between method definitions or different logical blocks.\nInclude detailed Chinese comments. If functions are included, provide detailed function comments and use the :param format for explaining input parameters\nAt the end, provide example invocation code using the `if __name__ == '__main__':` method\nHave good variable naming, be easy to maintain, and adhere to the best practices and standards of the chosen programming language.\n\n\nProgramming requirements:\n\n{{...}}\n\n\nOther requirements:\n\n{{...}}\n\nPlease follow these steps:\nStep 1: Describe the best code implementation approach and other common approaches, comparing the advantages and disadvantages of the best approach against others\nStep 2: Write the code following the best code implementation approach.\nStep 3: Upon completion, assess the following elements to ensure code quality:\n - Completeness of the code and its fulfillment of the requirements\n - Clarity of the code structure and its logical coherence\n - Adherence to programming conventions and style guides",
+                "Inputs": [
+                    {
+                        "InputPlaceholder": "详细描述您的编程需求",
+                        "InputLabel": "需求概述",
+                        "InputList": null
+                    },
+                    {
+                        "InputPlaceholder": "提供任何其他特定要求或指导，如性能参数、内存限制或特定库/框架的使用。",
+                        "InputLabel": "其他要求",
+                        "InputList": [
+                            "运行速度优先",
+                            "实现效果优先",
+                            "代码可读性优先"
+                        ]
+                    }
+                ]
+            },
+            "03-编程-通用编程语言": {
+                "icon": "code",
+                "UsageDescription": "按照要求编写代码。",
+                "ChinesePromptTemplate": "作为编程专家，您的任务是按照用户指定的编程语言完成编程任务，以解决用户的编程需求。要求代码实现规范、简洁、明确、高效、逻辑清晰、包含详尽中文注释、具有良好的命名和组织、易维护，遵守选用编程语言的最佳实践和规范。\n\n用户编程需求和指定编程语言如下：\n指定编程语言：\n```\n{{...}}\n```\n\n编程需求：\n```\n{{...}}\n```\n\n其他要求：\n```\n{{...}}\n```\n请按以下步骤操作：\n步骤1: 阐述最佳代码实现思路及其他常见实现思路，对比最佳实现思路与其他常见思路的优劣\n步骤2: 按照最佳代码实现思路编写代码。\n步骤3: 完成后，评估以下要素以确保代码质量：\n  - 代码完整性和对需求的满足度\n  - 代码结构的清晰度和逻辑连贯性\n  - 遵守编程规范和风格指南",
+                "EnglishPromptTemplate": "As a programming expert, your task is to complete programming assignments using the programming language specified by the user, to meet their programming needs. The code should be standard, concise, clear, efficient, logically coherent, include comprehensive English comments, have good naming and organization, be easy to maintain, and adhere to the best practices and standards of the chosen programming language.\n\nUser's programming requirements and specified programming language are as follows:\nSpecified programming language:\n```\n{{...}}\n```\n\nProgramming requirement:\n```\n{{...}}\n```\n\nOther requirements:\n```\n{{...}}\n```\nPlease proceed with the following steps:\nStep 1: Elucidate the best code implementation approach and other common approaches, comparing the advantages and disadvantages of the best approach with others.\nStep 2: Write code according to the best code implementation approach.\nStep 3: Upon completion, assess the following aspects to ensure code quality:\n  - Completeness of the code and its adequacy in meeting the requirements\n  - Clarity of code structure and logical coherence\n  - Adherence to coding standards and style guides",
+                "Inputs": [
+                    {
+                        "InputPlaceholder": "指定您希望使用的编程语言（如 Python、JavaScript、C++等）。",
+                        "InputLabel": "编程语言",
+                        "InputList": [
+                            "Python",
+                            "JavaScript",
+                            "C++"
+                        ]
+                    },
+                    {
+                        "InputPlaceholder": "详细描述您的编程需求",
+                        "InputLabel": "需求概述",
+                        "InputList": null
+                    },
+                    {
+                        "InputPlaceholder": "提供任何其他特定要求或指导，如性能参数、内存限制或特定库/框架的使用。",
+                        "InputLabel": "其他要求",
+                        "InputList": [
+                            "运行速度优先",
+                            "实现效果优先",
+                            "代码可读性优先"
+                        ]
+                    }
+                ]
+            },
+            "04-算法设计": {
+                "icon": "functions",
+                "UsageDescription": "根据特定需求提供算法解决方案或性能分析。",
+                "ChinesePromptTemplate": "作为一名专业的算法工程师，你的任务是根据用户提供的详细信息进行专业、全面、具体、有逻辑性的算法设计与性能分析。请根据以下步骤操作：\n请仔细审阅以下信息\n```\n算法需求：\n{{...}}\n详细功能描述：\n{{...}}\n额外要求和指导：\n{{...}}\n```\n根据以上信息，开始你的算法设计或性能分析工作。请确保最终输出：\n- 紧密围绕算法需求和功能描述展开\n- 详细且逻辑清晰地反映所有的额外要求和指导\n- 完成设计后，请检查并确认以下内容是否满足要求：\n  - 算法是否满足所有功能需求\n  - 性能分析是否全面、逻辑性是否强\n  - 解决方案是否适用于特定问题场景",
+                "EnglishPromptTemplate": "As a professional algorithm engineer, your task is to conduct professional, comprehensive, specific, and logical algorithm design and performance analysis based on the detailed information provided by the user. Please follow these steps: \nCarefully review the following information\n```\nAlgorithm Requirements:\n{{...}}\nDetailed Function Description:\n{{...}}\nAdditional Requirements and Guidance:\n{{...}}\n```\nBased on the above information, begin your work on algorithm design or performance analysis. Ensure the final output: \n- Closely revolves around the algorithm requirements and function description\n- Details and logically reflects all the additional requirements and guidance\n- After completing the design, check and confirm whether the following requirements are met:\n  - Whether the algorithm meets all functional requirements\n  - Whether the performance analysis is comprehensive and logical\n  - Whether the solution is applicable to specific problem scenarios\n[Please respond in Chinese]",
+                "Inputs": [
+                    {
+                        "InputPlaceholder": "描述您的算法需求（例如：数据分析、机器学习模型、图像处理等）。",
+                        "InputLabel": "算法需求",
+                        "InputList": null
+                    },
+                    {
+                        "InputPlaceholder": "详细说明功能需求，包括具体目标、预期结果、性能指标等。",
+                        "InputLabel": "功能描述",
+                        "InputList": null
+                    },
+                    {
+                        "InputPlaceholder": "提供额外要求和指导，如特定算法限制、资源约束、截止日期等。",
+                        "InputLabel": "额外要求",
+                        "InputList": null
+                    }
+                ]
+            },
+            "05-科研": {
+                "icon": "science",
+                "UsageDescription": "提供专业建议，协助完成研究方法、文献查阅、实验设计等任务。",
+                "ChinesePromptTemplate": "作为一名专业的研究咨询专家，你的任务是根据用户提供的详细信息进行专业、全面、具体、有逻辑性的研究咨询服务。请根据以下步骤操作：\n请仔细审阅以下信息\n研究问题：\n{{...}}\n研究领域：\n{{...}}\n具体需求：\n{{...}}\n根据以上信息，开始你的咨询服务。请确保最终建议：\n- 紧密围绕咨询问题、领域和需求展开\n- 详细且逻辑清晰地提供专业建议\n- 完成咨询后，请检查并确认以下内容是否满足要求：\n  - 是否针对性强、有助于解决问题\n  - 建议是否清晰、逻辑性强\n  - 语言风格是否专业且适合客户需求",
+                "EnglishPromptTemplate": "As a professional research consultant, your task is to provide expert, comprehensive, specific, and logical research consulting services based on the detailed information provided by the user. Please follow these steps:\nCarefully review the following information\nResearch Question:\n{{...}}\nResearch Area:\n{{...}}\nSpecific Requirements:\n{{...}}\nBased on the above information, begin your consulting service. Ensure that the final advice:\n- Closely revolves around the consultation question, area, and requirements\n- Provides detailed and logically clear professional advice\n- After completing the consultation, check and confirm if the following requirements are met:\n  - Whether it is targeted and helpful in solving the problem\n  - Whether the advice is clear and logical\n  - Whether the language style is professional and suitable for customer needs\n(Please respond in Chinese)",
+                "Inputs": [
+                    {
+                        "InputPlaceholder": "请输入您的具体研究问题（例如：如何设计有效的实验来测试某种假设？）。",
+                        "InputLabel": "研究问题",
+                        "InputList": null
+                    },
+                    {
+                        "InputPlaceholder": "描述您的研究领域或主题（例如：生物医学、环境科学、计算机科学等）。",
+                        "InputLabel": "研究领域",
+                        "InputList": null
+                    },
+                    {
+                        "InputPlaceholder": "提供您需要的具体咨询类型（例如：实验设计、数据分析、文献综述、科研伦理等）。",
+                        "InputLabel": "具体需求",
+                        "InputList": null
+                    }
+                ]
+            },
+            "06-技术指导": {
+                "icon": "support_agent",
+                "UsageDescription": "为各领域的技术问题提供专业解决方案和指导。",
+                "ChinesePromptTemplate": "作为一名跨领域的技术咨询专家，你的任务是根据用户提出的问题、背景信息和具体需求，提供专业、全面、有逻辑性的技术解决方案和指导。请根据以下步骤操作：\n请仔细审阅以下信息\n```\n问题概述：\n{{...}}\n问题背景：\n{{...}}\n需求与目标：\n{{...}}\n```\n根据以上信息，开始你的技术解决方案制定和指导工作。请确保最终方案：\n- 全面理解和解答问题，考虑到问题背景\n- 明确且逻辑清晰地达成需求与目标\n- 完成方案制定后，请检查并确认以下内容是否满足要求：\n  - 是否全面解决了提出的问题\n  - 方案是否切实可行，逻辑性是否强\n  - 是否适合目标用户的技术水平和实际应用",
+                "EnglishPromptTemplate": "As a cross-disciplinary technical consulting expert, your task is to provide professional, comprehensive, and logical technical solutions and guidance based on the user's presented problem, background information, and specific needs. Please follow these steps: \nCarefully review the following information\n```\nProblem Overview:\n{{...}}\nProblem Background:\n{{...}}\nNeeds and Objectives:\n{{...}}\n```\nBased on the above information, begin your work of formulating and guiding the technical solution. Ensure the final plan: \n- Fully understands and addresses the question, considering the problem's background\n- Clearly and logically achieves the needs and objectives\n- After completing the plan formulation, check and confirm whether the following requirements are met:\n  - Whether the presented problem is fully solved\n  - Whether the plan is feasible and logical\n  - Whether it is suitable for the target user's technical level and practical application\n[Please respond in Chinese]",
+                "Inputs": [
+                    {
+                        "InputPlaceholder": "概述您遇到的技术问题（例如：系统故障、工艺改进、产品设计等）。",
+                        "InputLabel": "问题概述",
+                        "InputList": null
+                    },
+                    {
+                        "InputPlaceholder": "提供问题发生的背景信息（例如：使用环境、已有技术、相关资源等）。",
+                        "InputLabel": "问题背景",
+                        "InputList": null
+                    },
+                    {
+                        "InputPlaceholder": "阐述您的需求和目标（例如：解决问题的紧迫性、预期效果、资源限制等）。",
+                        "InputLabel": "需求与目标",
+                        "InputList": null
+                    }
+                ]
+            },
+            "07-备课": {
                 "icon": "menu_book",
                 "UsageDescription": "为教师提供关于教学PPT内容精选与结构化布局的专业建议。",
                 "ChinesePromptTemplate": "作为一名教学内容策划专家，您的任务是基于教师提供的详细信息，提供专业、细致、有条理的教学PPT内容策划建议。请依照以下步骤操作：\n仔细阅读以下信息\n课程内容与教学目标：\n{{...}}\n目标学生群体：\n{{...}}\nPPT内容结构化需求：\n{{...}}\n根据以上信息，展开您的内容策划工作。请确保最终PPT内容：\n- 紧扣课程内容与教学目标\n- 易于学生理解，符合目标学生群体的特点\n- 在完成内容策划后，请检查并确认：\n  - 内容是否全面、逻辑性强\n  - 是否利于提升教学效果及学生的参与度\n  - 信息是否准确，及时反映最新教学理念和资料",
@@ -532,154 +676,33 @@
                         ]
                     }
                 ]
-            },
-            "技术指导": {
-                "icon": "support_agent",
-                "UsageDescription": "为各领域的技术问题提供专业解决方案和指导。",
-                "ChinesePromptTemplate": "作为一名跨领域的技术咨询专家，你的任务是根据用户提出的问题、背景信息和具体需求，提供专业、全面、有逻辑性的技术解决方案和指导。请根据以下步骤操作：\n请仔细审阅以下信息\n```\n问题概述：\n{{...}}\n问题背景：\n{{...}}\n需求与目标：\n{{...}}\n```\n根据以上信息，开始你的技术解决方案制定和指导工作。请确保最终方案：\n- 全面理解和解答问题，考虑到问题背景\n- 明确且逻辑清晰地达成需求与目标\n- 完成方案制定后，请检查并确认以下内容是否满足要求：\n  - 是否全面解决了提出的问题\n  - 方案是否切实可行，逻辑性是否强\n  - 是否适合目标用户的技术水平和实际应用",
-                "EnglishPromptTemplate": "As a cross-disciplinary technical consulting expert, your task is to provide professional, comprehensive, and logical technical solutions and guidance based on the user's presented problem, background information, and specific needs. Please follow these steps: \nCarefully review the following information\n```\nProblem Overview:\n{{...}}\nProblem Background:\n{{...}}\nNeeds and Objectives:\n{{...}}\n```\nBased on the above information, begin your work of formulating and guiding the technical solution. Ensure the final plan: \n- Fully understands and addresses the question, considering the problem's background\n- Clearly and logically achieves the needs and objectives\n- After completing the plan formulation, check and confirm whether the following requirements are met:\n  - Whether the presented problem is fully solved\n  - Whether the plan is feasible and logical\n  - Whether it is suitable for the target user's technical level and practical application\n[Please respond in Chinese]",
-                "Inputs": [
-                    {
-                        "InputPlaceholder": "概述您遇到的技术问题（例如：系统故障、工艺改进、产品设计等）。",
-                        "InputLabel": "问题概述",
-                        "InputList": null
-                    },
-                    {
-                        "InputPlaceholder": "提供问题发生的背景信息（例如：使用环境、已有技术、相关资源等）。",
-                        "InputLabel": "问题背景",
-                        "InputList": null
-                    },
-                    {
-                        "InputPlaceholder": "阐述您的需求和目标（例如：解决问题的紧迫性、预期效果、资源限制等）。",
-                        "InputLabel": "需求与目标",
-                        "InputList": null
-                    }
-                ]
-            },
-            "科研": {
-                "icon": "science",
-                "UsageDescription": "提供专业建议，协助完成研究方法、文献查阅、实验设计等任务。",
-                "ChinesePromptTemplate": "作为一名专业的研究咨询专家，你的任务是根据用户提供的详细信息进行专业、全面、具体、有逻辑性的研究咨询服务。请根据以下步骤操作：\n请仔细审阅以下信息\n研究问题：\n{{...}}\n研究领域：\n{{...}}\n具体需求：\n{{...}}\n根据以上信息，开始你的咨询服务。请确保最终建议：\n- 紧密围绕咨询问题、领域和需求展开\n- 详细且逻辑清晰地提供专业建议\n- 完成咨询后，请检查并确认以下内容是否满足要求：\n  - 是否针对性强、有助于解决问题\n  - 建议是否清晰、逻辑性强\n  - 语言风格是否专业且适合客户需求",
-                "EnglishPromptTemplate": "As a professional research consultant, your task is to provide expert, comprehensive, specific, and logical research consulting services based on the detailed information provided by the user. Please follow these steps:\nCarefully review the following information\nResearch Question:\n{{...}}\nResearch Area:\n{{...}}\nSpecific Requirements:\n{{...}}\nBased on the above information, begin your consulting service. Ensure that the final advice:\n- Closely revolves around the consultation question, area, and requirements\n- Provides detailed and logically clear professional advice\n- After completing the consultation, check and confirm if the following requirements are met:\n  - Whether it is targeted and helpful in solving the problem\n  - Whether the advice is clear and logical\n  - Whether the language style is professional and suitable for customer needs\n(Please respond in Chinese)",
-                "Inputs": [
-                    {
-                        "InputPlaceholder": "请输入您的具体研究问题（例如：如何设计有效的实验来测试某种假设？）。",
-                        "InputLabel": "研究问题",
-                        "InputList": null
-                    },
-                    {
-                        "InputPlaceholder": "描述您的研究领域或主题（例如：生物医学、环境科学、计算机科学等）。",
-                        "InputLabel": "研究领域",
-                        "InputList": null
-                    },
-                    {
-                        "InputPlaceholder": "提供您需要的具体咨询类型（例如：实验设计、数据分析、文献综述、科研伦理等）。",
-                        "InputLabel": "具体需求",
-                        "InputList": null
-                    }
-                ]
-            },
-            "算法设计": {
-                "icon": "functions",
-                "UsageDescription": "根据特定需求提供算法解决方案或性能分析。",
-                "ChinesePromptTemplate": "作为一名专业的算法工程师，你的任务是根据用户提供的详细信息进行专业、全面、具体、有逻辑性的算法设计与性能分析。请根据以下步骤操作：\n请仔细审阅以下信息\n```\n算法需求：\n{{...}}\n详细功能描述：\n{{...}}\n额外要求和指导：\n{{...}}\n```\n根据以上信息，开始你的算法设计或性能分析工作。请确保最终输出：\n- 紧密围绕算法需求和功能描述展开\n- 详细且逻辑清晰地反映所有的额外要求和指导\n- 完成设计后，请检查并确认以下内容是否满足要求：\n  - 算法是否满足所有功能需求\n  - 性能分析是否全面、逻辑性是否强\n  - 解决方案是否适用于特定问题场景",
-                "EnglishPromptTemplate": "As a professional algorithm engineer, your task is to conduct professional, comprehensive, specific, and logical algorithm design and performance analysis based on the detailed information provided by the user. Please follow these steps: \nCarefully review the following information\n```\nAlgorithm Requirements:\n{{...}}\nDetailed Function Description:\n{{...}}\nAdditional Requirements and Guidance:\n{{...}}\n```\nBased on the above information, begin your work on algorithm design or performance analysis. Ensure the final output: \n- Closely revolves around the algorithm requirements and function description\n- Details and logically reflects all the additional requirements and guidance\n- After completing the design, check and confirm whether the following requirements are met:\n  - Whether the algorithm meets all functional requirements\n  - Whether the performance analysis is comprehensive and logical\n  - Whether the solution is applicable to specific problem scenarios\n[Please respond in Chinese]",
-                "Inputs": [
-                    {
-                        "InputPlaceholder": "描述您的算法需求（例如：数据分析、机器学习模型、图像处理等）。",
-                        "InputLabel": "算法需求",
-                        "InputList": null
-                    },
-                    {
-                        "InputPlaceholder": "详细说明功能需求，包括具体目标、预期结果、性能指标等。",
-                        "InputLabel": "功能描述",
-                        "InputList": null
-                    },
-                    {
-                        "InputPlaceholder": "提供额外要求和指导，如特定算法限制、资源约束、截止日期等。",
-                        "InputLabel": "额外要求",
-                        "InputList": null
-                    }
-                ]
-            },
-            "编程-python-简易结果": {
-                "icon": "code",
-                "UsageDescription": "按照要求编写Python代码。",
-                "ChinesePromptTemplate": "作为Python编程专家，您的任务是根据编程需求完成编程任务。要求:\n```\n代码实现专业、规范、逻辑清晰\n遵循PEP8标准及Google Python编程风格指南\n类与类、类与函数、函数与函数之间，以及import语句与函数定义、函数定义与`if __name__ == '__main__':`语句之间应空两行。类中的方法定义或不同逻辑块之间应空一行。\n包含详尽中文注释，如果包含函数，请给出详细的函数注释并使用:param格式进行入参说明\n在最后通过if __name__ == '__main__': 方式给出示例调用代码\n具有良好的变量命名、易维护，遵守选用编程语言的最佳实践和规范。\n```\n\n编程需求：\n```\n{{...}}\n```\n\n其他要求：\n```\n{{...}}\n```",
-                "EnglishPromptTemplate": "As a Python programming expert, your task is to complete the programming tasks based on the programming requirements. Requirements:\n\nCode implementation should be professional, standardized, and logically clear\nFollow the PEP8 standard and the Google Python Style Guide\nThere should be two lines of space between classes, between classes and functions, between functions, and between import statements and function definitions, as well as between function definitions and the `if __name__ == '__main__':` statement. Within classes, there should be one line of space between method definitions or different logical blocks.\nInclude detailed Chinese comments. If functions are included, provide detailed function comments and use the :param format for input parameter explanation\nAt the end, provide example invocation code using the `if __name__ == '__main__':` method\nHave good variable naming, be easy to maintain, and adhere to the best practices and standards of the chosen programming language.\n\n\nProgramming requirements:\n\n{{...}}\n\n\nOther requirements:\n\n{{...}}\n",
-                "Inputs": [
-                    {
-                        "InputPlaceholder": "详细描述您的编程需求",
-                        "InputLabel": "需求概述",
-                        "InputList": null
-                    },
-                    {
-                        "InputPlaceholder": "提供任何其他特定要求或指导，如性能参数、内存限制或特定库/框架的使用。",
-                        "InputLabel": "其他要求",
-                        "InputList": [
-                            "运行速度优先",
-                            "实现效果优先",
-                            "代码可读性优先"
-                        ]
-                    }
-                ]
-            },
-            "编程-python-详细结果": {
-                "icon": "code",
-                "UsageDescription": "按照要求编写Python代码。",
-                "ChinesePromptTemplate": "作为Python编程专家，您的任务是根据编程需求完成编程任务。要求:\n```\n代码实现专业、规范、逻辑清晰\n遵循PEP8标准及Google Python编程风格指南\n类与类、类与函数、函数与函数之间，以及import语句与函数定义、函数定义与`if __name__ == '__main__':`语句之间应空两行。类中的方法定义或不同逻辑块之间应空一行。\n包含详尽中文注释，如果包含函数，请给出详细的函数注释并使用:param格式进行入参说明\n在最后通过if __name__ == '__main__': 方式给出示例调用代码\n具有良好的变量命名、易维护，遵守选用编程语言的最佳实践和规范。\n```\n\n编程需求：\n```\n{{...}}\n```\n\n其他要求：\n```\n{{...}}\n```\n请按以下步骤操作：\n步骤1: 阐述最佳代码实现思路及其他常见实现思路，对比最佳实现思路与其他常见思路的优劣\n步骤2: 按照最佳代码实现思路编写代码。\n步骤3: 完成后，评估以下要素以确保代码质量：\n  - 代码完整性和对需求的满足度\n  - 代码结构的清晰度和逻辑连贯性\n  - 遵守编程规范和风格指南",
-                "EnglishPromptTemplate": "As a Python programming expert, your task is to complete the programming task based on the programming requirements. Requirements:\n\nCode implementation should be professional, standardized, and logically clear\nFollow the PEP8 standard and the Google Python Style Guide\nThere should be two lines of space between classes, between classes and functions, between functions, and between import statements and function definitions, as well as between function definitions and the `if __name__ == '__main__':` statement. Within classes, there should be one line of space between method definitions or different logical blocks.\nInclude detailed Chinese comments. If functions are included, provide detailed function comments and use the :param format for explaining input parameters\nAt the end, provide example invocation code using the `if __name__ == '__main__':` method\nHave good variable naming, be easy to maintain, and adhere to the best practices and standards of the chosen programming language.\n\n\nProgramming requirements:\n\n{{...}}\n\n\nOther requirements:\n\n{{...}}\n\nPlease follow these steps:\nStep 1: Describe the best code implementation approach and other common approaches, comparing the advantages and disadvantages of the best approach against others\nStep 2: Write the code following the best code implementation approach.\nStep 3: Upon completion, assess the following elements to ensure code quality:\n - Completeness of the code and its fulfillment of the requirements\n - Clarity of the code structure and its logical coherence\n - Adherence to programming conventions and style guides",
-                "Inputs": [
-                    {
-                        "InputPlaceholder": "详细描述您的编程需求",
-                        "InputLabel": "需求概述",
-                        "InputList": null
-                    },
-                    {
-                        "InputPlaceholder": "提供任何其他特定要求或指导，如性能参数、内存限制或特定库/框架的使用。",
-                        "InputLabel": "其他要求",
-                        "InputList": [
-                            "运行速度优先",
-                            "实现效果优先",
-                            "代码可读性优先"
-                        ]
-                    }
-                ]
-            },
-            "编程-通用编程语言": {
-                "icon": "code",
-                "UsageDescription": "按照要求编写代码。",
-                "ChinesePromptTemplate": "作为编程专家，您的任务是按照用户指定的编程语言完成编程任务，以解决用户的编程需求。要求代码实现规范、简洁、明确、高效、逻辑清晰、包含详尽中文注释、具有良好的命名和组织、易维护，遵守选用编程语言的最佳实践和规范。\n\n用户编程需求和指定编程语言如下：\n指定编程语言：\n```\n{{...}}\n```\n\n编程需求：\n```\n{{...}}\n```\n\n其他要求：\n```\n{{...}}\n```\n请按以下步骤操作：\n步骤1: 阐述最佳代码实现思路及其他常见实现思路，对比最佳实现思路与其他常见思路的优劣\n步骤2: 按照最佳代码实现思路编写代码。\n步骤3: 完成后，评估以下要素以确保代码质量：\n  - 代码完整性和对需求的满足度\n  - 代码结构的清晰度和逻辑连贯性\n  - 遵守编程规范和风格指南",
-                "EnglishPromptTemplate": "As a programming expert, your task is to complete programming assignments using the programming language specified by the user, to meet their programming needs. The code should be standard, concise, clear, efficient, logically coherent, include comprehensive English comments, have good naming and organization, be easy to maintain, and adhere to the best practices and standards of the chosen programming language.\n\nUser's programming requirements and specified programming language are as follows:\nSpecified programming language:\n```\n{{...}}\n```\n\nProgramming requirement:\n```\n{{...}}\n```\n\nOther requirements:\n```\n{{...}}\n```\nPlease proceed with the following steps:\nStep 1: Elucidate the best code implementation approach and other common approaches, comparing the advantages and disadvantages of the best approach with others.\nStep 2: Write code according to the best code implementation approach.\nStep 3: Upon completion, assess the following aspects to ensure code quality:\n  - Completeness of the code and its adequacy in meeting the requirements\n  - Clarity of code structure and logical coherence\n  - Adherence to coding standards and style guides",
-                "Inputs": [
-                    {
-                        "InputPlaceholder": "指定您希望使用的编程语言（如 Python、JavaScript、C++等）。",
-                        "InputLabel": "编程语言",
-                        "InputList": [
-                            "Python",
-                            "JavaScript",
-                            "C++"
-                        ]
-                    },
-                    {
-                        "InputPlaceholder": "详细描述您的编程需求",
-                        "InputLabel": "需求概述",
-                        "InputList": null
-                    },
-                    {
-                        "InputPlaceholder": "提供任何其他特定要求或指导，如性能参数、内存限制或特定库/框架的使用。",
-                        "InputLabel": "其他要求",
-                        "InputList": [
-                            "运行速度优先",
-                            "实现效果优先",
-                            "代码可读性优先"
-                        ]
-                    }
-                ]
             }
         },
         "05-商业与管理": {
-            "产品开发": {
+            "01-项目管理": {
+                "icon": "assignment_turned_in",
+                "UsageDescription": "提供针对项目管理挑战的专业解决方案。",
+                "ChinesePromptTemplate": "作为一个经验丰富的项目经理，你的任务是根据提供的信息给出专业、全面、明确、可操作性的解决方案。请根据以下步骤操作：\n请仔细审阅以下信息\n\n项目问题或需求：\n{{...}}\n项目挑战详细信息：\n{{...}}\n项目相关参数或条件：\n{{...}}\n\n根据以上信息，开始你的解决方案规划。请确保最终方案：\n- 针对项目问题或需求提供明确的解决方法\n- 考虑到项目挑战的详细信息，提出切实可行的措施\n- 在给定的项目参数或条件下，确保方案的可操作性\n完成方案规划后，请检查并确认以下内容是否满足要求：\n  - 方案是否针对性强，能有效解决项目问题\n  - 方案是否详尽、逻辑清晰\n  - 是否考虑了项目的全部相关因素和约束条件",
+                "EnglishPromptTemplate": "As an experienced project manager, your task is to provide professional, comprehensive, clear, and actionable solutions based on the provided information. Please follow these steps:\nCarefully review the following information\n\nProject Issue or Requirement:\n{{...}}\nDetailed Information on Project Challenges:\n{{...}}\nProject Related Parameters or Conditions:\n{{...}}\n\nBased on the above information, start planning your solution. Ensure that the final plan:\n- Offers a clear solution method for the project issue or requirement\n- Considers the detailed information on project challenges to propose practical measures\n- Ensures the operability of the solution within the given project parameters or conditions\nAfter completing the solution planning, check and confirm if the following requirements are met:\n  - Whether the solution is targeted and effectively solves the project issue\n  - Whether the solution is thorough and logically clear\n  - Whether all relevant factors and constraints of the project have been considered\n(Please respond in Chinese)",
+                "Inputs": [
+                    {
+                        "InputPlaceholder": "请描述项目面临的具体问题或需求（例如：成本控制、时间管理、团队协作问题等）。",
+                        "InputLabel": "问题或需求",
+                        "InputList": null
+                    },
+                    {
+                        "InputPlaceholder": "详细描述项目面临的挑战（例如：资源限制、技术难题、市场变化等）。",
+                        "InputLabel": "挑战详细信息",
+                        "InputList": null
+                    },
+                    {
+                        "InputPlaceholder": "描述项目相关的参数或条件（例如：预算限制、时间框架、团队能力、资源可用性等）。",
+                        "InputLabel": "参数或条件",
+                        "InputList": null
+                    }
+                ]
+            },
+            "02-产品开发": {
                 "icon": "engineering",
                 "UsageDescription": "根据用户需求提供产品设计、市场定位、功能优化的策略性建议。",
                 "ChinesePromptTemplate": "作为一名专业的策略顾问，你的任务是根据用户提供的详细信息进行深入分析，提出专业、具体、切实可行的策略建议。请根据以下步骤操作：\n请仔细审阅以下信息\n问题或场景描述：\n{{...}}\n目标客户群体：\n{{...}}\n期望成果和关键指标：\n{{...}}\n根据以上信息，开始你的分析或建议工作。请确保最终策略建议：\n- 紧密围绕问题或场景进行深入分析\n- 针对目标客户群体制定策略\n- 明确期望成果和关键指标，确保建议具体可行\n- 完成分析后，请检查并确认以下内容是否满足要求：\n  - 是否针对性强，解决了提出的问题或需求\n  - 建议是否具有可操作性和实际应用价值\n  - 语言风格和内容是否适合目标读者",
@@ -702,7 +725,7 @@
                     }
                 ]
             },
-            "人员管理": {
+            "03-人员管理": {
                 "icon": "people",
                 "UsageDescription": "提供专业的团队管理和领导力相关建议。",
                 "ChinesePromptTemplate": "作为一名资深管理顾问，你的任务是针对管理人员的角色和责任，提供专业、全面的建议和解决方案。请根据以下信息进行分析：\n请仔细审阅以下信息\n```\n问题描述：\n{{...}}\n情境背景：\n{{...}}\n人员信息：\n{{...}}\n```\n根据以上信息，提出你的建议或解决方案。请确保你的建议：\n- 深入理解管理人员的职责和所面临的挑战\n- 具体且实用，适应管理人员的具体需求和情境\n- 完成建议后，请检查并确认以下内容是否满足要求：\n  - 建议是否切实可行，具有实际操作性\n  - 是否全面考虑了所有相关因素和可能的影响",
@@ -725,30 +748,7 @@
                     }
                 ]
             },
-            "广告营销": {
-                "icon": "campaign",
-                "UsageDescription": "提供针对性的广告营销策略与实践建议，支持品牌增长和市场拓展。",
-                "ChinesePromptTemplate": "作为广告营销领域的专业顾问，您的任务是基于丰富的行业知识和实践经验，为用户提供具体、创新且可操作的广告营销解决方案。请遵循以下步骤：\n审阅以下信息：\n市场挑战与机遇：\n{{...}}\n目标客户群和消费者画像：\n{{...}}\n战略目标与具体要求：\n{{...}}\n依据这些信息，制定您的策略建议。请确保您的建议：\n- 紧密结合市场动态和目标客户的特点\n- 全面考虑品牌定位、竞争策略和资源配置\n- 在规划完成后，确认方案：\n  - 符合当前市场趋势和竞争环境\n  - 创新性强且具备可行性\n  - 明确执行步骤和预期成效评估",
-                "EnglishPromptTemplate": "As a professional consultant in the field of advertising and marketing, your task is to provide specific, innovative, and actionable advertising and marketing solutions based on rich industry knowledge and practical experience. Please follow these steps:\nReview the following information:\nMarket Challenges and Opportunities:\n{{...}}\nTarget Customer Group and Consumer Profiles:\n{{...}}\nStrategic Goals and Specific Requirements:\n{{...}}\nBased on this information, formulate your strategic recommendations. Ensure that your recommendations:\n- Closely integrate with market dynamics and the characteristics of the target customers\n- Comprehensively consider brand positioning, competitive strategy, and resource allocation\n- After planning, confirm that the solution:\n  - Aligns with current market trends and competitive environment\n  - Is highly innovative and feasible\n  - Has clear execution steps and anticipated performance assessments\n(Please respond in Chinese)",
-                "Inputs": [
-                    {
-                        "InputPlaceholder": "概述您面临的广告营销挑战或把握的市场机会（如目标市场渗透、竞品分析、广告优化等）。",
-                        "InputLabel": "市场挑战与机遇",
-                        "InputList": null
-                    },
-                    {
-                        "InputPlaceholder": "描述目标客户群体和消费者特征（如年龄、消费习惯、媒体偏好等）。",
-                        "InputLabel": "客户群与消费者画像",
-                        "InputList": null
-                    },
-                    {
-                        "InputPlaceholder": "阐述您的战略目标和具体需求（如品牌重塑、市场份额扩增、销售提升等）。",
-                        "InputLabel": "战略目标与要求",
-                        "InputList": null
-                    }
-                ]
-            },
-            "目标规划": {
+            "04-目标规划": {
                 "icon": "flag",
                 "UsageDescription": "提供目标设定、战略规划和行动指导。",
                 "ChinesePromptTemplate": "作为一名战略规划专家，您的任务是基于综合信息，为个人或组织设定目标、制定战略及规划行动。请详细评估以下信息：\n```\n现状描述：\n{{...}}\n目标设定：\n{{...}}\n资源和约束条件：\n{{...}}\n```\n随后，请执行以下步骤：\n1. 从现状分析出发，细化并明确目标。\n2. 基于这些目标，规划相应的战略和具体行动步骤。\n3. 制定详细的行动计划，包括关键阶段和预期成果。\n确保您的规划：\n- 紧密结合所提供信息，具有高度针对性\n- 创新与实用并重\n- 结构清晰，方便执行和跟踪\n- 充分考虑潜在挑战及应对策略",
@@ -771,32 +771,32 @@
                     }
                 ]
             },
-            "项目管理": {
-                "icon": "assignment_turned_in",
-                "UsageDescription": "提供针对项目管理挑战的专业解决方案。",
-                "ChinesePromptTemplate": "作为一个经验丰富的项目经理，你的任务是根据提供的信息给出专业、全面、明确、可操作性的解决方案。请根据以下步骤操作：\n请仔细审阅以下信息\n\n项目问题或需求：\n{{...}}\n项目挑战详细信息：\n{{...}}\n项目相关参数或条件：\n{{...}}\n\n根据以上信息，开始你的解决方案规划。请确保最终方案：\n- 针对项目问题或需求提供明确的解决方法\n- 考虑到项目挑战的详细信息，提出切实可行的措施\n- 在给定的项目参数或条件下，确保方案的可操作性\n完成方案规划后，请检查并确认以下内容是否满足要求：\n  - 方案是否针对性强，能有效解决项目问题\n  - 方案是否详尽、逻辑清晰\n  - 是否考虑了项目的全部相关因素和约束条件",
-                "EnglishPromptTemplate": "As an experienced project manager, your task is to provide professional, comprehensive, clear, and actionable solutions based on the provided information. Please follow these steps:\nCarefully review the following information\n\nProject Issue or Requirement:\n{{...}}\nDetailed Information on Project Challenges:\n{{...}}\nProject Related Parameters or Conditions:\n{{...}}\n\nBased on the above information, start planning your solution. Ensure that the final plan:\n- Offers a clear solution method for the project issue or requirement\n- Considers the detailed information on project challenges to propose practical measures\n- Ensures the operability of the solution within the given project parameters or conditions\nAfter completing the solution planning, check and confirm if the following requirements are met:\n  - Whether the solution is targeted and effectively solves the project issue\n  - Whether the solution is thorough and logically clear\n  - Whether all relevant factors and constraints of the project have been considered\n(Please respond in Chinese)",
+            "05-广告营销": {
+                "icon": "campaign",
+                "UsageDescription": "提供针对性的广告营销策略与实践建议，支持品牌增长和市场拓展。",
+                "ChinesePromptTemplate": "作为广告营销领域的专业顾问，您的任务是基于丰富的行业知识和实践经验，为用户提供具体、创新且可操作的广告营销解决方案。请遵循以下步骤：\n审阅以下信息：\n市场挑战与机遇：\n{{...}}\n目标客户群和消费者画像：\n{{...}}\n战略目标与具体要求：\n{{...}}\n依据这些信息，制定您的策略建议。请确保您的建议：\n- 紧密结合市场动态和目标客户的特点\n- 全面考虑品牌定位、竞争策略和资源配置\n- 在规划完成后，确认方案：\n  - 符合当前市场趋势和竞争环境\n  - 创新性强且具备可行性\n  - 明确执行步骤和预期成效评估",
+                "EnglishPromptTemplate": "As a professional consultant in the field of advertising and marketing, your task is to provide specific, innovative, and actionable advertising and marketing solutions based on rich industry knowledge and practical experience. Please follow these steps:\nReview the following information:\nMarket Challenges and Opportunities:\n{{...}}\nTarget Customer Group and Consumer Profiles:\n{{...}}\nStrategic Goals and Specific Requirements:\n{{...}}\nBased on this information, formulate your strategic recommendations. Ensure that your recommendations:\n- Closely integrate with market dynamics and the characteristics of the target customers\n- Comprehensively consider brand positioning, competitive strategy, and resource allocation\n- After planning, confirm that the solution:\n  - Aligns with current market trends and competitive environment\n  - Is highly innovative and feasible\n  - Has clear execution steps and anticipated performance assessments\n(Please respond in Chinese)",
                 "Inputs": [
                     {
-                        "InputPlaceholder": "请描述项目面临的具体问题或需求（例如：成本控制、时间管理、团队协作问题等）。",
-                        "InputLabel": "问题或需求",
+                        "InputPlaceholder": "概述您面临的广告营销挑战或把握的市场机会（如目标市场渗透、竞品分析、广告优化等）。",
+                        "InputLabel": "市场挑战与机遇",
                         "InputList": null
                     },
                     {
-                        "InputPlaceholder": "详细描述项目面临的挑战（例如：资源限制、技术难题、市场变化等）。",
-                        "InputLabel": "挑战详细信息",
+                        "InputPlaceholder": "描述目标客户群体和消费者特征（如年龄、消费习惯、媒体偏好等）。",
+                        "InputLabel": "客户群与消费者画像",
                         "InputList": null
                     },
                     {
-                        "InputPlaceholder": "描述项目相关的参数或条件（例如：预算限制、时间框架、团队能力、资源可用性等）。",
-                        "InputLabel": "参数或条件",
+                        "InputPlaceholder": "阐述您的战略目标和具体需求（如品牌重塑、市场份额扩增、销售提升等）。",
+                        "InputLabel": "战略目标与要求",
                         "InputList": null
                     }
                 ]
             }
         },
         "06-信息处理": {
-            "信息整理": {
+            "01-信息整理": {
                 "icon": "view_list",
                 "UsageDescription": "提供针对复杂数据和信息的专业整理和分析。",
                 "ChinesePromptTemplate": "作为一名数据与信息管理专家，您的任务是对所提供的复杂数据和信息进行专业的分析、归纳和整理。请遵循以下步骤：\n1. 详细审阅提供的信息：\n   - 信息内容：\n     {{...}}\n   - 整理和分析要求：\n     {{...}}\n2. 基于所给信息执行整理和分析任务。确保结果：\n   - 精确展现所提供信息的要点\n   - 严格遵循整理和分析的指定要求\n   - 结构清晰、逻辑连贯\n在完成后，进行以下确认：\n   - 全面覆盖所提信息内容\n   - 结果格式和质量符合专业标准\n   - 适应预定的应用场景或目标受众",
@@ -814,7 +814,7 @@
                     }
                 ]
             },
-            "维基百科格式生成": {
+            "02-维基百科格式生成": {
                 "icon": "wysiwyg",
                 "UsageDescription": "转换文本格式以符合维基百科的标准。",
                 "ChinesePromptTemplate": "作为维基百科格式化专家，您的任务是将提供的文本内容转化为符合维基百科标准的格式。请遵循以下步骤：\n审阅以下信息：\n```\n待转化文本：\n{{...}}\n文本主题：\n{{...}}\n```\n在此基础上，进行以下操作：\n- 将待转化文本调整为遵守维基百科格式和风格指南\n- 确保内容客观准确且中立\n- 在文本中适当使用内部链接\n- 添加必要的可靠参考文献\n- 使用清晰、标准和中性的语言\n- 确保文章结构清晰，逻辑性强",
@@ -834,104 +834,7 @@
             }
         },
         "07-分析与理论": {
-            "军事分析": {
-                "icon": "military_tech",
-                "UsageDescription": "提供军事相关分析。",
-                "ChinesePromptTemplate": "作为一名军事分析专家，你的任务是根据客户提供的详细信息进行专业、全面、具体的军事相关分析。请根据以下步骤操作：\n请仔细审阅以下信息\n```\n军事话题：\n{{...}}\n战略或技术细节：\n{{...}}\n历史背景或当前情况：\n{{...}}\n```\n根据以上信息，开始你的分析工作。请确保最终分析：\n- 紧密围绕军事话题展开\n- 详细且逻辑清晰地反映所有的战略或技术细节\n- 涵盖相关的历史背景或当前情况\n- 完成分析后，请检查并确认以下内容是否满足要求：\n  - 分析是否全面、深入\n  - 结构是否清晰，逻辑是否合理",
-                "EnglishPromptTemplate": "As a military analysis expert, your task is to provide professional, comprehensive, and specific military-related analysis based on detailed information provided by the client. Please follow these steps:\nCarefully review the following information\n```\nMilitary Topic:\n{{...}}\nStrategic or Technical Details:\n{{...}}\nHistorical Background or Current Situation:\n{{...}}\n```\nBased on the above information, begin your analysis. Ensure that the final analysis:\n- Closely revolves around the military topic\n- Detailed and logically clear in reflecting all strategic or technical details\n- Covers relevant historical background or current situation\n- After completing the analysis, check and confirm whether the following requirements are met:\n  - Whether the analysis is comprehensive and in-depth\n  - Whether the structure is clear and the logic is sound\n(Please respond in Chinese)",
-                "Inputs": [
-                    {
-                        "InputPlaceholder": "请输入您要分析的军事话题（例如：特定冲突、战略发展、武器系统等）。",
-                        "InputLabel": "军事话题",
-                        "InputList": null
-                    },
-                    {
-                        "InputPlaceholder": "提供所需分析的具体战略或技术问题（例如：作战策略、武器功能、技术创新等）。",
-                        "InputLabel": "具体问题",
-                        "InputList": null
-                    },
-                    {
-                        "InputPlaceholder": "描述与话题相关的历史背景或当前情况（例如：历史事件、地缘政治影响、军事对峙等）。",
-                        "InputLabel": "背景现状",
-                        "InputList": null
-                    }
-                ]
-            },
-            "哲学分析": {
-                "icon": "question_mark",
-                "UsageDescription": "提供哲学层面的分析论证。包括：对特定场景的哲学解读，对正反双方观点的哲学支持与批判分析，并通过具体案例来增强理论的实际应用性和理解力。",
-                "ChinesePromptTemplate": "作为哲学领域的专家，请按以下步骤进行：\n1. 对所提供场景进行全面的哲学解析，考虑不同哲学流派和理论的适用性。\n2. 依据哲学理论，提出对正方观点的支持性分析，同时结合实际案例加强观点的现实关联性。\n3. 基于哲学理论，进行对反方观点的批判性分析，利用案例进一步论证其不合理之处。\n开始前，请仔细审视以下信息：\n```\n场景描述：\n{{...}}\n正方观点：\n{{...}}\n反方观点：\n{{...}}\n参考理论和案例：\n{{...}}\n```\n确保您的分析和论证过程符合哲学思维的严密性，逻辑连贯，同时在理论与实践之间架起桥梁。",
-                "EnglishPromptTemplate": "As an expert in the field of philosophy, please proceed with the following steps:\n1. Conduct a comprehensive philosophical analysis of the provided scenario, considering the applicability of different philosophical schools and theories.\n2. Based on philosophical theories, provide a supportive analysis of the proponent's viewpoint, while also using actual cases to strengthen the real-world relevance of the viewpoint.\n3. Perform a critical analysis of the opponent's viewpoint based on philosophical theories, using cases to further argue its irrational aspects.\nBefore beginning, please carefully review the following information:\n```\nScenario Description:\n{{...}}\nProponent's Viewpoint:\n{{...}}\nOpponent's Viewpoint:\n{{...}}\nReference Theories and Cases:\n{{...}}\n```\nEnsure that your analysis and argumentation process is rigorous in philosophical thinking, logically coherent, and bridges theory and practice.\n(Please respond in Chinese)",
-                "Inputs": [
-                    {
-                        "InputPlaceholder": "请详细描述待分析的场景，包括其背景和关键要素。",
-                        "InputLabel": "场景描述",
-                        "InputList": null
-                    },
-                    {
-                        "InputPlaceholder": "请输入需要论证的观点。",
-                        "InputLabel": "正方观点",
-                        "InputList": null
-                    },
-                    {
-                        "InputPlaceholder": "请输入需要驳斥的观点。",
-                        "InputLabel": "反方观点",
-                        "InputList": null
-                    },
-                    {
-                        "InputPlaceholder": "提供与讨论相关的哲学理论、案例研究或其他辅助材料，以支撑您的分析。",
-                        "InputLabel": "相关材料",
-                        "InputList": null
-                    }
-                ]
-            },
-            "新闻分析": {
-                "icon": "dynamic_feed",
-                "UsageDescription": "提供新闻事件分析。",
-                "ChinesePromptTemplate": "作为一名专业的新闻分析师，你的任务是根据客户提供的详细信息进行专业、全面、具体的新闻事件分析服务。请根据以下步骤操作：\n请仔细审阅以下信息\n```\n事件描述：\n{{...}}\n相关背景：\n{{...}}\n新闻价值：\n{{...}}\n反映的问题：\n{{...}}\n```\n根据以上信息，开始你的分析工作。请确保最终分析：\n- 详细且逻辑清晰地反映事件描述和背景\n- 深入挖掘并阐述新闻价值和反映的问题\n- 完成分析后，请检查并确认以下内容是否满足要求：\n  - 分析是否全面覆盖了所提供信息的方方面面\n  - 结构是否清晰，逻辑是否合理\n  - 内容是否具有深度和见解",
-                "EnglishPromptTemplate": "As a professional news analyst, your task is to provide expert, comprehensive, and specific news event analysis services based on detailed information provided by the client. Please follow these steps:\nCarefully review the following information\n```\nEvent Description:\n{{...}}\nRelated Background:\n{{...}}\nNews Value:\n{{...}}\nIssues Reflected:\n{{...}}\n```\nBased on the above information, begin your analysis. Ensure that the final analysis:\n- Detailed and logically clear in reflecting the event description and background\n- Delves deep and elucidates the news value and issues reflected\n- After completing the analysis, check and confirm whether the following requirements are met:\n  - Whether the analysis comprehensively covers all aspects of the provided information\n  - Whether the structure is clear and the logic is sound\n  - Whether the content has depth and insight\n(Please respond in Chinese)",
-                "Inputs": [
-                    {
-                        "InputPlaceholder": "请输入您需要分析的事件描述（例如：特定新闻事件、社会现象、政策变动等）。",
-                        "InputLabel": "事件描述",
-                        "InputList": null
-                    },
-                    {
-                        "InputPlaceholder": "描述与事件相关的背景信息（例如：历史沿革、相关人物、社会影响等）。",
-                        "InputLabel": "相关背景",
-                        "InputList": null
-                    },
-                    {
-                        "InputPlaceholder": "讨论事件的新闻价值（例如：对社会的影响、引发的讨论、潜在的变化等）。",
-                        "InputLabel": "新闻价值",
-                        "InputList": null
-                    },
-                    {
-                        "InputPlaceholder": "分析事件反映的问题（例如：政策缺陷、社会矛盾、法律争议等）。",
-                        "InputLabel": "反映问题",
-                        "InputList": null
-                    }
-                ]
-            },
-            "热点分析": {
-                "icon": "assessment",
-                "UsageDescription": "全面介绍当前热点并根据用户咨询提供专业分析。",
-                "ChinesePromptTemplate": "作为一名热点分析专家，你的任务分为两部分：首先，详细介绍当前政治、经济、科技和新闻领域的热点；其次，根据用户的咨询问题提供专业分析。请按以下步骤操作：\n请仔细审阅以下信息\n当前热点：{{...}}\n用户咨询问题：{{...}}\n根据以上信息，首先对当前热点进行全面和具体的说明，然后针对用户咨询问题进行专业回答。请确保：\n- 热点介绍全面、详尽且具有时效性\n- 针对咨询问题的回答专业、准确且具有针对性\n- 完成后，请检查内容的全面性、准确性和逻辑性\n- 保持语言风格专业和适合目标读者",
-                "EnglishPromptTemplate": "As a hot topic analysis expert, your task is divided into two parts: first, to provide a detailed introduction to the current hot topics in politics, economics, technology, and news; second, to offer professional analysis based on the user's consultation questions. Please follow these steps:\nCarefully review the following information\nCurrent Hot Topics: {{...}}\nUser Consultation Questions: {{...}}\nBased on the above information, first give a comprehensive and specific explanation of the current hot topics, and then provide a professional response to the user's consultation questions. Please ensure:\n- The introduction to hot topics is comprehensive, detailed, and timely\n- The response to consultation questions is professional, accurate, and targeted\n- After completion, check the comprehensiveness, accuracy, and logical consistency of the content\n- Maintain a professional language style suitable for the target audience\n(Please respond in Chinese)",
-                "Inputs": [
-                    {
-                        "InputPlaceholder": "请输入当前政治、经济、科技或新闻领域您感兴趣的热点问题（例如：重大政策发布、经济走势、科技创新、重要新闻事件等）。",
-                        "InputLabel": "当前热点",
-                        "InputList": null
-                    },
-                    {
-                        "InputPlaceholder": "如果您有特定咨询问题，请描述（例如：某政策背景解析、经济数据的影响评估、科技发展对行业的意义等）。",
-                        "InputLabel": "咨询问题",
-                        "InputList": null
-                    }
-                ]
-            },
-            "理论分析": {
+            "01-理论分析": {
                 "icon": "analytics",
                 "UsageDescription": "提供基于理论和实例的专业论证服务。包括：1. 对特定场景进行客观且中立的理论分析；2. 从理论和实例出发，论证正方观点或行为的合理性；3. 利用理论和实际例证，论证反方观点或行为的不合理性。",
                 "ChinesePromptTemplate": "作为一名理论专家，请依次进行如下任务：\n1. 对所提供的场景进行客观、中立且逻辑严密的理论分析。指出所有合理和不合理之处\n2. 结合理论依据和实例，尽力论证正方观点或行为的合理性。\n3. 使用理论分析和实例，尽力论证反方观点或行为的不合理性。\n在执行任务前，请细致审阅以下信息：\n```\n场景描述：\n{{...}}\n正方观点或行为：\n{{...}}\n反方观点或行为：\n{{...}}\n相关材料：\n{{...}}\n```\n在完成任务时，请确保您的论证：\n- 在理论层面上专业、科学且具有说服力\n- 实例清楚、普适且易于理解\n- 结构逻辑清晰，论证全面\n- 严格符合所提供信息的要求",
@@ -959,30 +862,35 @@
                     }
                 ]
             },
-            "职业分析": {
-                "icon": "work",
-                "UsageDescription": "对未来有潜力的职业或领域进行全面分析，或根据用户需求对特定职业进行深入分析。",
-                "ChinesePromptTemplate": "作为专业的职业趋势分析师，你的任务是：\n1. 分析未来有潜力的职业或领域，并提供基于市场数据和行业趋势的专业全面依据。\n2. 如果用户指定某职业，根据用户需求对该职业进行深入分析。\n请根据用户提供的以下信息开始你的分析工作：\n- 职业或领域类型：{{...}}\n- 分析目的：{{...}}\n- 具体分析要求和指导：{{...}}\n确保分析报告准确、全面，并包含所有必要的分析要素。",
-                "EnglishPromptTemplate": "As a professional career trend analyst, your task is to:\n1. Analyze careers or fields with future potential, providing comprehensive evidence based on market data and industry trends.\n2. If the user specifies a certain profession, conduct an in-depth analysis of that profession based on user needs.\nBegin your analysis based on the following information provided by the user:\n- Career or Field Type: {{...}}\n- Analysis Purpose: {{...}}\n- Specific Analysis Requirements and Guidelines: {{...}}\nEnsure that the analysis report is accurate, comprehensive, and includes all necessary analytical elements.\n(Please respond in Chinese)",
+            "02-哲学分析": {
+                "icon": "question_mark",
+                "UsageDescription": "提供哲学层面的分析论证。包括：对特定场景的哲学解读，对正反双方观点的哲学支持与批判分析，并通过具体案例来增强理论的实际应用性和理解力。",
+                "ChinesePromptTemplate": "作为哲学领域的专家，请按以下步骤进行：\n1. 对所提供场景进行全面的哲学解析，考虑不同哲学流派和理论的适用性。\n2. 依据哲学理论，提出对正方观点的支持性分析，同时结合实际案例加强观点的现实关联性。\n3. 基于哲学理论，进行对反方观点的批判性分析，利用案例进一步论证其不合理之处。\n开始前，请仔细审视以下信息：\n```\n场景描述：\n{{...}}\n正方观点：\n{{...}}\n反方观点：\n{{...}}\n参考理论和案例：\n{{...}}\n```\n确保您的分析和论证过程符合哲学思维的严密性，逻辑连贯，同时在理论与实践之间架起桥梁。",
+                "EnglishPromptTemplate": "As an expert in the field of philosophy, please proceed with the following steps:\n1. Conduct a comprehensive philosophical analysis of the provided scenario, considering the applicability of different philosophical schools and theories.\n2. Based on philosophical theories, provide a supportive analysis of the proponent's viewpoint, while also using actual cases to strengthen the real-world relevance of the viewpoint.\n3. Perform a critical analysis of the opponent's viewpoint based on philosophical theories, using cases to further argue its irrational aspects.\nBefore beginning, please carefully review the following information:\n```\nScenario Description:\n{{...}}\nProponent's Viewpoint:\n{{...}}\nOpponent's Viewpoint:\n{{...}}\nReference Theories and Cases:\n{{...}}\n```\nEnsure that your analysis and argumentation process is rigorous in philosophical thinking, logically coherent, and bridges theory and practice.\n(Please respond in Chinese)",
                 "Inputs": [
                     {
-                        "InputPlaceholder": "请输入您关注的职业或领域（例如：人工智能、可持续能源、数字营销等）。",
-                        "InputLabel": "职业领域",
+                        "InputPlaceholder": "请详细描述待分析的场景，包括其背景和关键要素。",
+                        "InputLabel": "场景描述",
                         "InputList": null
                     },
                     {
-                        "InputPlaceholder": "描述您的分析目的（例如：职业发展、行业投资、教育培训等）。",
-                        "InputLabel": "分析目的",
+                        "InputPlaceholder": "请输入需要论证的观点。",
+                        "InputLabel": "正方观点",
                         "InputList": null
                     },
                     {
-                        "InputPlaceholder": "提供具体、详细的分析要求和指导（例如：关键技能、行业发展趋势、薪资水平、地区差异等）。",
-                        "InputLabel": "具体要求",
+                        "InputPlaceholder": "请输入需要驳斥的观点。",
+                        "InputLabel": "反方观点",
+                        "InputList": null
+                    },
+                    {
+                        "InputPlaceholder": "提供与讨论相关的哲学理论、案例研究或其他辅助材料，以支撑您的分析。",
+                        "InputLabel": "相关材料",
                         "InputList": null
                     }
                 ]
             },
-            "逻辑分析": {
+            "03-逻辑分析": {
                 "icon": "device_hub",
                 "UsageDescription": "提供逻辑论证分析服务。包括对指定场景的逻辑评价，对特定观点进行逻辑支持或反驳。",
                 "ChinesePromptTemplate": "请根据逻辑论证专家的角色，完成以下任务：\n1. 对提供的场景进行细致且系统的逻辑分析，识别逻辑上的合理性与不足。\n2. 以逻辑论证的方法支持正方观点，提供相应证据和推理。\n3. 识别反方观点的逻辑漏洞，并提供反驳。\n在进行分析前，请细阅以下信息：\n```\n场景描述：\n{{...}}\n正方观点：\n{{...}}\n反方观点：\n{{...}}\n支持材料：\n{{...}}\n```\n请确保分析过程中逻辑清晰、论证充分，且能够平衡理论与实际案例。",
@@ -1009,10 +917,102 @@
                         "InputList": null
                     }
                 ]
+            },
+            "04-热点分析": {
+                "icon": "assessment",
+                "UsageDescription": "全面介绍当前热点并根据用户咨询提供专业分析。",
+                "ChinesePromptTemplate": "作为一名热点分析专家，你的任务分为两部分：首先，详细介绍当前政治、经济、科技和新闻领域的热点；其次，根据用户的咨询问题提供专业分析。请按以下步骤操作：\n请仔细审阅以下信息\n当前热点：{{...}}\n用户咨询问题：{{...}}\n根据以上信息，首先对当前热点进行全面和具体的说明，然后针对用户咨询问题进行专业回答。请确保：\n- 热点介绍全面、详尽且具有时效性\n- 针对咨询问题的回答专业、准确且具有针对性\n- 完成后，请检查内容的全面性、准确性和逻辑性\n- 保持语言风格专业和适合目标读者",
+                "EnglishPromptTemplate": "As a hot topic analysis expert, your task is divided into two parts: first, to provide a detailed introduction to the current hot topics in politics, economics, technology, and news; second, to offer professional analysis based on the user's consultation questions. Please follow these steps:\nCarefully review the following information\nCurrent Hot Topics: {{...}}\nUser Consultation Questions: {{...}}\nBased on the above information, first give a comprehensive and specific explanation of the current hot topics, and then provide a professional response to the user's consultation questions. Please ensure:\n- The introduction to hot topics is comprehensive, detailed, and timely\n- The response to consultation questions is professional, accurate, and targeted\n- After completion, check the comprehensiveness, accuracy, and logical consistency of the content\n- Maintain a professional language style suitable for the target audience\n(Please respond in Chinese)",
+                "Inputs": [
+                    {
+                        "InputPlaceholder": "请输入当前政治、经济、科技或新闻领域您感兴趣的热点问题（例如：重大政策发布、经济走势、科技创新、重要新闻事件等）。",
+                        "InputLabel": "当前热点",
+                        "InputList": null
+                    },
+                    {
+                        "InputPlaceholder": "如果您有特定咨询问题，请描述（例如：某政策背景解析、经济数据的影响评估、科技发展对行业的意义等）。",
+                        "InputLabel": "咨询问题",
+                        "InputList": null
+                    }
+                ]
+            },
+            "05-职业分析": {
+                "icon": "work",
+                "UsageDescription": "对未来有潜力的职业或领域进行全面分析，或根据用户需求对特定职业进行深入分析。",
+                "ChinesePromptTemplate": "作为专业的职业趋势分析师，你的任务是：\n1. 分析未来有潜力的职业或领域，并提供基于市场数据和行业趋势的专业全面依据。\n2. 如果用户指定某职业，根据用户需求对该职业进行深入分析。\n请根据用户提供的以下信息开始你的分析工作：\n- 职业或领域类型：{{...}}\n- 分析目的：{{...}}\n- 具体分析要求和指导：{{...}}\n确保分析报告准确、全面，并包含所有必要的分析要素。",
+                "EnglishPromptTemplate": "As a professional career trend analyst, your task is to:\n1. Analyze careers or fields with future potential, providing comprehensive evidence based on market data and industry trends.\n2. If the user specifies a certain profession, conduct an in-depth analysis of that profession based on user needs.\nBegin your analysis based on the following information provided by the user:\n- Career or Field Type: {{...}}\n- Analysis Purpose: {{...}}\n- Specific Analysis Requirements and Guidelines: {{...}}\nEnsure that the analysis report is accurate, comprehensive, and includes all necessary analytical elements.\n(Please respond in Chinese)",
+                "Inputs": [
+                    {
+                        "InputPlaceholder": "请输入您关注的职业或领域（例如：人工智能、可持续能源、数字营销等）。",
+                        "InputLabel": "职业领域",
+                        "InputList": null
+                    },
+                    {
+                        "InputPlaceholder": "描述您的分析目的（例如：职业发展、行业投资、教育培训等）。",
+                        "InputLabel": "分析目的",
+                        "InputList": null
+                    },
+                    {
+                        "InputPlaceholder": "提供具体、详细的分析要求和指导（例如：关键技能、行业发展趋势、薪资水平、地区差异等）。",
+                        "InputLabel": "具体要求",
+                        "InputList": null
+                    }
+                ]
+            },
+            "06-新闻分析": {
+                "icon": "dynamic_feed",
+                "UsageDescription": "提供新闻事件分析。",
+                "ChinesePromptTemplate": "作为一名专业的新闻分析师，你的任务是根据客户提供的详细信息进行专业、全面、具体的新闻事件分析服务。请根据以下步骤操作：\n请仔细审阅以下信息\n```\n事件描述：\n{{...}}\n相关背景：\n{{...}}\n新闻价值：\n{{...}}\n反映的问题：\n{{...}}\n```\n根据以上信息，开始你的分析工作。请确保最终分析：\n- 详细且逻辑清晰地反映事件描述和背景\n- 深入挖掘并阐述新闻价值和反映的问题\n- 完成分析后，请检查并确认以下内容是否满足要求：\n  - 分析是否全面覆盖了所提供信息的方方面面\n  - 结构是否清晰，逻辑是否合理\n  - 内容是否具有深度和见解",
+                "EnglishPromptTemplate": "As a professional news analyst, your task is to provide expert, comprehensive, and specific news event analysis services based on detailed information provided by the client. Please follow these steps:\nCarefully review the following information\n```\nEvent Description:\n{{...}}\nRelated Background:\n{{...}}\nNews Value:\n{{...}}\nIssues Reflected:\n{{...}}\n```\nBased on the above information, begin your analysis. Ensure that the final analysis:\n- Detailed and logically clear in reflecting the event description and background\n- Delves deep and elucidates the news value and issues reflected\n- After completing the analysis, check and confirm whether the following requirements are met:\n  - Whether the analysis comprehensively covers all aspects of the provided information\n  - Whether the structure is clear and the logic is sound\n  - Whether the content has depth and insight\n(Please respond in Chinese)",
+                "Inputs": [
+                    {
+                        "InputPlaceholder": "请输入您需要分析的事件描述（例如：特定新闻事件、社会现象、政策变动等）。",
+                        "InputLabel": "事件描述",
+                        "InputList": null
+                    },
+                    {
+                        "InputPlaceholder": "描述与事件相关的背景信息（例如：历史沿革、相关人物、社会影响等）。",
+                        "InputLabel": "相关背景",
+                        "InputList": null
+                    },
+                    {
+                        "InputPlaceholder": "讨论事件的新闻价值（例如：对社会的影响、引发的讨论、潜在的变化等）。",
+                        "InputLabel": "新闻价值",
+                        "InputList": null
+                    },
+                    {
+                        "InputPlaceholder": "分析事件反映的问题（例如：政策缺陷、社会矛盾、法律争议等）。",
+                        "InputLabel": "反映问题",
+                        "InputList": null
+                    }
+                ]
+            },
+            "07-军事分析": {
+                "icon": "military_tech",
+                "UsageDescription": "提供军事相关分析。",
+                "ChinesePromptTemplate": "作为一名军事分析专家，你的任务是根据客户提供的详细信息进行专业、全面、具体的军事相关分析。请根据以下步骤操作：\n请仔细审阅以下信息\n```\n军事话题：\n{{...}}\n战略或技术细节：\n{{...}}\n历史背景或当前情况：\n{{...}}\n```\n根据以上信息，开始你的分析工作。请确保最终分析：\n- 紧密围绕军事话题展开\n- 详细且逻辑清晰地反映所有的战略或技术细节\n- 涵盖相关的历史背景或当前情况\n- 完成分析后，请检查并确认以下内容是否满足要求：\n  - 分析是否全面、深入\n  - 结构是否清晰，逻辑是否合理",
+                "EnglishPromptTemplate": "As a military analysis expert, your task is to provide professional, comprehensive, and specific military-related analysis based on detailed information provided by the client. Please follow these steps:\nCarefully review the following information\n```\nMilitary Topic:\n{{...}}\nStrategic or Technical Details:\n{{...}}\nHistorical Background or Current Situation:\n{{...}}\n```\nBased on the above information, begin your analysis. Ensure that the final analysis:\n- Closely revolves around the military topic\n- Detailed and logically clear in reflecting all strategic or technical details\n- Covers relevant historical background or current situation\n- After completing the analysis, check and confirm whether the following requirements are met:\n  - Whether the analysis is comprehensive and in-depth\n  - Whether the structure is clear and the logic is sound\n(Please respond in Chinese)",
+                "Inputs": [
+                    {
+                        "InputPlaceholder": "请输入您要分析的军事话题（例如：特定冲突、战略发展、武器系统等）。",
+                        "InputLabel": "军事话题",
+                        "InputList": null
+                    },
+                    {
+                        "InputPlaceholder": "提供所需分析的具体战略或技术问题（例如：作战策略、武器功能、技术创新等）。",
+                        "InputLabel": "具体问题",
+                        "InputList": null
+                    },
+                    {
+                        "InputPlaceholder": "描述与话题相关的历史背景或当前情况（例如：历史事件、地缘政治影响、军事对峙等）。",
+                        "InputLabel": "背景现状",
+                        "InputList": null
+                    }
+                ]
             }
         },
         "08-医疗健康": {
-            "健身": {
+            "01-健身": {
                 "icon": "fitness_center",
                 "UsageDescription": "根据个人需求提供定制化的健身建议与计划。",
                 "ChinesePromptTemplate": "作为一名专业的健身教练和营养顾问，你的任务是根据客户提供的详细信息制定专业、实用、个性化的健身与营养计划。请根据以下步骤操作：\n请仔细审阅以下信息\n\n健身目标：\n{{...}}\n当前健康状况和健身水平：\n{{...}}\n具体需求和限制（如饮食偏好、可用设备、时间安排等）：\n{{...}}\n\n根据以上信息，制定你的健身与营养计划。请确保最终计划：\n- 明确针对健身目标，适应当前健康状况和健身水平\n- 充分考虑具体需求和限制\n- 完成计划后，请检查并确认以下内容是否满足要求：\n  - 计划是否全面、实用\n  - 是否易于客户理解和执行\n  - 是否符合健康与安全标准",
@@ -1035,7 +1035,7 @@
                     }
                 ]
             },
-            "心理学": {
+            "02-心理学": {
                 "icon": "psychology",
                 "UsageDescription": "提供心理健康、情感处理、人际关系等方面的专业咨询。",
                 "ChinesePromptTemplate": "作为一名心理咨询专家，你的任务是基于专业知识和经验，针对客户的心理问题提供专业、深入、有同理心的咨询服务。请根据以下步骤操作：\n请仔细审阅以下信息\n```\n问题描述：\n{{...}}\n背景与细节：\n{{...}}\n需求与期望：\n{{...}}\n```\n根据以上信息，开始你的咨询服务。请确保最终结果：\n- 充分理解并关注客户的心理健康问题和背景情境\n- 提供详细且逻辑清晰的分析和咨询建议\n- 完成咨询后，请检查并确认以下内容是否满足要求：\n  - 是否包含所有要求的元素\n  - 分析结构是否清晰、逻辑性是否强\n  - 咨询建议是否切实可行、符合专业标准",
@@ -1058,7 +1058,7 @@
                     }
                 ]
             },
-            "营养学": {
+            "03-营养学": {
                 "icon": "local_dining",
                 "UsageDescription": "提供关于食物成分、饮食计划、营养摄取的专业分析。",
                 "ChinesePromptTemplate": "作为一名营养学和饮食规划专家，你的任务是根据客户提供的具体信息进行专业、全面、具体、有逻辑性的食物成分分析与饮食规划指导。请根据以下步骤操作：\n请仔细审阅以下信息\n```\n咨询问题：\n{{...}}\n食物或饮食相关信息：\n{{...}}\n特殊需求或注意事项：\n{{...}}\n```\n根据以上信息，开始你的分析或规划工作。请确保最终结果：\n- 紧密围绕客户的咨询问题和特殊需求展开\n- 详细且逻辑清晰地反映所有的信息和需求\n- 完成分析或规划后，请检查并确认以下内容是否满足要求：\n  - 是否包含所有要求的元素\n  - 分析或规划是否合理、实用\n  - 信息是否科学、准确",
@@ -1083,7 +1083,7 @@
             }
         },
         "09-教育与社会科学": {
-            "教育": {
+            "01-教育": {
                 "icon": "school",
                 "UsageDescription": "针对教育方法、学习策略、教育资源提供专业建议。",
                 "ChinesePromptTemplate": "作为一名教育专家，你的任务是根据提供的详细信息提供专业、具体、实用的教育方法、学习策略和教育资源建议。请根据以下步骤操作：\n请仔细审阅以下信息\n```\n教育问题类型：\n{{...}}\n具体需求和期望：\n{{...}}\n相关背景信息：\n{{...}}\n```\n根据以上信息，开始你的建议工作。请确保最终建议：\n- 紧密围绕具体需求和期望展开\n- 结合相关背景信息，提供适宜的方法和策略\n- 完成建议后，请检查并确认以下内容是否满足要求：\n  - 建议是否切实可行、适用于特定情况\n  - 信息是否全面、逻辑性是否强\n  - 方法和策略是否创新且具有实践价值",
@@ -1108,7 +1108,7 @@
             }
         },
         "10-其他": {
-            "旅行": {
+            "01-旅行": {
                 "icon": "flight",
                 "UsageDescription": "提供旅行相关建议。",
                 "ChinesePromptTemplate": "作为一名旅行规划专家，你的任务是根据客户提供的详细信息进行专业、全面、具体的旅行计划制定和建议。请根据以下步骤操作：\n请仔细审阅以下信息\n```\n旅行目的和偏好：\n{{...}}\n目的地特点和要求：\n{{...}}\n额外需求和限制：\n{{...}}\n```\n根据以上信息，开始你的旅行规划工作。请确保最终建议：\n- 详细体现旅行目的和偏好\n- 考虑目的地的特点和要求\n- 充分考虑额外需求和限制\n- 完成规划后，请检查并确认以下内容是否满足要求：\n  - 规划是否实用、全面\n  - 是否适应旅行者的需求和兴趣\n  - 提供的信息和建议是否清晰、有帮助",
@@ -1131,7 +1131,7 @@
                     }
                 ]
             },
-            "购物": {
+            "02-购物": {
                 "icon": "shopping_cart",
                 "UsageDescription": "提供个性化购物建议和产品比较。",
                 "ChinesePromptTemplate": "作为专业的购物顾问，你的任务是根据客户提供的详细信息，提供专业、全面、具体的购物建议和产品比较。请根据以下步骤操作：\n请仔细审阅以下信息\n```\n产品名称：\n{{...}}\n主要特点或功能：\n{{...}}\n预算范围：\n{{...}}\n品牌偏好：\n{{...}}\n```\n根据以上信息，开始你的建议工作。请确保最终建议：\n- 充分考虑产品特性、功能、预算和品牌偏好\n- 细致分析并比较不同产品的优劣\n- 完成建议后，请检查并确认以下内容是否满足要求：\n  - 建议是否适合客户需求和预算\n  - 信息是否全面\n  - 建议是否贴合客户品牌偏好和使用场景",
@@ -1159,7 +1159,7 @@
                     }
                 ]
             },
-            "随机任务生成": {
+            "03-随机任务生成": {
                 "icon": "shuffle",
                 "UsageDescription": "用于生成具有创新性和多样性的随机任务。",
                 "ChinesePromptTemplate": "请生成一个随机任务。这个任务可以是任何类型，如写作、数学问题、设计挑战或者任何你能想到的任务。请先简要描述这个任务，然后给出具体的任务要求。例如，如果是写作任务，描述一下写作的主题和要求的字数；如果是数学问题，给出问题的背景和难度级别。提供信息如下：\n```\n任务类型：\n{{...}}\n任务难度：\n{{...}}\n```",
