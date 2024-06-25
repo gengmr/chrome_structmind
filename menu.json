@@ -396,15 +396,15 @@
                     }
                 ]
             },
-            "05-问题检查": {
-                "icon": "search",
-                "UsageDescription": "识别并分析潜在的问题和风险并提出预防或改进建议。适用于工程安全、软件测试、项目风险评估等多种场景。",
-                "ChinesePromptTemplate": "作为一名问题检测专家，您需要根据以下场景描述检测可能存在的问题或潜在风险。请细致地审查并回答下列问题：\n```\n场景描述：\n{{...}}\n```\n\n请您分析并回答：\n```\n1. 在所描述的场景中，您能够检测到任何明显或隐蔽的问题吗？\n2. 有哪些潜在的风险因素需要关注？\n3. 如果存在问题，建议采取哪些预防或改进措施？\n```",
-                "EnglishPromptTemplate": "As a problem detection expert, you are required to identify potential issues or risks based on the following scenario description. Please review in detail and answer the following questions (Please respond in Chinese):\n```\nScenario description:\n{{...}}\n```\n\nPlease analyze and answer:\n```\n1. Can you detect any obvious or hidden problems in the described scenario?\n2. What are the potential risk factors that need attention?\n3. If problems exist, what preventive or improvement measures would you suggest?\n```",
+            "05-雅思辅导": {
+                "icon": "menu_book",
+                "UsageDescription": "给学生讲解英文文章，提高雅思成绩。",
+                "ChinesePromptTemplate": "作为雅思培训专家，您的任务是：\n\n1. 提供整体的总结，阐述原文的主要思想和作者意图，帮助学生理解文章的主要思想和作者意图。\n2. 对给定的英文原文进行逐句翻译，给出中英文对照文本，确保学生准确理解每个句子的含义。\n3. 对每个句子的重要或复杂的词汇进行深入细致的讲解，包括定义、用法和常见例句，帮助学生扩展词汇量和使用能力。\n4. 分析这些句子的语法结构，详细解释主要的语法点，并提供相似结构的句子示例，增强学生的语法知识和应用能力。\n\n确保输出内容专业、清晰、逻辑性强，便于学生理解和学习。\n\n输入：\n-----\n{{输入英文原文}}\n-----\n\n输出：\n1. 总结：\n```\n[Summary of the text]\n```\n\n2. 逐句翻译与讲解：\n```\n[Source Sentence 1]\n[Translated Sentence 1]\n[如果句子重要或复杂：详细的词汇解释，例句，用法，语法点]\n\n[Source Sentence 2]\n[Translated Sentence 2]\n[如果句子重要或复杂：详细的词汇解释，例句，用法，语法点]\n...\n```",
+                "EnglishPromptTemplate": "As an IELTS Training Specialist, your task is to:\n\n1. Provide an overall summary of the text, explaining the main ideas and the author's intent to help students understand the passage.\n2. Translate each sentence of the given English text into Chinese, ensuring students accurately grasp the meaning of each sentence.\n3. For sentences that are complex or significant, offer detailed explanations of key vocabulary, including definitions, usage, and common example sentences to help students expand their vocabulary and usage skills.\n4. Analyze the grammatical structure of these sentences, explaining the main grammar points and providing examples of similar sentence structures to enhance students' grammatical knowledge and application skills.\n\nEnsure that the output is professional, clear, logical, and easy for students to understand and learn from.\n\nInput:\n-----\n{{Input English text}}\n-----\n\nOutput:\n1. Summary:\n```\n[Summary of the text]\n```\n\n2. Sentence-by-Sentence Translation and Explanation:\n```\n[Source Sentence 1]\n[Translated Sentence 1]\n[If the sentence is complex or significant: Detailed explanation of key vocabulary, Example Sentences, Usage, Grammar Points]\n\n[Source Sentence 2]\n[Translated Sentence 2]\n[If the sentence is complex or significant: Detailed explanation of key vocabulary, Example Sentences, Usage, Grammar Points]\n...\n```",
                 "Inputs": [
                     {
-                        "InputPlaceholder": "详细描述您希望检查的场景，包括任何已知的细节和上下文信息",
-                        "InputLabel": "详细场景",
+                        "InputPlaceholder": "请输入英文原文",
+                        "InputLabel": "英文原文",
                         "InputList": null
                     }
                 ]
@@ -466,6 +466,19 @@
                     {
                         "InputPlaceholder": "您对风险的态度是什么（保守、中等、积极）",
                         "InputLabel": "风险偏好",
+                        "InputList": null
+                    }
+                ]
+            },
+            "08-问题检查": {
+                "icon": "search",
+                "UsageDescription": "识别并分析潜在的问题和风险并提出预防或改进建议。适用于工程安全、软件测试、项目风险评估等多种场景。",
+                "ChinesePromptTemplate": "作为一名问题检测专家，您需要根据以下场景描述检测可能存在的问题或潜在风险。请细致地审查并回答下列问题：\n```\n场景描述：\n{{...}}\n```\n\n请您分析并回答：\n```\n1. 在所描述的场景中，您能够检测到任何明显或隐蔽的问题吗？\n2. 有哪些潜在的风险因素需要关注？\n3. 如果存在问题，建议采取哪些预防或改进措施？\n```",
+                "EnglishPromptTemplate": "As a problem detection expert, you are required to identify potential issues or risks based on the following scenario description. Please review in detail and answer the following questions (Please respond in Chinese):\n```\nScenario description:\n{{...}}\n```\n\nPlease analyze and answer:\n```\n1. Can you detect any obvious or hidden problems in the described scenario?\n2. What are the potential risk factors that need attention?\n3. If problems exist, what preventive or improvement measures would you suggest?\n```",
+                "Inputs": [
+                    {
+                        "InputPlaceholder": "详细描述您希望检查的场景，包括任何已知的细节和上下文信息",
+                        "InputLabel": "详细场景",
                         "InputList": null
                     }
                 ]
@@ -1299,7 +1312,7 @@
         }
     },
     "3. 自定义模式": {
-        "自定义模版": {
+        "01-自定义模版": {
             "UsageDescription": "xxx",
             "ChinesePromptTemplate": "xxx",
             "EnglishPromptTemplate": "xxx",

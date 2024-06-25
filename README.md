@@ -80,7 +80,7 @@ StructMind 是一个 Chrome 浏览器扩展，专为管理和生成 ChatGPT 提�
       - **InputLabel** (string): 输入框标签，用于说明输入内容。
       - **InputList** (array): 可选项的下拉菜单列表，元素为字符串。
 
-### 示例
+#### 示例
 
 以下是一个 `menu.json` 文件的示例，展示了多层菜单的结构及文件的详细属性：
 
@@ -141,3 +141,10 @@ StructMind 是一个 Chrome 浏览器扩展，专为管理和生成 ChatGPT 提�
     }
   }
 }
+```
+
+### 使用说明
+若需修改现有功能，请按以下步骤操作：
+
+   - 调整 Templates 文件夹中的 JSON 文件：确保 JSON 格式符合“结构说明”的要求。
+   - 执行 create_menu.py 脚本：运行 create_menu.py 文件以生成 menu.json。
