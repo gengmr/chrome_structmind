@@ -121,7 +121,7 @@ document.addEventListener('DOMContentLoaded', () => {
                             const textarea = document.createElement('textarea');
                             textarea.placeholder = `请输入${placeholderName}`;
                             textarea.dataset.placeholder = placeholder;
-                            textarea.classList.add('styled-textarea');
+                            textarea.classList.add('styled-textarea', 'input-textarea'); // 添加 input-textarea 类
                             inputDiv.appendChild(textarea);
 
                             form.appendChild(inputDiv);
@@ -134,11 +134,12 @@ document.addEventListener('DOMContentLoaded', () => {
                         const templateText = templateEditor.value;
                         let result = templateText;
 
-                        const textareas = form.querySelectorAll('textarea');
+                        // 只选择具有 input-textarea 类的 <textarea> 元素
+                        const textareas = form.querySelectorAll('textarea.input-textarea');
                         const placeholders = templateText.match(/{{\s*[^}]+\s*}}/g) || [];
 
                         if (placeholders.length !== textareas.length) {
-                            console.error("占位符和输入元素数量不一致");
+                            console.error(`占位符和输入元素数量不一致: 占位符数量=${placeholders.length}, 输入元素数量=${textareas.length}`);
                             return;
                         }
 
@@ -221,7 +222,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
                             const textarea = document.createElement('textarea');
                             textarea.placeholder = `请输入${fileData.Inputs[index].InputLabel}`;
-                            textarea.classList.add('styled-textarea');
+                            textarea.classList.add('styled-textarea', 'input-textarea'); // 添加 input-textarea 类
                             textarea.dataset.placeholder = placeholder.slice(2, -2).trim();
                             inputContainer.appendChild(textarea);
                             inputDiv.appendChild(inputContainer);
@@ -247,7 +248,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         } else {
                             const textarea = document.createElement('textarea');
                             textarea.placeholder = fileData.Inputs[index].InputPlaceholder;
-                            textarea.classList.add('styled-textarea');
+                            textarea.classList.add('styled-textarea', 'input-textarea'); // 添加 input-textarea 类
                             inputDiv.appendChild(textarea);
                         }
 
@@ -301,7 +302,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
                                 const textarea = document.createElement('textarea');
                                 textarea.placeholder = `请输入${fileData.Inputs[index].InputLabel}`;
-                                textarea.classList.add('styled-textarea');
+                                textarea.classList.add('styled-textarea', 'input-textarea'); // 添加 input-textarea 类
                                 textarea.dataset.placeholder = placeholder.slice(2, -2).trim();
                                 inputContainer.appendChild(textarea);
                                 inputDiv.appendChild(inputContainer);
@@ -327,7 +328,7 @@ document.addEventListener('DOMContentLoaded', () => {
                             } else {
                                 const textarea = document.createElement('textarea');
                                 textarea.placeholder = fileData.Inputs[index].InputPlaceholder;
-                                textarea.classList.add('styled-textarea');
+                                textarea.classList.add('styled-textarea', 'input-textarea'); // 添加 input-textarea 类
                                 inputDiv.appendChild(textarea);
                             }
 
@@ -341,32 +342,23 @@ document.addEventListener('DOMContentLoaded', () => {
                         const output = document.getElementById('output');
                         let result = template;
 
-                        // 获取所有输入组
-                        const inputs = form.querySelectorAll('.input-group');
+                        // 获取所有 input-textarea 输入组
+                        const inputs = form.querySelectorAll('.input-textarea');
+
+                        // 获取占位符
+                        const placeholders = (template.match(/{{\s*[^}]+\s*}}/g) || []);
+
+                        // 检查占位符和输入元素数量是否一致
+                        if (placeholders.length !== inputs.length) {
+                            console.error(`占位符和输入元素数量不一致: 占位符数量=${placeholders.length}, 输入元素数量=${inputs.length}`);
+                            return;
+                        }
 
                         // 按顺序替换占位符
-                        inputs.forEach((inputGroup, index) => {
-                            const placeholderPattern = /{{\s*[^}]+\s*}}/;
-                            let value = '';
-
-                            // 获取下拉菜单和自定义输入框的值
-                            const select = inputGroup.querySelector('select');
-                            if (select) {
-                                if (select.value === 'custom') {
-                                    const subTextarea = inputGroup.querySelector('.input-group-sub textarea');
-                                    value = subTextarea ? subTextarea.value.trim() : '';
-                                } else {
-                                    value = select.value;
-                                }
-                            } else {
-                                // 获取文本区域的值
-                                const textarea = inputGroup.querySelector('textarea');
-                                if (textarea) {
-                                    value = textarea.value.trim();
-                                }
-                            }
-
-                            // 替换当前索引对应的占位符，仅替换第一个匹配的占位符
+                        placeholders.forEach((placeholder, index) => {
+                            const input = inputs[index];
+                            const value = input.value.trim();
+                            const placeholderPattern = new RegExp(`{{\\s*${placeholder.slice(2, -2).trim()}\\s*}}`, 'g');
                             result = result.replace(placeholderPattern, value || '');
                         });
 

@@ -398,10 +398,23 @@
             },
             "05-雅思辅导": {
                 "icon": "menu_book",
-                "UsageDescription": "给学生讲解英文文章，提高雅思成绩。",
-                "ChinesePromptTemplate": "作为雅思培训专家，您的任务是：\n\n1. 提供整体的总结，阐述原文的主要思想和作者意图，帮助学生理解文章的主要思想和作者意图。\n2. 对给定的英文原文进行逐句翻译，给出中英文对照文本，确保学生准确理解每个句子的含义。\n3. 对每个句子的重要或复杂的词汇进行深入细致的讲解，包括定义、用法和常见例句，帮助学生扩展词汇量和使用能力。\n4. 分析这些句子的语法结构，详细解释主要的语法点，并提供相似结构的句子示例，增强学生的语法知识和应用能力。\n\n确保输出内容专业、清晰、逻辑性强，便于学生理解和学习。\n\n输入：\n-----\n{{输入英文原文}}\n-----\n\n输出：\n1. 总结：\n```\n[Summary of the text]\n```\n\n2. 逐句翻译与讲解：\n```\n[Source Sentence 1]\n[Translated Sentence 1]\n[如果句子重要或复杂：详细的词汇解释，例句，用法，语法点]\n\n[Source Sentence 2]\n[Translated Sentence 2]\n[如果句子重要或复杂：详细的词汇解释，例句，用法，语法点]\n...\n```",
-                "EnglishPromptTemplate": "As an IELTS Training Specialist, your task is to:\n\n1. Provide an overall summary of the text, explaining the main ideas and the author's intent to help students understand the passage.\n2. Translate each sentence of the given English text into Chinese, ensuring students accurately grasp the meaning of each sentence.\n3. For sentences that are complex or significant, offer detailed explanations of key vocabulary, including definitions, usage, and common example sentences to help students expand their vocabulary and usage skills.\n4. Analyze the grammatical structure of these sentences, explaining the main grammar points and providing examples of similar sentence structures to enhance students' grammatical knowledge and application skills.\n\nEnsure that the output is professional, clear, logical, and easy for students to understand and learn from.\n\nInput:\n-----\n{{Input English text}}\n-----\n\nOutput:\n1. Summary:\n```\n[Summary of the text]\n```\n\n2. Sentence-by-Sentence Translation and Explanation:\n```\n[Source Sentence 1]\n[Translated Sentence 1]\n[If the sentence is complex or significant: Detailed explanation of key vocabulary, Example Sentences, Usage, Grammar Points]\n\n[Source Sentence 2]\n[Translated Sentence 2]\n[If the sentence is complex or significant: Detailed explanation of key vocabulary, Example Sentences, Usage, Grammar Points]\n...\n```",
+                "UsageDescription": "对英文原文进行详细讲解，帮助学生提高雅思成绩。",
+                "ChinesePromptTemplate": "作为幽默风趣且讲解能力极强的雅思专家级教师，您的任务是针对雅思水平{{...}}的学生：\n\n1. 提供整体总结，阐述原文的主要思想和作者意图。\n2. 对给定的英文原文进行逐句翻译，给出中英文对照文本。对于复杂的句子，深入讲解其中的词汇和语法结构，包括定义、用法和常见例句，增强学生的词汇量和语法知识。对于相对于学生雅思水平较简单的句子，仅提供翻译，无需额外讲解。\n\n确保讲解专业、清晰、逻辑性强，使学生能够高效提高英语水平，并乐在其中。\n\n输入：\n```\n{{...}}\n```\n\n输出：\n1. 总结：\n```\n[原文总结]\n```\n\n2. 逐句翻译与讲解：\n```\n[原句 1]\n[翻译 1]\n[讲解 1]\n\n[原句 2]\n[翻译 2]\n[讲解 2]\n...\n```",
+                "EnglishPromptTemplate": "As a humorous and highly skilled IELTS specialist teacher, your task is to assist students aiming for an IELTS score of {{...}}:\n\n1. Provide an overall summary, explaining the main ideas and the author's intent.\n2. Translate each sentence of the given English text, providing a bilingual comparison. For complex sentences, offer detailed explanations of vocabulary and grammatical structures, including definitions, usage, and common example sentences to enhance students' vocabulary and grammatical knowledge. For sentences that are relatively simple for the student's IELTS level, just provide the translation without additional explanation.\n\nEnsure the explanations are professional, clear, logical, and enjoyable, enabling students to efficiently improve their English skills while having fun.\n\nInput:\n```\n{{...}}\n```\n\nOutput:\n1. Summary:\n```\n[Summary of the text]\n```\n\n2. Sentence-by-Sentence Translation and Explanation:\n```\n[Source Sentence 1]\n[Translated Sentence 1]\n[Explanation 1]\n\n[Source Sentence 2]\n[Translated Sentence 2]\n[Explanation 2]\n...\n```",
                 "Inputs": [
+                    {
+                        "InputPlaceholder": "请选择当前雅思分数",
+                        "InputLabel": "当前雅思分数",
+                        "InputList": [
+                            "4.0",
+                            "4.5",
+                            "5.0",
+                            "5.5",
+                            "6.0",
+                            "6.5",
+                            "7.0"
+                        ]
+                    },
                     {
                         "InputPlaceholder": "请输入英文原文",
                         "InputLabel": "英文原文",
@@ -1312,7 +1325,7 @@
         }
     },
     "3. 自定义模式": {
-        "01-自定义模版": {
+        "自定义模版": {
             "UsageDescription": "xxx",
             "ChinesePromptTemplate": "xxx",
             "EnglishPromptTemplate": "xxx",
