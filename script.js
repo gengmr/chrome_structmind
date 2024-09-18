@@ -342,28 +342,43 @@ document.addEventListener('DOMContentLoaded', () => {
                         const output = document.getElementById('output');
                         let result = template;
 
-                        // 获取所有 input-textarea 输入组
-                        const inputs = form.querySelectorAll('.input-textarea');
+                        // 获取所有的输入组
+                        const inputs = form.querySelectorAll('.input-group');
 
-                        // 获取占位符
+                        // 获取所有的占位符
                         const placeholders = (template.match(/{{\s*[^}]+\s*}}/g) || []);
 
-                        // 检查占位符和输入元素数量是否一致
+                        // 确保占位符和输入组的数量一致
                         if (placeholders.length !== inputs.length) {
                             console.error(`占位符和输入元素数量不一致: 占位符数量=${placeholders.length}, 输入元素数量=${inputs.length}`);
                             return;
                         }
 
-                        // 按顺序替换占位符
+                        // 按顺序替换每个占位符
                         placeholders.forEach((placeholder, index) => {
-                            const input = inputs[index];
-                            const value = input.value.trim();
-                            const placeholderPattern = new RegExp(`{{\\s*${placeholder.slice(2, -2).trim()}\\s*}}`, 'g');
-                            result = result.replace(placeholderPattern, value || '');
+                            const inputGroup = inputs[index];
+                            let value = '';
+
+                            // 优先检查下拉菜单的值
+                            const select = inputGroup.querySelector('select');
+                            if (select && select.value !== 'custom') {
+                                value = select.value; // 使用下拉菜单的值
+                            } else {
+                                // 如果下拉菜单选择了自定义，或不存在下拉菜单，则使用文本框的值
+                                const textarea = inputGroup.querySelector('textarea');
+                                if (textarea) {
+                                    value = textarea.value.trim(); // 使用文本框的值
+                                }
+                            }
+
+                            // 替换当前索引的占位符，只替换一次
+                            result = result.replace(placeholder, value ? value : '');
                         });
 
                         output.value = result;
                     }
+
+
 
                     form.addEventListener('input', () => {
                         const templateKey = languageSwitch.checked ? 'EnglishPromptTemplate' : 'ChinesePromptTemplate';
